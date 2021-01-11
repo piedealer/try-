@@ -1,0 +1,54 @@
+<PatrolArea Name="Auridon -Tanzelwil">
+  <WaypointDistance>30</WaypointDistance>
+  <TargetMaxLevel>999</TargetMaxLevel>
+  <TargetMinLevel>0</TargetMinLevel>
+  <TargetRange>30</TargetRange>
+  <Type>1</Type>
+  <UseClosestWaypoint>True</UseClosestWaypoint>
+  <PatrolMinLevel>1</PatrolMinLevel>
+  <PatrolMaxLevel>999</PatrolMaxLevel>
+  <TargetsPerHotspot>5</TargetsPerHotspot>
+  <Target Name="Ancestral Warrior" />
+  <Target Name="Ancestral Tempest" />
+  <Target Name="Ancestral Icemaster" />
+  <Target Name="Ancestral Blademaster" />
+  <TaskList Name="Auridon -Tanzelwil">
+    <Loops>3</Loops>
+    <Task>Goto Hotspot: auto, 1869.1,3399.52,114.39</Task>
+    <Task>Goto Hotspot: auto, 1844.25,3381,112.56</Task>
+    <Task>Goto Hotspot: auto, 1816.28,3368.1,113</Task>
+    <Task>Goto Hotspot: auto, 1819.01,3332.78,119.12</Task>
+    <Task>Goto Hotspot: auto, 1796.43,3313.78,126.9</Task>
+    <Task>Goto Hotspot: auto, 1815.51,3290.33,129.9</Task>
+    <Task>Goto Hotspot: auto, 1785.89,3273.99,136.78</Task>
+    <Task>Goto Hotspot: auto, 1758.28,3257.75,145.82</Task>
+    <Task>Goto Hotspot: auto, 1726.13,3251.18,149.05</Task>
+    <Task>Goto Hotspot: auto, 1725.69,3216.32,149.52</Task>
+    <Task>Goto Hotspot: auto, 1696.58,3208.45,155.16</Task>
+    <Task>Goto Hotspot: auto, 1670.88,3187.39,158.98</Task>
+    <Task>Goto Hotspot: auto, 1656.25,3159.99,155.38</Task>
+    <Task>Goto Hotspot: auto, 1675.04,3185.23,158.52</Task>
+    <Task>Goto Hotspot: auto, 1707.44,3176.64,156.31</Task>
+    <Task>Goto Hotspot: auto, 1724.39,3211.13,150.06</Task>
+    <Task>Goto Hotspot: auto, 1757.3,3215.85,146.29</Task>
+    <Task>Goto Hotspot: auto, 1776.13,3187.88,136.3</Task>
+    <Task>Goto Hotspot: auto, 1805.61,3181.12,132.72</Task>
+    <Task>Goto Hotspot: auto, 1828.56,3200.94,134.05</Task>
+    <Task>Goto Hotspot: auto, 1844.22,3227.82,136.47</Task>
+    <Task>Goto Hotspot: auto, 1873.82,3235.49,142.08</Task>
+    <Task>Goto Hotspot: auto, 1891.55,3262.67,146.79</Task>
+    <Task>Goto Hotspot: auto, 1859.02,3278.05,139.79</Task>
+    <Task>Goto Hotspot: auto, 1878.13,3305.71,141.29</Task>
+    <Task>Goto Hotspot: auto, 1909.58,3312.5,141.7</Task>
+    <Task>Goto Hotspot: auto, 1881.44,3307.8,141.41</Task>
+    <Task>Goto Hotspot: auto, 1856.8,3285.41,140.15</Task>
+    <Task>Goto Hotspot: auto, 1826.39,3279.16,132.4</Task>
+    <Task>Goto Hotspot: auto, 1811.24,3307.31,127.16</Task>
+    <Task>Goto Hotspot: auto, 1813.56,3336.6,119.62</Task>
+    <Task>Goto Hotspot: auto, 1798.22,3363.77,113.61</Task>
+    <Task>Goto Hotspot: auto, 1768.33,3357.51,115.23</Task>
+    <Task>Goto Hotspot: auto, 1800.18,3349.92,111.74</Task>
+    <Task>Goto Hotspot: auto, 1826.74,3372.94,113.25</Task>
+    <Task>Goto Hotspot: auto, 1854.59,3389.39,113.01</Task>
+  </TaskList>
+</PatrolArea>

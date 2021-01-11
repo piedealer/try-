@@ -1,0 +1,17 @@
+<PatrolArea Name="Alik'r Desert Tigonus Dolmen">
+  <WaypointDistance>30</WaypointDistance>
+  <TargetMaxLevel>999</TargetMaxLevel>
+  <TargetMinLevel>0</TargetMinLevel>
+  <TargetRange>30</TargetRange>
+  <Type>1</Type>
+  <UseClosestWaypoint>False</UseClosestWaypoint>
+  <PatrolMinLevel>1</PatrolMinLevel>
+  <PatrolMaxLevel>999</PatrolMaxLevel>
+  <TargetsPerHotspot>5</TargetsPerHotspot>
+  <TaskList Name="Alik'r Desert Tigonus Dolmen">
+    <Loops>9999</Loops>
+    <Task>Goto Hotspot: auto, 2873.54,1943.24,131.21</Task>
+    <Task>Pause: 1000</Task>
+    <Task>Goto Task Number: 1</Task>
+  </TaskList>
+</PatrolArea>

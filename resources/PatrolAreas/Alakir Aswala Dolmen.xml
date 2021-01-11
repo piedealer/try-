@@ -1,0 +1,22 @@
+<PatrolArea Name="Alakir Aswala Dolmen">
+  <WaypointDistance>30</WaypointDistance>
+  <TargetMaxLevel>999</TargetMaxLevel>
+  <TargetMinLevel>0</TargetMinLevel>
+  <TargetRange>30</TargetRange>
+  <Type>1</Type>
+  <UseClosestWaypoint>False</UseClosestWaypoint>
+  <PatrolMinLevel>1</PatrolMinLevel>
+  <PatrolMaxLevel>999</PatrolMaxLevel>
+  <TargetsPerHotspot>5</TargetsPerHotspot>
+  <TaskList Name="Alakir Aswala Dolmen">
+    <Loops>1</Loops>
+    <Task>Goto Hotspot: auto, 3134.02,992.22,119.83</Task>
+    <Task>Goto Hotspot: auto, 3117.9,1018.16,117.9</Task>
+    <Task>Goto Hotspot: auto, 3085.53,1141.07,125.25</Task>
+    <Task>Goto Hotspot: auto, 3097.94,1136.81,125.25</Task>
+    <Task>Goto Hotspot: auto, 3090.75,1114.75,125.25</Task>
+    <Task>Goto Hotspot: auto, 3118.76,1037.32,118.01</Task>
+    <Task>Goto Hotspot: auto, 3136.46,984.31,118.42</Task>
+    <Task>Goto Hotspot: auto, 3146.16,985.67,120.54</Task>
+  </TaskList>
+</PatrolArea>

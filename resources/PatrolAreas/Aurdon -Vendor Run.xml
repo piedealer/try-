@@ -1,0 +1,15 @@
+<PatrolArea Name="Aurdon -Vendor Run">
+  <WaypointDistance>30</WaypointDistance>
+  <TargetMaxLevel>999</TargetMaxLevel>
+  <TargetMinLevel>0</TargetMinLevel>
+  <TargetRange>30</TargetRange>
+  <Type>1</Type>
+  <UseClosestWaypoint>False</UseClosestWaypoint>
+  <PatrolMinLevel>1</PatrolMinLevel>
+  <PatrolMaxLevel>999</PatrolMaxLevel>
+  <TargetsPerHotspot>5</TargetsPerHotspot>
+  <TaskList Name="Aurdon -Vendor Run">
+    <Loops>9999</Loops>
+    <Task>Goto Hotspot: auto, 2433.79,4062.61,102.18</Task>
+  </TaskList>
+</PatrolArea>

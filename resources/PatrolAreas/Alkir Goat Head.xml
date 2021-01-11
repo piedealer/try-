@@ -1,0 +1,20 @@
+<PatrolArea Name="Alkir Goat Head">
+  <WaypointDistance>30</WaypointDistance>
+  <TargetMaxLevel>999</TargetMaxLevel>
+  <TargetMinLevel>0</TargetMinLevel>
+  <TargetRange>30</TargetRange>
+  <Type>1</Type>
+  <UseClosestWaypoint>False</UseClosestWaypoint>
+  <PatrolMinLevel>1</PatrolMinLevel>
+  <PatrolMaxLevel>999</PatrolMaxLevel>
+  <TargetsPerHotspot>5</TargetsPerHotspot>
+  <TaskList Name="Alkir Goat Head">
+    <Loops>1</Loops>
+    <Task>Goto Hotspot: auto, 2802.77,1800.53,132.31</Task>
+    <Task>Goto Hotspot: auto, 2804.15,1831.24,129.7</Task>
+    <Task>Goto Hotspot: auto, 2873.14,1837.65,126.42</Task>
+    <Task>Goto Hotspot: auto, 2882.66,1880.91,125.54</Task>
+    <Task>Goto Hotspot: auto, 2843.03,1859.9,126.11</Task>
+    <Task>Goto Hotspot: auto, 2803.83,1794.44,133.79</Task>
+  </TaskList>
+</PatrolArea>
