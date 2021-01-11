@@ -1,0 +1,23 @@
+<PatrolArea Name="Khenarthi's Roost Beetle Scutle farm - leveling">
+  <WaypointDistance>30</WaypointDistance>
+  <TargetMaxLevel>999</TargetMaxLevel>
+  <TargetMinLevel>0</TargetMinLevel>
+  <TargetRange>30</TargetRange>
+  <Type>0</Type>
+  <UseClosestWaypoint>False</UseClosestWaypoint>
+  <PatrolMinLevel>1</PatrolMinLevel>
+  <PatrolMaxLevel>999</PatrolMaxLevel>
+  <TargetsPerHotspot>5</TargetsPerHotspot>
+  <TaskList Name="Khenarthi's Roost Beetle Scutle farm - leveling">
+    <Loops>10</Loops>
+    <Task>Goto Hotspot: auto, 913.33,1389.64,131.86</Task>
+    <Task>Goto Hotspot: auto, 899.98,1355.8,131.05</Task>
+    <Task>Goto Hotspot: auto, 897.4,1323.82,130.26</Task>
+    <Task>Goto Hotspot: auto, 860.4,1325.98,133.35</Task>
+    <Task>Goto Hotspot: auto, 828.66,1309.95,129.67</Task>
+    <Task>Goto Hotspot: auto, 789.38,1308.34,133.14</Task>
+    <Task>Goto Hotspot: auto, 785.69,1274.83,134.14</Task>
+    <Task>Goto Hotspot: auto, 787.9,1249.88,136.62</Task>
+    <Task>Goto Hotspot: auto, 808.95,1271.79,131.83</Task>
+  </TaskList>
+</PatrolArea>

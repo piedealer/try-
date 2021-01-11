@@ -1,0 +1,32 @@
+<PatrolArea Name="From Vendor to Farm Zone Bleakrock Isle">
+  <WaypointDistance>30</WaypointDistance>
+  <TargetMaxLevel>999</TargetMaxLevel>
+  <TargetMinLevel>0</TargetMinLevel>
+  <TargetRange>30</TargetRange>
+  <Type>0</Type>
+  <UseClosestWaypoint>False</UseClosestWaypoint>
+  <PatrolMinLevel>1</PatrolMinLevel>
+  <PatrolMaxLevel>999</PatrolMaxLevel>
+  <TargetsPerHotspot>5</TargetsPerHotspot>
+  <TaskList Name="From Vendor to Farm Zone Bleakrock Isle">
+    <Loops>1</Loops>
+    <Task>Goto Hotspot: auto, 946.83,1198.32,113.53</Task>
+    <Task>Goto Hotspot: auto, 975.01,1176.05,111.07</Task>
+    <Task>Goto Hotspot: auto, 992.97,1146.45,111.11</Task>
+    <Task>Goto Hotspot: auto, 1001.99,1111.08,111</Task>
+    <Task>Goto Hotspot: auto, 991.15,1081.22,110.99</Task>
+    <Task>Goto Hotspot: auto, 1000.84,1045.39,108.78</Task>
+    <Task>Goto Hotspot: auto, 1022.89,1015.55,104.77</Task>
+    <Task>Goto Hotspot: auto, 1023.58,983.6,106.22</Task>
+    <Task>Goto Hotspot: auto, 1001.79,958.93,105.63</Task>
+    <Task>Goto Hotspot: auto, 970.55,958.01,104.07</Task>
+    <Task>Goto Hotspot: auto, 939.22,960.92,107.61</Task>
+    <Task>Goto Hotspot: auto, 907.98,951.49,103.47</Task>
+    <Task>Goto Hotspot: auto, 879.18,937.67,101.94</Task>
+    <Task>Goto Hotspot: auto, 842.74,947.51,101.91</Task>
+    <Task>Goto Hotspot: auto, 815.72,931.36,105.92</Task>
+    <Task>Goto Hotspot: auto, 795.95,908.22,106.7</Task>
+    <Task>Goto Hotspot: auto, 782.01,875.35,102.19</Task>
+    <Task>Goto Hotspot: auto, 768.51,840.91,98.79</Task>
+  </TaskList>
+</PatrolArea>

@@ -1,0 +1,24 @@
+<PatrolArea Name="Bathick Instant node 1 second place">
+  <WaypointDistance>30</WaypointDistance>
+  <TargetMaxLevel>999</TargetMaxLevel>
+  <TargetMinLevel>0</TargetMinLevel>
+  <TargetRange>100</TargetRange>
+  <Type>1</Type>
+  <UseClosestWaypoint>True</UseClosestWaypoint>
+  <PatrolMinLevel>1</PatrolMinLevel>
+  <PatrolMaxLevel>999</PatrolMaxLevel>
+  <TargetsPerHotspot>5</TargetsPerHotspot>
+  <Target Name="Iron Ore" />
+  <Target Name="Pewter Seam" />
+  <Target Name="Columbine" />
+  <Target Name="Wormwood" />
+  <Target Name="Wormwood" />
+  <Target Name="Jute" />
+  <Target Name="Pewter Seam" />
+  <Target Name="Nightshade" />
+  <Target Name="Maple" />
+  <TaskList Name="Bathick Instant node 1 second place">
+    <Loops>9999</Loops>
+    <Task>Goto Hotspot: auto, 1267.79,573.71,130.16</Task>
+  </TaskList>
+</PatrolArea>

@@ -1,0 +1,32 @@
+<PatrolArea Name="Bleakrock Isle">
+  <WaypointDistance>30</WaypointDistance>
+  <TargetMaxLevel>999</TargetMaxLevel>
+  <TargetMinLevel>0</TargetMinLevel>
+  <TargetRange>30</TargetRange>
+  <Type>1</Type>
+  <UseClosestWaypoint>False</UseClosestWaypoint>
+  <PatrolMinLevel>1</PatrolMinLevel>
+  <PatrolMaxLevel>999</PatrolMaxLevel>
+  <TargetsPerHotspot>5</TargetsPerHotspot>
+  <Target Name="Frostbite Spider" />
+  <TaskList Name="Bleakrock Isle">
+    <Loops>9999</Loops>
+    <Task>Goto Hotspot: auto, 755.7,828.71,98.79</Task>
+    <Task>Goto Hotspot: auto, 739.59,802.51,94.43</Task>
+    <Task>Goto Hotspot: auto, 704.83,802.02,100.57</Task>
+    <Task>Goto Hotspot: auto, 730.45,784.82,97.08</Task>
+    <Task>Goto Hotspot: auto, 699.43,771.33,100.99</Task>
+    <Task>Goto Hotspot: auto, 667.41,772.67,102.44</Task>
+    <Task>Goto Hotspot: auto, 636.65,777.97,102.66</Task>
+    <Task>Goto Hotspot: auto, 672,773.15,102.08</Task>
+    <Task>Goto Hotspot: auto, 680.35,742.37,109.21</Task>
+    <Task>Goto Hotspot: auto, 706.75,725.5,107.25</Task>
+    <Task>Goto Hotspot: auto, 733.61,703.02,104.7</Task>
+    <Task>Goto Hotspot: auto, 750.68,678.43,108.63</Task>
+    <Task>Goto Hotspot: auto, 744.36,710.59,103.68</Task>
+    <Task>Goto Hotspot: auto, 760.93,736.9,103.77</Task>
+    <Task>Goto Hotspot: auto, 789.09,722.5,103.94</Task>
+    <Task>Goto Hotspot: auto, 787.88,755.09,102.13</Task>
+    <Task>Goto Hotspot: auto, 742.33,784.04,97.1</Task>
+  </TaskList>
+</PatrolArea>

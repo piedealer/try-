@@ -1,0 +1,18 @@
+<PatrolArea Name="Goat Head on Dead path">
+  <WaypointDistance>30</WaypointDistance>
+  <TargetMaxLevel>999</TargetMaxLevel>
+  <TargetMinLevel>0</TargetMinLevel>
+  <TargetRange>30</TargetRange>
+  <Type>1</Type>
+  <UseClosestWaypoint>False</UseClosestWaypoint>
+  <PatrolMinLevel>1</PatrolMinLevel>
+  <PatrolMaxLevel>999</PatrolMaxLevel>
+  <TargetsPerHotspot>5</TargetsPerHotspot>
+  <TaskList Name="Goat Head on Dead path">
+    <Loops>9999</Loops>
+    <Task>Goto Hotspot: auto, 2804.55,1803.76,132.44</Task>
+    <Task>Goto Hotspot: auto, 2822.2,1835.67,126.74</Task>
+    <Task>Goto Hotspot: auto, 2850.21,1860.11,125.62</Task>
+    <Task>Goto Hotspot: auto, 2874.91,1880.16,125.46</Task>
+  </TaskList>
+</PatrolArea>

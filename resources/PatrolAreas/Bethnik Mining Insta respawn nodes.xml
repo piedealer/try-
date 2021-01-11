@@ -1,0 +1,53 @@
+<PatrolArea Name="Bethnik Mining Insta respawn nodes">
+  <WaypointDistance>30</WaypointDistance>
+  <TargetMaxLevel>999</TargetMaxLevel>
+  <TargetMinLevel>0</TargetMinLevel>
+  <TargetRange>30</TargetRange>
+  <Type>1</Type>
+  <UseClosestWaypoint>False</UseClosestWaypoint>
+  <PatrolMinLevel>1</PatrolMinLevel>
+  <PatrolMaxLevel>999</PatrolMaxLevel>
+  <TargetsPerHotspot>5</TargetsPerHotspot>
+  <Target Name="Pewter Seam" />
+  <Target Name="Runestone" />
+  <Target Name="Iron Ore" />
+  <Target Name="Namira's Rot" />
+  <Target Name="Jute" />
+  <Target Name="Maple" />
+  <Target Name="Blue Entoloma" />
+  <Target Name="White Cap" />
+  <Target Name="Lady's Smock" />
+  <TaskList Name="Bethnik Mining Insta respawn nodes">
+    <Loops>9999</Loops>
+    <Task>Goto Hotspot: auto, 1498.1,778.03,107.61</Task>
+    <Task>Goto Hotspot: auto, 1487.99,807.35,107.17</Task>
+    <Task>Goto Hotspot: auto, 1451.14,795.11,110.8</Task>
+    <Task>Goto Hotspot: auto, 1421.32,783.34,124.38</Task>
+    <Task>Goto Hotspot: auto, 1410.72,812.16,110.59</Task>
+    <Task>Goto Hotspot: auto, 1382.14,829.24,108.95</Task>
+    <Task>Goto Hotspot: auto, 1347.81,827.62,106.75</Task>
+    <Task>Goto Hotspot: auto, 1316.96,818.34,107.33</Task>
+    <Task>Goto Hotspot: auto, 1289.36,832.54,105.93</Task>
+    <Task>Goto Hotspot: auto, 1277.94,860.76,105.98</Task>
+    <Task>Goto Hotspot: auto, 1240.35,867.36,106.07</Task>
+    <Task>Goto Hotspot: auto, 1221.03,892.75,104.16</Task>
+    <Task>Goto Hotspot: auto, 1241.95,870.83,104.81</Task>
+    <Task>Goto Hotspot: auto, 1272.21,866.58,105.86</Task>
+    <Task>Goto Hotspot: auto, 1289.46,832.58,105.82</Task>
+    <Task>Goto Hotspot: auto, 1277.91,801.51,103.94</Task>
+    <Task>Goto Hotspot: auto, 1268.6,768.86,119.95</Task>
+    <Task>Goto Hotspot: auto, 1266.02,795.21,103.85</Task>
+    <Task>Goto Hotspot: auto, 1244.76,816.41,105.54</Task>
+    <Task>Goto Hotspot: auto, 1210.1,823.79,113.93</Task>
+    <Task>Goto Hotspot: auto, 1245.63,814.57,105.09</Task>
+    <Task>Goto Hotspot: auto, 1276.17,807.19,103.94</Task>
+    <Task>Goto Hotspot: auto, 1308.04,806.99,109.36</Task>
+    <Task>Goto Hotspot: auto, 1341.65,825.4,107.42</Task>
+    <Task>Goto Hotspot: auto, 1377.02,833.96,105.07</Task>
+    <Task>Goto Hotspot: auto, 1408.9,831.45,105.19</Task>
+    <Task>Goto Hotspot: auto, 1403.19,795.6,120.62</Task>
+    <Task>Goto Hotspot: auto, 1439.16,785.58,120.5</Task>
+    <Task>Goto Hotspot: auto, 1469.56,798.78,104.88</Task>
+    <Task>Goto Hotspot: auto, 1496.78,779.54,107.81</Task>
+  </TaskList>
+</PatrolArea>

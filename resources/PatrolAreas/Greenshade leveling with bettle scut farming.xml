@@ -1,0 +1,49 @@
+<PatrolArea Name="Greenshade leveling with bettle scut farming">
+  <WaypointDistance>30</WaypointDistance>
+  <TargetMaxLevel>999</TargetMaxLevel>
+  <TargetMinLevel>0</TargetMinLevel>
+  <TargetRange>30</TargetRange>
+  <Type>1</Type>
+  <UseClosestWaypoint>False</UseClosestWaypoint>
+  <PatrolMinLevel>1</PatrolMinLevel>
+  <PatrolMaxLevel>999</PatrolMaxLevel>
+  <TargetsPerHotspot>5</TargetsPerHotspot>
+  <Target Name="Thunderbug" />
+  <TaskList Name="Greenshade leveling with bettle scut farming">
+    <Loops>20</Loops>
+    <Task>Goto Hotspot: auto, 2082.61,2224.63,102.5</Task>
+    <Task>Goto Hotspot: auto, 2116.17,2217.91,106.89</Task>
+    <Task>Goto Hotspot: auto, 2144.28,2241.41,105.28</Task>
+    <Task>Goto Hotspot: auto, 2131.63,2269.21,105.26</Task>
+    <Task>Goto Hotspot: auto, 2101.72,2277.91,102.34</Task>
+    <Task>Goto Hotspot: auto, 2068.64,2274.61,97.06</Task>
+    <Task>Goto Hotspot: auto, 2039.31,2292.22,96</Task>
+    <Task>Goto Hotspot: auto, 2014.73,2317.64,101.94</Task>
+    <Task>Goto Hotspot: auto, 1993.36,2346.02,104.83</Task>
+    <Task>Goto Hotspot: auto, 1961.82,2336.56,102.38</Task>
+    <Task>Goto Hotspot: auto, 1955.42,2304.88,102.68</Task>
+    <Task>Goto Hotspot: auto, 1924.31,2296.06,100.93</Task>
+    <Task>Goto Hotspot: auto, 1894.46,2312.45,101.73</Task>
+    <Task>Goto Hotspot: auto, 1863.36,2305.26,107.05</Task>
+    <Task>Goto Hotspot: auto, 1835.76,2289.51,101.74</Task>
+    <Task>Goto Hotspot: auto, 1821.78,2260.26,100.07</Task>
+    <Task>Goto Hotspot: auto, 1805.79,2233.6,104.61</Task>
+    <Task>Goto Hotspot: auto, 1825.81,2255.48,99.61</Task>
+    <Task>Goto Hotspot: auto, 1835.45,2287.31,101.23</Task>
+    <Task>Goto Hotspot: auto, 1841.98,2322.95,104.24</Task>
+    <Task>Goto Hotspot: auto, 1829.42,2351.84,97.08</Task>
+    <Task>Goto Hotspot: auto, 1836.15,2382.77,92.99</Task>
+    <Task>Goto Hotspot: auto, 1871.31,2392.33,96.79</Task>
+    <Task>Goto Hotspot: auto, 1889.1,2418.43,94.83</Task>
+    <Task>Goto Hotspot: auto, 1874.56,2448.5,95.23</Task>
+    <Task>Goto Hotspot: auto, 1880.62,2415.83,92.96</Task>
+    <Task>Goto Hotspot: auto, 1890.64,2382.35,98.47</Task>
+    <Task>Goto Hotspot: auto, 1909.19,2354.97,100.86</Task>
+    <Task>Goto Hotspot: auto, 1928.62,2329.68,98.85</Task>
+    <Task>Goto Hotspot: auto, 1952.36,2303.99,103.72</Task>
+    <Task>Goto Hotspot: auto, 1977.26,2285.29,103.82</Task>
+    <Task>Goto Hotspot: auto, 2006.65,2263.37,100.33</Task>
+    <Task>Goto Hotspot: auto, 2039.25,2246.09,95.87</Task>
+    <Task>Goto Hotspot: auto, 2071.58,2229.32,99.92</Task>
+  </TaskList>
+</PatrolArea>

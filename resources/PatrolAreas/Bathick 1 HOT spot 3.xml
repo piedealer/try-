@@ -1,0 +1,24 @@
+<PatrolArea Name="Bathick 1 HOT spot 3">
+  <WaypointDistance>30</WaypointDistance>
+  <TargetMaxLevel>999</TargetMaxLevel>
+  <TargetMinLevel>0</TargetMinLevel>
+  <TargetRange>100</TargetRange>
+  <Type>1</Type>
+  <UseClosestWaypoint>False</UseClosestWaypoint>
+  <PatrolMinLevel>1</PatrolMinLevel>
+  <PatrolMaxLevel>999</PatrolMaxLevel>
+  <TargetsPerHotspot>5</TargetsPerHotspot>
+  <Target Name="Pewter Seam" />
+  <Target Name="Namira's Rot" />
+  <Target Name="Iron Ore" />
+  <Target Name="Lady's Smock" />
+  <Target Name="Maple" />
+  <Target Name="Jute" />
+  <Target Name="Violet Coprinus" />
+  <Target Name="Stinkhorn" />
+  <Target Name="Runestone" />
+  <TaskList Name="Bathick 1 HOT spot 3">
+    <Loops>9999</Loops>
+    <Task>Goto Hotspot: auto, 1190.87,820.67,113.54</Task>
+  </TaskList>
+</PatrolArea>
