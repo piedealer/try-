@@ -4,7 +4,7 @@
   <TargetMinLevel>0</TargetMinLevel>
   <TargetRange>20</TargetRange>
   <Type>1</Type>
-  <UseClosestWaypoint>True</UseClosestWaypoint>
+  <UseClosestWaypoint>False</UseClosestWaypoint>
   <PatrolMinLevel>1</PatrolMinLevel>
   <PatrolMaxLevel>999</PatrolMaxLevel>
   <TargetsPerHotspot>5</TargetsPerHotspot>
@@ -60,7 +60,7 @@
   <Target Name="Blessed Thistle" />
   <Target Name="Pewter Seam" />
   <TaskList Name="Khenarthis Roost 29.05.2019">
-    <Loops>9999</Loops>
+    <Loops>1</Loops>
     <Task>Goto Hotspot: auto, 1195.31,1020.09,112.09</Task>
     <Task>Goto Hotspot: auto, 1204.45,1033.38,119.16</Task>
     <Task>Goto Hotspot: auto, 1188.47,1038.7,122.51</Task>

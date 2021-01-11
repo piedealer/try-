@@ -1,9 +1,9 @@
 <Settings>
   <MainForm>
-    <Coords X="554" Y="171" W="512" H="479" />
+    <Coords X="760" Y="89" W="590" H="581" />
     <Profile Name="Templar 2H simple farm" />
   </MainForm>
   <MiniForm>
-    <Coords X="154" Y="182" />
+    <Coords X="40" Y="616" />
   </MiniForm>
 </Settings>
