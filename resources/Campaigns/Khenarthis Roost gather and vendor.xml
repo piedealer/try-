@@ -1,0 +1,11 @@
+<TaskList Name="Khenarthis Roost gather and vendor">
+  <Loops>1</Loops>
+  <Task>REPEAT LOOP: 99</Task>
+  <Task>Start Patrol: Khenarthis Roost 29.05.2019,0,1</Task>
+  <Task>Start Patrol: Khenarthis Roost gathering to vendor,0,1</Task>
+  <Task>Target NPC: Palmur</Task>
+  <Task>Press Key(s): E, 3000</Task>
+  <Task>Press Key(s): E, 3000</Task>
+  <Task>Press Key(s): ESCAPE, 2000</Task>
+  <Task>END REPEAT LOOP</Task>
+</TaskList>

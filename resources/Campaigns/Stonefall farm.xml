@@ -1,0 +1,19 @@
+<TaskList Name="Stonefall farm">
+  <Loops>1</Loops>
+  <Task>REPEAT LOOP: 999999</Task>
+  <Task>Start Patrol: Stonefall vendor run,1,1</Task>
+  <Task>Goto Waypoint: 2604.59,2441.86,103.04</Task>
+  <Task>Goto Waypoint: 2613.18,2436.88,102.94</Task>
+  <Task>Target NPC: Meadmoon</Task>
+  <Task>Press Key(s): E</Task>
+  <Task>Pause: 1000</Task>
+  <Task>Press Key(s): E</Task>
+  <Task>Pause: 1000</Task>
+  <Task>Press Key(s): E</Task>
+  <Task>Pause: 1000</Task>
+  <Task>Press Key(s): ESCAPE</Task>
+  <Task>Pause: 1000</Task>
+  <Task>Start Patrol: Stonefall vendor run,0,1</Task>
+  <Task>Start Patrol: Stonefalls kill area,0,2</Task>
+  <Task>END REPEAT LOOP</Task>
+</TaskList>

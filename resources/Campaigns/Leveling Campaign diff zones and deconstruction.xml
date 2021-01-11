@@ -1,0 +1,128 @@
+<TaskList Name="Leveling Campaign diff zones and deconstruction">
+  <Loops>1</Loops>
+  <Task>REPEAT LOOP: 99999</Task>
+  <Task>Start Patrol: Greenshade leveling with bettle scut farming,0,20</Task>
+  <Task>Start Patrol: Greenshade Waypoint run,0,1</Task>
+  <Task>Goto Waypoint: 1642.35,2358.15,106.54</Task>
+  <Task>Set Waypoint Accuracy: 3</Task>
+  <Task>Target NPC: Wayshrine</Task>
+  <Task>Press Key(s): E, 1000</Task>
+  <Task>Scaled Left Click: 742,739,1920,1137</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Scaled Left Click: 905,567,1920,1137</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Start Patrol: Greenshade vendor run first part,0,1</Task>
+  <Task>Goto Waypoint: 1387.83,2705.26,118.8</Task>
+  <Task>Set Waypoint Accuracy: 3</Task>
+  <Task>Target NPC: Blade and Song</Task>
+  <Task>Press Key(s): E, 1000</Task>
+  <Task>Goto Waypoint: 1399.22,2721.17,49.39</Task>
+  <Task>Target NPC: Blacksmithing Stations</Task>
+  <Task>Press Key(s): E, 1000</Task>
+  <Task>Scaled Left Click: 1709,233,1920,1137</Task>
+  <Task>REPEAT LOOP: 4</Task>
+  <Task>Scaled Left Click: 1731,428,1920,1137</Task>
+  <Task>Scaled Left Click: 1744,483,1920,1137</Task>
+  <Task>Scaled Left Click: 1724,529,1920,1137</Task>
+  <Task>Scaled Left Click: 1867,297,1920,1137</Task>
+  <Task>Scaled Left Click: 1750,433,1920,1137</Task>
+  <Task>Scaled Left Click: 1821,480,1920,1137</Task>
+  <Task>Press Key(s): R, 1000</Task>
+  <Task>Press Key(s): E, 1000</Task>
+  <Task>END REPEAT LOOP</Task>
+  <Task>Press Key(s): ESCAPE, 1000</Task>
+  <Task>Goto Waypoint: 1388.49,2706.32,49.39</Task>
+  <Task>Set Waypoint Accuracy: 3</Task>
+  <Task>Target NPC: Woodhearth</Task>
+  <Task>Press Key(s): E, 1000</Task>
+  <Task>Goto Waypoint: 1385.6,2699.8,117.18</Task>
+  <Task>Goto Waypoint: 1380.2,2688,116.82</Task>
+  <Task>Goto Waypoint: 1367.32,2681.47,116.97</Task>
+  <Task>Goto Waypoint: 1371.67,2675.52,119.24</Task>
+  <Task>Set Waypoint Accuracy: 3</Task>
+  <Task>Target NPC: Maiden</Task>
+  <Task>Press Key(s): E, 1000</Task>
+  <Task>Goto Waypoint: 1392.7,2662.03,51.43</Task>
+  <Task>Set Waypoint Accuracy: 3</Task>
+  <Task>Target NPC: Station</Task>
+  <Task>Press Key(s): E, 1000</Task>
+  <Task>Scaled Left Click: 1711,236,1920,1137</Task>
+  <Task>REPEAT LOOP: 20</Task>
+  <Task>Scaled Left Click: 1723,428,1920,1137</Task>
+  <Task>Scaled Left Click: 1681,483,1920,1137</Task>
+  <Task>Scaled Left Click: 1693,540,1920,1137</Task>
+  <Task>Scaled Left Click: 1734,579,1920,1137</Task>
+  <Task>Scaled Left Click: 1733,635,1920,1137</Task>
+  <Task>Scaled Left Click: 1723,682,1920,1137</Task>
+  <Task>Scaled Left Click: 1735,740,1920,1137</Task>
+  <Task>Scaled Left Click: 1720,792,1920,1137</Task>
+  <Task>Scaled Left Click: 1729,846,1920,1137</Task>
+  <Task>Scaled Left Click: 1725,894,1920,1137</Task>
+  <Task>Scaled Left Click: 1737,842,1920,1137</Task>
+  <Task>Press Key(s): R, 1000</Task>
+  <Task>Scaled Left Click: 919,579,1920,1137</Task>
+  <Task>END REPEAT LOOP</Task>
+  <Task>Press Key(s): ESCAPE, 1000</Task>
+  <Task>Goto Waypoint: 1374.18,2674.13,51.43</Task>
+  <Task>Set Waypoint Accuracy: 3</Task>
+  <Task>Target NPC: Woodhearth</Task>
+  <Task>Press Key(s): E, 1000</Task>
+  <Task>Start Patrol: Greenshade vednor run second part,0,1</Task>
+  <Task>Goto Waypoint: 1244.42,2882.78,113.51</Task>
+  <Task>Set Waypoint Accuracy: 3</Task>
+  <Task>Target NPC: Curious</Task>
+  <Task>Press Key(s): E, 1000</Task>
+  <Task>Goto Waypoint: 1230.81,2876.62,65.3</Task>
+  <Task>Goto Waypoint: 1228.79,2871.51,65.3</Task>
+  <Task>Set Waypoint Accuracy: 3</Task>
+  <Task>Target NPC: Table</Task>
+  <Task>Press Key(s): E, 1000</Task>
+  <Task>Scaled Left Click: 1816,236,1920,1137</Task>
+  <Task>REPEAT LOOP: 20</Task>
+  <Task>END REPEAT LOOP</Task>
+  <Task>Press Key(s): ESCAPE, 1000</Task>
+  <Task>Goto Waypoint: 1232.56,2877.39,65.3</Task>
+  <Task>Goto Waypoint: 1241.3,2880.99,65.3</Task>
+  <Task>Set Waypoint Accuracy: 3</Task>
+  <Task>Target NPC: Woodhearth</Task>
+  <Task>Press Key(s): E, 1000</Task>
+  <Task>Start Patrol: Greenshade vendor run third part,0,1</Task>
+  <Task>Goto Waypoint: 1528.01,2867.46,110.39</Task>
+  <Task>Set Waypoint Accuracy: 3</Task>
+  <Task>Target NPC: Wayshrine</Task>
+  <Task>Press Key(s): E, 1000</Task>
+  <Task>Scaled Left Click: 1116,613,1920,1137</Task>
+  <Task>Press Key(s): E, 1000</Task>
+  <Task>Start Patrol: Grenshade vendor run part four,0,1</Task>
+  <Task>Goto Waypoint: 2914.99,2398.11,136.77</Task>
+  <Task>Set Waypoint Accuracy: 3</Task>
+  <Task>Target NPC: Station</Task>
+  <Task>Press Key(s): E, 1000</Task>
+  <Task>Scaled Left Click: 1707,235,1920,1137</Task>
+  <Task>REPEAT LOOP: 20</Task>
+  <Task>Scaled Left Click: 1722,430,1920,1137</Task>
+  <Task>Scaled Left Click: 1818,477,1920,1137</Task>
+  <Task>Scaled Left Click: 1818,536,1920,1137</Task>
+  <Task>Scaled Left Click: 1818,581,1920,1137</Task>
+  <Task>Scaled Left Click: 1811,583,1920,1137</Task>
+  <Task>Scaled Left Click: 1831,601,1920,1137</Task>
+  <Task>Scaled Left Click: 1816,640,1920,1137</Task>
+  <Task>Scaled Left Click: 1828,692,1920,1137</Task>
+  <Task>Scaled Left Click: 1816,742,1920,1137</Task>
+  <Task>Scaled Left Click: 1835,797,1920,1137</Task>
+  <Task>Scaled Left Click: 1860,290,1920,1137</Task>
+  <Task>Scaled Left Click: 1810,427,1920,1137</Task>
+  <Task>Scaled Left Click: 1832,486,1920,1137</Task>
+  <Task>Press Key(s): R, 1000</Task>
+  <Task>Press Key(s): E, 1000</Task>
+  <Task>END REPEAT LOOP</Task>
+  <Task>Press Key(s): ESCAPE, 1000</Task>
+  <Task>Start Patrol: Greenshade vendor run last part,0,1</Task>
+  <Task>Goto Waypoint: 2786.85,2482.55,123.04</Task>
+  <Task>Set Waypoint Accuracy: 3</Task>
+  <Task>Target NPC: Wayshrine</Task>
+  <Task>Press Key(s): E, 1000</Task>
+  <Task>Scaled Right Click: 778,585,1920,1137</Task>
+  <Task>Press Key(s): E, 1000</Task>
+  <Task>END REPEAT LOOP</Task>
+</TaskList>

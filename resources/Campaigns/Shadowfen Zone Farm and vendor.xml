@@ -1,0 +1,19 @@
+<TaskList Name="Shadowfen Zone Farm and vendor">
+  <Loops>1</Loops>
+  <Task>REPEAT LOOP: 999</Task>
+  <Task>Start Patrol: Shadowfen-Zone Farm,0,1</Task>
+  <Task>Start Patrol: Shadowfen -Zone Farm Vendor,0,1</Task>
+  <Task>Target NPC: Sayne Indalor</Task>
+  <Task>Press Key(s): E, 1000</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Press Key(s): ESCAPE, 1000</Task>
+  <Task>Goto Waypoint: 2123.57,1125.99,107.94</Task>
+  <Task>Goto Waypoint: 2118,1137.32,107.21</Task>
+  <Task>Goto Waypoint: 2132.33,1141.67,107.58</Task>
+  <Task>Goto Waypoint: 2155.08,1116.69,108.06</Task>
+  <Task>Goto Waypoint: 2181.16,1122.45,107.68</Task>
+  <Task>Goto Waypoint: 2200.19,1136.92,107.32</Task>
+  <Task>Goto Waypoint: 2293.68,1110.18,106.8</Task>
+  <Task>Goto Waypoint: 2330.02,1096.03,104.69</Task>
+  <Task>END REPEAT LOOP</Task>
+</TaskList>
