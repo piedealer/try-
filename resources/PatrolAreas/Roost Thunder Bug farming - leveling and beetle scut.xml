@@ -1,0 +1,60 @@
+<PatrolArea Name="Roost Thunder Bug farming - leveling and beetle scut">
+  <WaypointDistance>10</WaypointDistance>
+  <TargetMaxLevel>999</TargetMaxLevel>
+  <TargetMinLevel>0</TargetMinLevel>
+  <TargetRange>10</TargetRange>
+  <Type>1</Type>
+  <UseClosestWaypoint>True</UseClosestWaypoint>
+  <PatrolMinLevel>1</PatrolMinLevel>
+  <PatrolMaxLevel>999</PatrolMaxLevel>
+  <TargetsPerHotspot>5</TargetsPerHotspot>
+  <Target Name="Thunderbug" />
+  <TaskList Name="Roost Thunder Bug farming - leveling and beetle scut">
+    <Loops>9999</Loops>
+    <Task>Goto Hotspot: auto, 922.68,1399.13,128.33</Task>
+    <Task>Goto Hotspot: auto, 911.64,1388.71,132.11</Task>
+    <Task>Goto Hotspot: auto, 904.06,1381.15,132.91</Task>
+    <Task>Goto Hotspot: auto, 902.27,1369.55,132.92</Task>
+    <Task>Goto Hotspot: auto, 899.63,1356.93,131.4</Task>
+    <Task>Goto Hotspot: auto, 893.02,1347.26,130.97</Task>
+    <Task>Goto Hotspot: auto, 891.8,1335.04,130.36</Task>
+    <Task>Goto Hotspot: auto, 894.96,1320.14,130.65</Task>
+    <Task>Goto Hotspot: auto, 885.79,1313.91,130.91</Task>
+    <Task>Goto Hotspot: auto, 870.85,1321.22,132.97</Task>
+    <Task>Goto Hotspot: auto, 859.44,1327.53,133.21</Task>
+    <Task>Goto Hotspot: auto, 854.71,1336.54,131.79</Task>
+    <Task>Goto Hotspot: auto, 842.65,1337.81,128.65</Task>
+    <Task>Goto Hotspot: auto, 833.36,1329.83,129.28</Task>
+    <Task>Goto Hotspot: auto, 822.53,1324.02,129.8</Task>
+    <Task>Goto Hotspot: auto, 818.69,1313.32,129.79</Task>
+    <Task>Goto Hotspot: auto, 808.05,1310.02,129.81</Task>
+    <Task>Goto Hotspot: auto, 798.37,1302.1,130.75</Task>
+    <Task>Goto Hotspot: auto, 793.3,1310.67,133.69</Task>
+    <Task>Goto Hotspot: auto, 782.58,1302.56,133.01</Task>
+    <Task>Goto Hotspot: auto, 773,1293.56,134.9</Task>
+    <Task>Goto Hotspot: auto, 763.85,1288.17,135.06</Task>
+    <Task>Goto Hotspot: auto, 759.65,1278.14,132.28</Task>
+    <Task>Goto Hotspot: auto, 763.2,1268.6,133.99</Task>
+    <Task>Goto Hotspot: auto, 773.02,1264.73,134.12</Task>
+    <Task>Goto Hotspot: auto, 782.24,1259.48,135.77</Task>
+    <Task>Goto Hotspot: auto, 788.71,1249.12,136.59</Task>
+    <Task>Goto Hotspot: auto, 798.11,1262.61,135.38</Task>
+    <Task>Goto Hotspot: auto, 802.99,1274.65,133.21</Task>
+    <Task>Goto Hotspot: auto, 811.05,1288.16,128.73</Task>
+    <Task>Goto Hotspot: auto, 821.26,1294.49,125.77</Task>
+    <Task>Goto Hotspot: auto, 834.48,1294.32,126.51</Task>
+    <Task>Goto Hotspot: auto, 847.39,1291.76,126.12</Task>
+    <Task>Goto Hotspot: auto, 859.83,1295.16,126.49</Task>
+    <Task>Goto Hotspot: auto, 872.45,1298.7,126.75</Task>
+    <Task>Goto Hotspot: auto, 882.96,1304.38,130.18</Task>
+    <Task>Goto Hotspot: auto, 888.98,1313.73,130.95</Task>
+    <Task>Goto Hotspot: auto, 897.88,1326.36,130.37</Task>
+    <Task>Goto Hotspot: auto, 906.17,1340.03,128.81</Task>
+    <Task>Goto Hotspot: auto, 911.09,1348.99,128.39</Task>
+    <Task>Goto Hotspot: auto, 915.85,1358.16,128.29</Task>
+    <Task>Goto Hotspot: auto, 920.29,1367.77,128.75</Task>
+    <Task>Goto Hotspot: auto, 923.76,1377.56,128.94</Task>
+    <Task>Goto Hotspot: auto, 926.91,1387.34,128.8</Task>
+    <Task>Goto Hotspot: auto, 927.79,1397.71,128.91</Task>
+  </TaskList>
+</PatrolArea>

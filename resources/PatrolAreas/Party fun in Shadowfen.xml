@@ -1,0 +1,44 @@
+<PatrolArea Name="Party fun in Shadowfen">
+  <WaypointDistance>30</WaypointDistance>
+  <TargetMaxLevel>999</TargetMaxLevel>
+  <TargetMinLevel>0</TargetMinLevel>
+  <TargetRange>30</TargetRange>
+  <Type>1</Type>
+  <UseClosestWaypoint>True</UseClosestWaypoint>
+  <PatrolMinLevel>1</PatrolMinLevel>
+  <PatrolMaxLevel>999</PatrolMaxLevel>
+  <TargetsPerHotspot>5</TargetsPerHotspot>
+  <Target Name="Worm Cult Savage" />
+  <Target Name="Skeletal Warrior" />
+  <Target Name="Worm Cult Pyromancer" />
+  <TaskList Name="Party fun in Shadowfen">
+    <Loops>9999</Loops>
+    <Task>Goto Hotspot: auto, 1683.37,1325.54,100.19</Task>
+    <Task>Goto Hotspot: auto, 1712.12,1309.59,100.37</Task>
+    <Task>Goto Hotspot: auto, 1695.17,1337.34,100.09</Task>
+    <Task>Goto Hotspot: auto, 1664.95,1338.85,100.83</Task>
+    <Task>Goto Hotspot: auto, 1630.53,1329.12,100.06</Task>
+    <Task>Goto Hotspot: auto, 1657.16,1311.95,100.27</Task>
+    <Task>Goto Hotspot: auto, 1688.25,1321.55,100.3</Task>
+    <Task>Goto Hotspot: auto, 1662.39,1298.31,100.03</Task>
+    <Task>Goto Hotspot: auto, 1668.4,1268.85,100.78</Task>
+    <Task>Goto Hotspot: auto, 1696.16,1255.66,101.51</Task>
+    <Task>Goto Hotspot: auto, 1690.9,1288.93,100.58</Task>
+    <Task>Goto Hotspot: auto, 1664.46,1305.17,100.79</Task>
+    <Task>Goto Hotspot: auto, 1632.09,1299.87,100.24</Task>
+    <Task>Goto Hotspot: auto, 1609.48,1273.74,100.6</Task>
+    <Task>Goto Hotspot: auto, 1579.34,1259.78,99.97</Task>
+    <Task>Goto Hotspot: auto, 1555.21,1281.8,100.09</Task>
+    <Task>Goto Hotspot: auto, 1541.2,1253.11,99.22</Task>
+    <Task>Goto Hotspot: auto, 1576.7,1250.89,100.55</Task>
+    <Task>Goto Hotspot: auto, 1578.48,1282.23,100.96</Task>
+    <Task>Goto Hotspot: auto, 1546.58,1289.25,100.75</Task>
+    <Task>Goto Hotspot: auto, 1517.87,1273.62,107.4</Task>
+    <Task>Goto Hotspot: auto, 1548.99,1279.49,100.73</Task>
+    <Task>Goto Hotspot: auto, 1576.43,1261.68,99.97</Task>
+    <Task>Goto Hotspot: auto, 1607.01,1259.02,100.25</Task>
+    <Task>Goto Hotspot: auto, 1606.24,1294.41,100.12</Task>
+    <Task>Goto Hotspot: auto, 1637.46,1306.89,99.74</Task>
+    <Task>Goto Hotspot: auto, 1663.31,1327.14,100.56</Task>
+  </TaskList>
+</PatrolArea>

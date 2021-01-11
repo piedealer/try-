@@ -1,0 +1,30 @@
+<PatrolArea Name="Skyhard Morrowing -1 ">
+  <WaypointDistance>30</WaypointDistance>
+  <TargetMaxLevel>999</TargetMaxLevel>
+  <TargetMinLevel>0</TargetMinLevel>
+  <TargetRange>30</TargetRange>
+  <Type>1</Type>
+  <UseClosestWaypoint>False</UseClosestWaypoint>
+  <PatrolMinLevel>1</PatrolMinLevel>
+  <PatrolMaxLevel>999</PatrolMaxLevel>
+  <TargetsPerHotspot>5</TargetsPerHotspot>
+  <TaskList Name="Skyhard Morrowing -1 ">
+    <Loops>9999</Loops>
+    <Task>Goto Hotspot: auto, 1852.14,4816.51,114.22</Task>
+    <Task>Goto Hotspot: auto, 1841.52,4786.48,114.25</Task>
+    <Task>Goto Hotspot: auto, 1827.34,4752.4,114.1</Task>
+    <Task>Goto Hotspot: auto, 1814.98,4717.19,114.06</Task>
+    <Task>Goto Hotspot: auto, 1800.47,4689.78,113.89</Task>
+    <Task>Goto Hotspot: auto, 1834.78,4682.74,113.12</Task>
+    <Task>Goto Hotspot: auto, 1807.38,4666.1,110.74</Task>
+    <Task>Goto Hotspot: auto, 1788.24,4642.06,112.34</Task>
+    <Task>Goto Hotspot: auto, 1778.99,4609.84,114.5</Task>
+    <Task>Goto Hotspot: auto, 1774.42,4575.49,115.11</Task>
+    <Task>Goto Hotspot: auto, 1742.11,4560.9,115.22</Task>
+    <Task>Goto Hotspot: auto, 1712.13,4564.98,116.33</Task>
+    <Task>Goto Hotspot: auto, 1686.59,4548.41,120.5</Task>
+    <Task>Goto Hotspot: auto, 1656.28,4530.56,122.25</Task>
+    <Task>Goto Hotspot: auto, 1633.12,4510.84,119.54</Task>
+    <Task>Goto Hotspot: auto, 1605.43,4491.59,114.3</Task>
+  </TaskList>
+</PatrolArea>

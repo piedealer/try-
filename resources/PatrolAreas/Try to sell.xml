@@ -1,0 +1,24 @@
+<PatrolArea Name="Try to sell">
+  <WaypointDistance>30</WaypointDistance>
+  <TargetMaxLevel>999</TargetMaxLevel>
+  <TargetMinLevel>0</TargetMinLevel>
+  <TargetRange>30</TargetRange>
+  <Type>1</Type>
+  <UseClosestWaypoint>False</UseClosestWaypoint>
+  <PatrolMinLevel>1</PatrolMinLevel>
+  <PatrolMaxLevel>999</PatrolMaxLevel>
+  <TargetsPerHotspot>5</TargetsPerHotspot>
+  <Target Name="Didrika">
+    <bModified>True</bModified>
+    <NodeType>Mining</NodeType>
+    <bUseExactName>True</bUseExactName>
+    <MeleeDistance>4.5</MeleeDistance>
+    <AggroRange>999</AggroRange>
+  </Target>
+  <TaskList Name="Try to sell">
+    <Loops>9999</Loops>
+    <Task>Goto Hotspot: auto, 964.55,1189.23,113.53</Task>
+    <Task>Goto Hotspot: auto, 937.32,1204.68,113.53</Task>
+    <Task>Goto Hotspot: auto, 924.87,1208.31,112.63</Task>
+  </TaskList>
+</PatrolArea>

@@ -1,0 +1,25 @@
+<PatrolArea Name="Zombies in Rift">
+  <WaypointDistance>30</WaypointDistance>
+  <TargetMaxLevel>999</TargetMaxLevel>
+  <TargetMinLevel>0</TargetMinLevel>
+  <TargetRange>30</TargetRange>
+  <Type>1</Type>
+  <UseClosestWaypoint>False</UseClosestWaypoint>
+  <PatrolMinLevel>1</PatrolMinLevel>
+  <PatrolMaxLevel>999</PatrolMaxLevel>
+  <TargetsPerHotspot>5</TargetsPerHotspot>
+  <Target Name="Zombie" />
+  <TaskList Name="Zombies in Rift">
+    <Loops>9999</Loops>
+    <Task>Goto Hotspot: auto, 4138.24,2076.72,176.31</Task>
+    <Task>Goto Hotspot: auto, 4144.94,2040.62,169.51</Task>
+    <Task>Goto Hotspot: auto, 4112.26,2025.19,168.37</Task>
+    <Task>Goto Hotspot: auto, 4084.28,2043.48,170.34</Task>
+    <Task>Goto Hotspot: auto, 4061.86,2013.42,168.33</Task>
+    <Task>Goto Hotspot: auto, 4037.97,1990.89,168.85</Task>
+    <Task>Goto Hotspot: auto, 4055.14,2021.13,169.71</Task>
+    <Task>Goto Hotspot: auto, 4082.71,2043.65,170.29</Task>
+    <Task>Goto Hotspot: auto, 4114.37,2040.99,169.07</Task>
+    <Task>Goto Hotspot: auto, 4138.72,2059.14,171.08</Task>
+  </TaskList>
+</PatrolArea>
