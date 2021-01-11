@@ -1,0 +1,25 @@
+<TaskList Name="Eeastmarch Zone gather and vendor">
+  <Loops>1</Loops>
+  <Task>REPEAT LOOP: 99</Task>
+  <Task>Start Patrol: Eastmarch -Zone farm,0,1</Task>
+  <Task>Start Patrol: Eastmarch Zone-vendor,0,1</Task>
+  <Task>Goto Waypoint: 2444.54,1250.87,126.55</Task>
+  <Task>Set Waypoint Accuracy: 3</Task>
+  <Task>Target NPC: Cold Moon Inn</Task>
+  <Task>Press Key(s): E, 1000</Task>
+  <Task>Goto Waypoint: 2440.81,1251.24,68.04</Task>
+  <Task>Goto Waypoint: 2435.59,1251.17,68.04</Task>
+  <Task>Goto Waypoint: 2436,1259.57,68.04</Task>
+  <Task>Goto Waypoint: 2437.96,1260.3,68.04</Task>
+  <Task>Target NPC: Irghild Cold Moon</Task>
+  <Task>Press Key(s): E, 1000</Task>
+  <Task>Scaled Left Click: 1174,555,1718,985</Task>
+  <Task>Pause: 2000</Task>
+  <Task>Press Key(s): ESCAPE, 2000</Task>
+  <Task>Goto Waypoint: 2436.14,1261.15,68.04</Task>
+  <Task>Goto Waypoint: 2435.94,1251.51,68.04</Task>
+  <Task>Goto Waypoint: 2441.3,1251.22,68.05</Task>
+  <Task>Target NPC: Windhelm</Task>
+  <Task>Press Key(s): E, 2000</Task>
+  <Task>END REPEAT LOOP</Task>
+</TaskList>

@@ -1,0 +1,20 @@
+<TaskList Name="Alakir Anticlock">
+  <Loops>1</Loops>
+  <Task>REPEAT LOOP: 999</Task>
+  <Task>Start Patrol: Alkir Goat Head,0,1</Task>
+  <Task>Set Waypoint Accuracy: 3</Task>
+  <Task>Target NPC: Wayshrine</Task>
+  <Task>Press Key(s): E, 1000</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Start Patrol: Alakir Shrikes Dolmen,0,1</Task>
+  <Task>Set Waypoint Accuracy: 3</Task>
+  <Task>Target NPC: Wayshrine</Task>
+  <Task>Press Key(s): E, 1000</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Start Patrol: Alakir Aswala Dolmen,0,1</Task>
+  <Task>Set Waypoint Accuracy: 3</Task>
+  <Task>Target NPC: Wayshrine</Task>
+  <Task>Press Key(s): E, 1000</Task>
+  <Task>Pause: 3000</Task>
+  <Task>END REPEAT LOOP</Task>
+</TaskList>

@@ -1,0 +1,11 @@
+<TaskList Name="Auridone - Zone Farm">
+  <Loops>1</Loops>
+  <Task>REPEAT LOOP: 999</Task>
+  <Task>Start Patrol: Auridon - Zone Farm,0,1</Task>
+  <Task>Start Patrol: Aurdon -Vendor Run,0,1</Task>
+  <Task>Target NPC: Samardan</Task>
+  <Task>Press Key(s): E, 1000</Task>
+  <Task>Press Key(s): E, 3000</Task>
+  <Task>Press Key(s): ESCAPE, 3000</Task>
+  <Task>END REPEAT LOOP</Task>
+</TaskList>

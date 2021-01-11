@@ -1,0 +1,19 @@
+<TaskList Name="Beetle scutle farm">
+  <Loops>1</Loops>
+  <Task>Start Patrol: Vendor runKhenarthi's Roost,1,1</Task>
+  <Task>REPEAT LOOP: 999</Task>
+  <Task>Goto Waypoint: 994.22,1272.42,155.77</Task>
+  <Task>Goto Waypoint: 996.31,1264.49,156.79</Task>
+  <Task>Target NPC: Palmur-dra</Task>
+  <Task>Press Key(s): E</Task>
+  <Task>Pause: 1000</Task>
+  <Task>Press Key(s): E</Task>
+  <Task>Pause: 1000</Task>
+  <Task>Press Key(s): E</Task>
+  <Task>Pause: 1000</Task>
+  <Task>Press Key(s): ESCAPE</Task>
+  <Task>Pause: 1000</Task>
+  <Task>Start Patrol: Roost Thunder Bug farming - leveling and beetle scut,0,10</Task>
+  <Task>Start Patrol: Vendor runKhenarthi's Roost,1,1</Task>
+  <Task>END REPEAT LOOP</Task>
+</TaskList>

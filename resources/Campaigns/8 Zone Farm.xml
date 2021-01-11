@@ -1,0 +1,194 @@
+<TaskList Name="8 Zone Farm">
+  <Loops>1</Loops>
+  <Task>Start Patrol: Betnikh - Zone farm,1,1</Task>
+  <Task>Start Patrol: Bethnik - Zone farm to vendor,0,1</Task>
+  <Task>Goto Waypoint: 1003.97,972.29,138.84</Task>
+  <Task>Target NPC: Agli</Task>
+  <Task>Press Key(s): E, 1000</Task>
+  <Task>Pause: 1000</Task>
+  <Task>Scaled Left Click: 751,390,1051,702</Task>
+  <Task>Pause: 1000</Task>
+  <Task>Press Key(s): ESCAPE, 1000</Task>
+  <Task>Goto Waypoint: 1002.22,964.38,138.83</Task>
+  <Task>Goto Waypoint: 980.44,984.37,138.93</Task>
+  <Task>Goto Waypoint: 959.06,1011.06,124.8</Task>
+  <Task>Goto Waypoint: 986.54,1031.82,120.46</Task>
+  <Task>Goto Waypoint: 1015.93,1031.85,119.76</Task>
+  <Task>Goto Waypoint: 1038.55,1033.53,120.36</Task>
+  <Task>Goto Waypoint: 1051.93,1043.29,121.3</Task>
+  <Task>Goto Waypoint: 1056.85,1043.65,122.3</Task>
+  <Task>Goto Waypoint: 1056.74,1043.56,122.3</Task>
+  <Task>Target NPC: Wayshrine</Task>
+  <Task>Pause: 1000</Task>
+  <Task>Press Key(s): E, 2000</Task>
+  <Task>Scaled Right Click: 754,331,1051,702</Task>
+  <Task>Pause: 1000</Task>
+  <Task>Scaled Left Click: 661,379,1051,702</Task>
+  <Task>Press Key(s): E, 1000</Task>
+  <Task>Start Patrol: Shadowfen-Zone Farm,0,1</Task>
+  <Task>Start Patrol: Shadowfen -Zone Farm Vendor,0,1</Task>
+  <Task>Goto Waypoint: 2124.88,1127.21,107.94</Task>
+  <Task>Goto Waypoint: 2122.83,1126.2,107.94</Task>
+  <Task>Target NPC: Sayne Indalor</Task>
+  <Task>Press Key(s): E, 1000</Task>
+  <Task>Scaled Left Click: 740,371,1051,702</Task>
+  <Task>Pause: 2000</Task>
+  <Task>Press Key(s): ESCAPE, 1000</Task>
+  <Task>Goto Waypoint: 2123.99,1126.8,107.94</Task>
+  <Task>Goto Waypoint: 2142.85,1128.31,107.68</Task>
+  <Task>Goto Waypoint: 2165.44,1115.78,107.66</Task>
+  <Task>Goto Waypoint: 2200.99,1135.05,107.37</Task>
+  <Task>Goto Waypoint: 2252.8,1122.59,106.79</Task>
+  <Task>Goto Waypoint: 2296.21,1110.15,106.61</Task>
+  <Task>Goto Waypoint: 2307.71,1106.51,106</Task>
+  <Task>Goto Waypoint: 2314.94,1093.93,106.66</Task>
+  <Task>Goto Waypoint: 2317.01,1090.16,107.14</Task>
+  <Task>Target NPC: Wayshrine</Task>
+  <Task>Press Key(s): E, 1000</Task>
+  <Task>Pause: 1000</Task>
+  <Task>Scaled Right Click: 750,311,1051,702</Task>
+  <Task>Pause: 1000</Task>
+  <Task>Scaled Left Click: 624,233,1051,702</Task>
+  <Task>Pause: 1000</Task>
+  <Task>Press Key(s): E, 1000</Task>
+  <Task>Pause: 1000</Task>
+  <Task>Start Patrol: Bleakrock gathering,0,1</Task>
+  <Task>Goto Waypoint: 1009.85,934.09,105.96</Task>
+  <Task>Goto Waypoint: 1010.48,949.81,104.88</Task>
+  <Task>Goto Waypoint: 1025.51,993.11,104.8</Task>
+  <Task>Goto Waypoint: 1029.23,1010.81,104.73</Task>
+  <Task>Goto Waypoint: 1002.81,1041.5,107.93</Task>
+  <Task>Goto Waypoint: 990.01,1077.07,111</Task>
+  <Task>Goto Waypoint: 1003.04,1117.54,111.01</Task>
+  <Task>Goto Waypoint: 1006.28,1146.08,111.21</Task>
+  <Task>Goto Waypoint: 980.16,1172.53,111.1</Task>
+  <Task>Goto Waypoint: 965.75,1187.75,113.48</Task>
+  <Task>Goto Waypoint: 964.11,1193.25,113.53</Task>
+  <Task>Goto Waypoint: 964.18,1194.79,113.67</Task>
+  <Task>Target NPC: Linnea</Task>
+  <Task>Press Key(s): E, 1000</Task>
+  <Task>Left Click: 1353,637</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Press Key(s): ESCAPE, 1000</Task>
+  <Task>Goto Waypoint: 961.02,1189.22,113.53</Task>
+  <Task>Goto Waypoint: 984.43,1171.32,111.1</Task>
+  <Task>Goto Waypoint: 1005.65,1124.67,111.06</Task>
+  <Task>Goto Waypoint: 991.16,1066.53,110.99</Task>
+  <Task>Goto Waypoint: 1017.5,1022.9,105.43</Task>
+  <Task>Goto Waypoint: 1026.98,1016.73,105.07</Task>
+  <Task>Goto Waypoint: 1027.55,994.35,104.51</Task>
+  <Task>Goto Waypoint: 1020.47,959.11,105.6</Task>
+  <Task>Goto Waypoint: 1018.73,938.53,107.47</Task>
+  <Task>Target NPC: Wayshrine</Task>
+  <Task>Press Key(s): E, 1000</Task>
+  <Task>Scaled Right Click: 742,159,1043,694</Task>
+  <Task>Pause: 1000</Task>
+  <Task>Scaled Left Click: 380,488,1043,694</Task>
+  <Task>Press Key(s): E, 1000</Task>
+  <Task>Start Patrol: Auridon - Zone Farm,0,1</Task>
+  <Task>Goto Waypoint: 2537.9,3769.67,120.72</Task>
+  <Task>Goto Waypoint: 2497.13,3811.43,120.26</Task>
+  <Task>Goto Waypoint: 2478.54,3837.46,120.26</Task>
+  <Task>Goto Waypoint: 2447.57,3886.25,115.2</Task>
+  <Task>Goto Waypoint: 2426.28,3935.24,107.12</Task>
+  <Task>Goto Waypoint: 2428.62,3953.18,106.46</Task>
+  <Task>Goto Waypoint: 2432.95,3978.04,106.8</Task>
+  <Task>Goto Waypoint: 2423.37,3998.23,107</Task>
+  <Task>Goto Waypoint: 2421.68,4040.74,106.52</Task>
+  <Task>Goto Waypoint: 2421.65,4062.94,101.81</Task>
+  <Task>Goto Waypoint: 2432.44,4065.4,102.07</Task>
+  <Task>Goto Waypoint: 2434.27,4062.67,102.23</Task>
+  <Task>Target NPC: Samardan</Task>
+  <Task>Press Key(s): E, 1030</Task>
+  <Task>Scaled Left Click: 811,387,1043,694</Task>
+  <Task>Pause: 1000</Task>
+  <Task>Press Key(s): ESCAPE, 1000</Task>
+  <Task>Goto Waypoint: 2431.33,4067.7,102.06</Task>
+  <Task>Goto Waypoint: 2419.33,4065.63,101.63</Task>
+  <Task>Goto Waypoint: 2420.22,4039.93,106.87</Task>
+  <Task>Goto Waypoint: 2421.94,4009.43,107.01</Task>
+  <Task>Goto Waypoint: 2423.9,3972.64,107.91</Task>
+  <Task>Target NPC: Wayshrine</Task>
+  <Task>Press Key(s): E, 1000</Task>
+  <Task>Scaled Right Click: 746,143,1043,694</Task>
+  <Task>Pause: 1000</Task>
+  <Task>Scaled Left Click: 600,293,1043,694</Task>
+  <Task>Pause: 1000</Task>
+  <Task>Press Key(s): E, 1000</Task>
+  <Task>Start Patrol: Riften - Zone Farm,0,1</Task>
+  <Task>Goto Waypoint: 3923.21,2089.69,238.78</Task>
+  <Task>Goto Waypoint: 3930.78,2108.26,238.69</Task>
+  <Task>Goto Waypoint: 3905.96,2108.24,243.18</Task>
+  <Task>Goto Waypoint: 3850.82,2083.67,247.28</Task>
+  <Task>Goto Waypoint: 3782.79,2100.08,248</Task>
+  <Task>Goto Waypoint: 3759.88,2142.26,250.93</Task>
+  <Task>Goto Waypoint: 3715.56,2161.37,247.51</Task>
+  <Task>Goto Waypoint: 3640.6,2084.75,246.96</Task>
+  <Task>Goto Waypoint: 3616.02,2086.14,247</Task>
+  <Task>Goto Waypoint: 3617.69,2038.53,246.66</Task>
+  <Task>Goto Waypoint: 3617.24,2024.01,246.96</Task>
+  <Task>Goto Waypoint: 3614.08,2018.45,247.05</Task>
+  <Task>Goto Waypoint: 3620.22,2006.11,246.96</Task>
+  <Task>Goto Waypoint: 3618.51,2004.05,246.91</Task>
+  <Task>Goto Waypoint: 3628.61,2006.06,247.04</Task>
+  <Task>Target NPC: Boran</Task>
+  <Task>Press Key(s): E, 1000</Task>
+  <Task>Scaled Left Click: 710,365,1043,694</Task>
+  <Task>Pause: 1000</Task>
+  <Task>Press Key(s): ESCAPE, 1000</Task>
+  <Task>Goto Waypoint: 3617.48,2003.5,246.93</Task>
+  <Task>Goto Waypoint: 3618.88,1985.7,247.02</Task>
+  <Task>Goto Waypoint: 3620.21,1947.37,246.99</Task>
+  <Task>Goto Waypoint: 3660.42,1945.75,247.05</Task>
+  <Task>Goto Waypoint: 3661.74,1968.6,247.14</Task>
+  <Task>Goto Waypoint: 3683.02,1991.69,247.06</Task>
+  <Task>Goto Waypoint: 3698.86,1984.68,247.94</Task>
+  <Task>Goto Waypoint: 3699.21,1980.19,248.99</Task>
+  <Task>Target NPC: Wayshrine</Task>
+  <Task>Press Key(s): E, 1000</Task>
+  <Task>Scaled Right Click: 736,164,1043,694</Task>
+  <Task>Pause: 1000</Task>
+  <Task>Scaled Left Click: 524,519,1043,694</Task>
+  <Task>Press Key(s): E, 1000</Task>
+  <Task>Start Patrol: Khenarthis Roost 29.05.2019,0,1</Task>
+  <Task>Start Patrol: Khenarthis Roost to Vendor,0,1</Task>
+  <Task>Goto Waypoint: 997.81,1264.32,156.7</Task>
+  <Task>Target NPC: Palmur-dra</Task>
+  <Task>Press Key(s): E, 1000</Task>
+  <Task>Press Key(s): E, 1000</Task>
+  <Task>Press Key(s): ESCAPE, 1000</Task>
+  <Task>Goto Waypoint: 997.81,1264.32,156.7</Task>
+  <Task>Goto Waypoint: 1011.93,1290.67,155.96</Task>
+  <Task>Goto Waypoint: 1001.73,1296.09,155.79</Task>
+  <Task>Goto Waypoint: 1006.93,1305.6,156.31</Task>
+  <Task>Goto Waypoint: 1018.81,1329.05,165.06</Task>
+  <Task>Goto Waypoint: 1005.17,1353.14,166.25</Task>
+  <Task>Target NPC: Wayshrine</Task>
+  <Task>Press Key(s): E, 1000</Task>
+  <Task>Scaled Right Click: 728,161,1043,694</Task>
+  <Task>Press Key(s): E, 1000</Task>
+  <Task>Scaled Left Click: 592,226,1043,694</Task>
+  <Task>Start Patrol: Eastmarch -Zone farm,0,1</Task>
+  <Task>Press Key(s): M, 1000</Task>
+  <Task>Scaled Right Click: 774,103,1043,694</Task>
+  <Task>Pause: 1000</Task>
+  <Task>Scaled Left Click: 338,387,1043,694</Task>
+  <Task>Pause: 1000</Task>
+  <Task>Press Key(s): E, 1000</Task>
+  <Task>Pause: 10000</Task>
+  <Task>Start Patrol: Stros Mkai Vendor profile,0,1</Task>
+  <Task>Target NPC: Candariel</Task>
+  <Task>Press Key(s): E, 1000</Task>
+  <Task>Press Key(s): E, 1000</Task>
+  <Task>Press Key(s): ESCAPE, 1000</Task>
+  <Task>Start Patrol: Stros M'Kai 01.05.2019,0,1</Task>
+  <Task>Press Key(s): M, 1000</Task>
+  <Task>Pause: 1000</Task>
+  <Task>Scaled Right Click: 753,111,1043,694</Task>
+  <Task>Pause: 1000</Task>
+  <Task>Scaled Left Click: 298,324,1043,694</Task>
+  <Task>Pause: 1000</Task>
+  <Task>Scaled Left Click: 321,363,1043,694</Task>
+  <Task>Press Key(s): E, 1000</Task>
+  <Task>Pause: 10000</Task>
+</TaskList>
