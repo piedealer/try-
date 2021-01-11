@@ -1,0 +1,26 @@
+﻿<Dictionary name="MMOViperSettings" type="System.Collections.Hashtable, mscorlib">
+  <Items>
+    <Item>
+      <Simple type="System.String, mscorlib" value="PluginManager" />
+      <Dictionary type="System.Collections.Hashtable, mscorlib">
+        <Items>
+          <Item>
+            <Simple type="System.String, mscorlib" value="EnabledPlugins" />
+            <Complex type="MMOViper.x71a20e267d3fe6fc+xf1050164936a47d5, MMOViperBot">
+              <Properties>
+                <Simple name="x759aa16c2016a289" value="EnabledPlugins" />
+                <Simple name="x3146d638ec378671" type="System.RuntimeType, mscorlib" value="System.Collections.ArrayList, mscorlib" />
+                <Collection name="xd2f68ee6f47e9dfb" type="System.Collections.ArrayList, mscorlib">
+                  <Properties>
+                    <Simple name="Capacity" value="4" />
+                  </Properties>
+                  <Items />
+                </Collection>
+              </Properties>
+            </Complex>
+          </Item>
+        </Items>
+      </Dictionary>
+    </Item>
+  </Items>
+</Dictionary>
