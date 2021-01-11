@@ -10,6 +10,6 @@
   <TargetsPerHotspot>5</TargetsPerHotspot>
   <TaskList Name="Shadowfen -Zone Farm Vendor">
     <Loops>9999</Loops>
-    <Task>Goto Hotspot: auto, 2124.88,1127.21,107.94</Task>
+    <Task>Goto Hotspot: auto, 2188.46,1109.07,108.14</Task>
   </TaskList>
 </PatrolArea>
