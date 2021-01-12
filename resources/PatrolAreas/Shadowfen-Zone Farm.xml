@@ -2,7 +2,7 @@
   <WaypointDistance>40</WaypointDistance>
   <TargetMaxLevel>999</TargetMaxLevel>
   <TargetMinLevel>0</TargetMinLevel>
-  <TargetRange>60</TargetRange>
+  <TargetRange>58</TargetRange>
   <Type>1</Type>
   <UseClosestWaypoint>True</UseClosestWaypoint>
   <PatrolMinLevel>1</PatrolMinLevel>
