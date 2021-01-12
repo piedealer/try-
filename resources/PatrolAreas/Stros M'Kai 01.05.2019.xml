@@ -4,7 +4,7 @@
   <TargetMinLevel>0</TargetMinLevel>
   <TargetRange>25</TargetRange>
   <Type>1</Type>
-  <UseClosestWaypoint>True</UseClosestWaypoint>
+  <UseClosestWaypoint>False</UseClosestWaypoint>
   <PatrolMinLevel>1</PatrolMinLevel>
   <PatrolMaxLevel>999</PatrolMaxLevel>
   <TargetsPerHotspot>5</TargetsPerHotspot>
@@ -55,7 +55,7 @@
   <Target Name="Maple" />
   <Target Name="Columbine" />
   <TaskList Name="Stros M'Kai 01.05.2019">
-    <Loops>9999</Loops>
+    <Loops>1</Loops>
     <Task>Goto Hotspot: auto, 918.15,918.14,103.47</Task>
     <Task>Goto Hotspot: auto, 916.02,899.17,102.02</Task>
     <Task>Goto Hotspot: auto, 898.72,887.71,101.82</Task>
