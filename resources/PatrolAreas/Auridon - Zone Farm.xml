@@ -38,7 +38,7 @@
   <Target Name="White Cap" />
   <Target Name="Stinkhorn" />
   <TaskList Name="Auridon - Zone Farm">
-    <Loops>9999</Loops>
+    <Loops>1</Loops>
     <Task>Goto Hotspot: auto, 2497.67,3781.2,120.38</Task>
     <Task>Goto Hotspot: auto, 2550.46,3779.22,121.15</Task>
     <Task>Goto Hotspot: auto, 2573.42,3824.91,121.87</Task>
