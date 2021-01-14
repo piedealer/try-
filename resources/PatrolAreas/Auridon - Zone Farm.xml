@@ -37,6 +37,8 @@
   <Target Name="Nightshade" />
   <Target Name="White Cap" />
   <Target Name="Stinkhorn" />
+  <Target Name="Violet Coprinus" />
+  <Target Name="Oak" />
   <TaskList Name="Auridon - Zone Farm">
     <Loops>1</Loops>
     <Task>Goto Hotspot: auto, 2497.67,3781.2,120.38</Task>
