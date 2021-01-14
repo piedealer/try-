@@ -76,7 +76,7 @@
   <Target Name="Wormwood" />
   <Target Name="Blue Entoloma" />
   <TaskList Name="Bleakrock gathering">
-    <Loops>99999</Loops>
+    <Loops>1</Loops>
     <Task>Goto Hotspot: auto, 1011.46,926.98,104.95</Task>
     <Task>Goto Hotspot: auto, 1028.1,894.16,104.71</Task>
     <Task>Goto Hotspot: auto, 1017.1,866.42,101.26</Task>
