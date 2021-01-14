@@ -5,6 +5,7 @@
   <Task>Start Patrol: Rift Zone Farm vendor,0,1</Task>
   <Task>Goto Waypoint: 3633.2,2011.26,247.06</Task>
   <Task>Set Waypoint Accuracy: 3</Task>
+  <Task>Pause: 60000</Task>
   <Task>Target NPC: Tolfari</Task>
   <Task>Press Key(s): E, 3000</Task>
   <Task>Pause: 1000</Task>

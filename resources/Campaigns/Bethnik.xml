@@ -4,6 +4,7 @@
   <Task>Start Patrol: Betnikh - Zone farm,1,1</Task>
   <Task>Start Patrol: Bethnik - Zone farm to vendor,0,1</Task>
   <Task>Goto Waypoint: 1002.36,972.35,138.9</Task>
+  <Task>Pause: 60000</Task>
   <Task>Target NPC: Agli</Task>
   <Task>Press Key(s): E, 1000</Task>
   <Task>Scaled Left Click: 703,414,1087,752</Task>

@@ -11,6 +11,7 @@
   <Task>Goto Waypoint: 2435.59,1251.17,68.04</Task>
   <Task>Goto Waypoint: 2436,1259.57,68.04</Task>
   <Task>Goto Waypoint: 2437.96,1260.3,68.04</Task>
+  <Task>Pause: 60000</Task>
   <Task>Target NPC: Irghild Cold Moon</Task>
   <Task>Press Key(s): E, 1000</Task>
   <Task>Scaled Left Click: 1174,555,1718,985</Task>

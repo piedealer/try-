@@ -3,6 +3,7 @@
   <Task>REPEAT LOOP: 99</Task>
   <Task>Start Patrol: Stros M'Kai 01.05.2019,0,1</Task>
   <Task>Start Patrol: Stros Mkai Vendor profile,0,1</Task>
+  <Task>Pause: 60000</Task>
   <Task>Target NPC: Candariel</Task>
   <Task>Press Key(s): E, 2000</Task>
   <Task>Press Key(s): E, 2000</Task>

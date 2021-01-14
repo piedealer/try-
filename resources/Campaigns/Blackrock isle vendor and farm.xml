@@ -3,6 +3,7 @@
   <Task>REPEAT LOOP: 99</Task>
   <Task>Start Patrol: Bleakrock gathering,0,1</Task>
   <Task>Start Patrol: Blarock zone farm and vendor,0,1</Task>
+  <Task>Pause: 60000</Task>
   <Task>Target NPC: Sjarla</Task>
   <Task>Press Key(s): E, 2000</Task>
   <Task>Press Key(s): E, 3000</Task>
