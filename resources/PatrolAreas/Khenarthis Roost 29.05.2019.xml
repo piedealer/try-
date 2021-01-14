@@ -59,6 +59,11 @@
   <Target Name="Iron Ore" />
   <Target Name="Blessed Thistle" />
   <Target Name="Pewter Seam" />
+  <Target Name="Ore">
+    <bModified>True</bModified>
+    <MeleeDistance>5</MeleeDistance>
+    <AggroRange>999</AggroRange>
+  </Target>
   <TaskList Name="Khenarthis Roost 29.05.2019">
     <Loops>1</Loops>
     <Task>Goto Hotspot: auto, 1195.31,1020.09,112.09</Task>
