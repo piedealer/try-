@@ -3,6 +3,7 @@
   <Task>REPEAT LOOP: 999</Task>
   <Task>Start Patrol: Auridon - Zone Farm,0,1</Task>
   <Task>Start Patrol: Aurdon -Vendor Run,0,1</Task>
+  <Task>Pause: 60000</Task>
   <Task>Target NPC: Samardan</Task>
   <Task>Press Key(s): E, 1000</Task>
   <Task>Press Key(s): E, 3000</Task>
