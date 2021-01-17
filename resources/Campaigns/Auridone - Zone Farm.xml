@@ -5,8 +5,10 @@
   <Task>Start Patrol: Aurdon -Vendor Run,0,1</Task>
   <Task>Pause: 60000</Task>
   <Task>Target NPC: Samardan</Task>
-  <Task>Press Key(s): E, 1000</Task>
-  <Task>Press Key(s): E, 3000</Task>
-  <Task>Press Key(s): ESCAPE, 3000</Task>
+  <Task>Press Key(s): E, 5000</Task>
+  <Task>Pause: 5000</Task>
+  <Task>Scaled Left Click: 708,350,1086,622</Task>
+  <Task>Pause: 5000</Task>
+  <Task>Press Key(s): ESCAPE, 5000</Task>
   <Task>END REPEAT LOOP</Task>
 </TaskList>
