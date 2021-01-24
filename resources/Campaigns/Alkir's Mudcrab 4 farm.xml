@@ -1,7 +1,7 @@
 <TaskList Name="Alkir's Mudcrab 4 farm">
   <Loops>1</Loops>
   <Task>REPEAT LOOP: 99999</Task>
-  <Task>Start Patrol: Alki'r Mudcrab 4 place,0,500</Task>
+  <Task>Start Patrol: Alki'r Mudcrab 4 place,0,250</Task>
   <Task>Start Patrol: Alkir's Mudcrab 4 vendor,0,1</Task>
   <Task>Goto Waypoint: 2175.71,1345.78,155.96</Task>
   <Task>Set Waypoint Accuracy: 3</Task>
