@@ -1,0 +1,53 @@
+<PatrolArea Name="Bethnik Mudcrab 7 place">
+  <WaypointDistance>30</WaypointDistance>
+  <TargetMaxLevel>999</TargetMaxLevel>
+  <TargetMinLevel>0</TargetMinLevel>
+  <TargetRange>30</TargetRange>
+  <Type>1</Type>
+  <UseClosestWaypoint>False</UseClosestWaypoint>
+  <PatrolMinLevel>1</PatrolMinLevel>
+  <PatrolMaxLevel>999</PatrolMaxLevel>
+  <TargetsPerHotspot>5</TargetsPerHotspot>
+  <Target Name="Mudcrab" />
+  <TaskList Name="Bethnik Mudcrab 7 place">
+    <Loops>9999</Loops>
+    <Task>Goto Hotspot: auto, 1173.76,1609.83,105.27</Task>
+    <Task>Goto Hotspot: auto, 1142.57,1610.86,104.95</Task>
+    <Task>Goto Hotspot: auto, 1111.4,1602.51,105.23</Task>
+    <Task>Goto Hotspot: auto, 1074.08,1604.66,104.77</Task>
+    <Task>Goto Hotspot: auto, 1036.58,1612.05,105.21</Task>
+    <Task>Goto Hotspot: auto, 1003.25,1593.16,104.81</Task>
+    <Task>Goto Hotspot: auto, 972.99,1585.93,104.95</Task>
+    <Task>Goto Hotspot: auto, 934.34,1579.13,105.12</Task>
+    <Task>Goto Hotspot: auto, 894,1569.51,104.48</Task>
+    <Task>Goto Hotspot: auto, 856.45,1556.8,105.79</Task>
+    <Task>Goto Hotspot: auto, 831.17,1540.62,104.77</Task>
+    <Task>Goto Hotspot: auto, 801.16,1533.78,104.74</Task>
+    <Task>Goto Hotspot: auto, 779.7,1503.31,104.42</Task>
+    <Task>Goto Hotspot: auto, 744.65,1498.75,105.33</Task>
+    <Task>Goto Hotspot: auto, 719.42,1474.02,105.59</Task>
+    <Task>Goto Hotspot: auto, 688.8,1452.16,105.71</Task>
+    <Task>Goto Hotspot: auto, 653.09,1440.6,104.83</Task>
+    <Task>Goto Hotspot: auto, 631.01,1413.22,105.67</Task>
+    <Task>Goto Hotspot: auto, 594.77,1406.63,105.12</Task>
+    <Task>Goto Hotspot: auto, 577.04,1382.37,105.81</Task>
+    <Task>Goto Hotspot: auto, 554.94,1360.84,105.35</Task>
+    <Task>Goto Hotspot: auto, 543.46,1325.52,106.2</Task>
+    <Task>Goto Hotspot: auto, 530.94,1290.95,105.56</Task>
+    <Task>Goto Hotspot: auto, 502.95,1267.07,105.57</Task>
+    <Task>Goto Hotspot: auto, 480.13,1242.2,107.07</Task>
+    <Task>Goto Hotspot: auto, 480.01,1209.75,105</Task>
+    <Task>Goto Hotspot: auto, 487.32,1173.13,105.35</Task>
+    <Task>Goto Hotspot: auto, 479.71,1135.44,105.57</Task>
+    <Task>Goto Hotspot: auto, 460.28,1107.76,104.78</Task>
+    <Task>Goto Hotspot: auto, 458.91,1070.84,105.26</Task>
+    <Task>Goto Hotspot: auto, 458.12,1037.99,104.05</Task>
+    <Task>Goto Hotspot: auto, 431.92,1014.41,105.01</Task>
+    <Task>Goto Hotspot: auto, 457.91,992.94,105.18</Task>
+    <Task>Goto Hotspot: auto, 480.66,967.51,105.36</Task>
+    <Task>Goto Hotspot: auto, 500.41,935.48,107.63</Task>
+    <Task>Goto Hotspot: auto, 523.21,846.33,105.35</Task>
+    <Task>Goto Hotspot: auto, 523.88,846.19,105.37</Task>
+    <Task>Goto Hotspot: auto, 524.79,813.26,104.82</Task>
+  </TaskList>
+</PatrolArea>

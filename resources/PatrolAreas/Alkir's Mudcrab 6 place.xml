@@ -1,0 +1,23 @@
+<PatrolArea Name="Alkir's Mudcrab 6 place">
+  <WaypointDistance>30</WaypointDistance>
+  <TargetMaxLevel>999</TargetMaxLevel>
+  <TargetMinLevel>0</TargetMinLevel>
+  <TargetRange>30</TargetRange>
+  <Type>1</Type>
+  <UseClosestWaypoint>False</UseClosestWaypoint>
+  <PatrolMinLevel>1</PatrolMinLevel>
+  <PatrolMaxLevel>999</PatrolMaxLevel>
+  <TargetsPerHotspot>5</TargetsPerHotspot>
+  <Target Name="Mudcrab" />
+  <Target Name="Water Hyacinth" />
+  <TaskList Name="Alkir's Mudcrab 6 place">
+    <Loops>9999</Loops>
+    <Task>Goto Hotspot: auto, 3770.16,627.75,100.42</Task>
+    <Task>Goto Hotspot: auto, 3744.95,644.22,100.55</Task>
+    <Task>Goto Hotspot: auto, 3705.65,648.92,100.68</Task>
+    <Task>Goto Hotspot: auto, 3669.64,652.82,100.26</Task>
+    <Task>Goto Hotspot: auto, 3704.21,646.27,100.54</Task>
+    <Task>Goto Hotspot: auto, 3742.15,642.26,100.15</Task>
+    <Task>Goto Hotspot: auto, 3771.1,626.77,100.6</Task>
+  </TaskList>
+</PatrolArea>

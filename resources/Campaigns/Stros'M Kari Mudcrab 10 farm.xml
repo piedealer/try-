@@ -1,0 +1,16 @@
+<TaskList Name="Stros'M Kari Mudcrab 10 farm">
+  <Loops>1</Loops>
+  <Task>REPEAT LOOP: 999999</Task>
+  <Task>Start Patrol: Stros M'kai 10 farm,0,50</Task>
+  <Task>Start Patrol: Stros'sM Kai 10 vendor,0,1</Task>
+  <Task>Goto Waypoint: 1046.22,993.23,101.96</Task>
+  <Task>Set Waypoint Accuracy: 3</Task>
+  <Task>Target NPC: Candariel</Task>
+  <Task>Pause: 5000</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 10000</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 5000</Task>
+  <Task>Press Key(s): ESCAPE, 1000</Task>
+  <Task>END REPEAT LOOP</Task>
+</TaskList>
