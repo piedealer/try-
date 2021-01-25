@@ -10,7 +10,7 @@
   <TargetsPerHotspot>5</TargetsPerHotspot>
   <Target Name="Mudcrab" />
   <TaskList Name="Stros Mkari Mudcrab 9 farm">
-    <Loops>9999</Loops>
+    <Loops>50</Loops>
     <Task>Goto Hotspot: auto, 1094.59,1559.48,100.21</Task>
     <Task>Goto Hotspot: auto, 1060.68,1571.02,100.41</Task>
     <Task>Goto Hotspot: auto, 1026.66,1586.19,102.61</Task>

@@ -10,7 +10,7 @@
   <TargetsPerHotspot>5</TargetsPerHotspot>
   <Target Name="Mudcrab" />
   <TaskList Name="Bethnik Mudcrab 7 place">
-    <Loops>9999</Loops>
+    <Loops>30</Loops>
     <Task>Goto Hotspot: auto, 1173.76,1609.83,105.27</Task>
     <Task>Goto Hotspot: auto, 1142.57,1610.86,104.95</Task>
     <Task>Goto Hotspot: auto, 1111.4,1602.51,105.23</Task>
