@@ -1,17 +1,15 @@
-<PatrolArea Name="User's Follow Bot">
+<PatrolArea Name="Alkir's Mudcrab 6 place get rid of agro">
   <WaypointDistance>30</WaypointDistance>
   <TargetMaxLevel>999</TargetMaxLevel>
   <TargetMinLevel>0</TargetMinLevel>
-  <TargetRange>100</TargetRange>
+  <TargetRange>30</TargetRange>
   <Type>1</Type>
   <UseClosestWaypoint>False</UseClosestWaypoint>
   <PatrolMinLevel>1</PatrolMinLevel>
   <PatrolMaxLevel>999</PatrolMaxLevel>
   <TargetsPerHotspot>5</TargetsPerHotspot>
-  <Target Name="Mudcrab" />
-  <TaskList Name="User's Follow Bot">
+  <TaskList Name="Alkir's Mudcrab 6 place get rid of agro">
     <Loops>9999</Loops>
-    <Task>Pause: 1000</Task>
-    <Task>Goto Task Number: 1</Task>
+    <Task>Goto Hotspot: auto, 3642.97,768.62,114</Task>
   </TaskList>
 </PatrolArea>

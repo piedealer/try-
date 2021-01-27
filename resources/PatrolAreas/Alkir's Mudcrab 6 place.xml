@@ -10,6 +10,7 @@
   <TargetsPerHotspot>5</TargetsPerHotspot>
   <Target Name="Mudcrab" />
   <Target Name="Water Hyacinth" />
+  <Target Name="Nirnroot" />
   <TaskList Name="Alkir's Mudcrab 6 place">
     <Loops>9999</Loops>
     <Task>Goto Hotspot: auto, 3770.16,627.75,100.42</Task>
