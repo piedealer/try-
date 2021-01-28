@@ -4,7 +4,7 @@
   <Task>Start Patrol: Alkir's Mudcrab 6 place get rid of agro,0,1</Task>
   <Task>Press Key(s): M, 300</Task>
   <Task>Pause: 3000</Task>
-  <Task>Scaled Left Click: 466,295,1156,566</Task>
+  <Task>Scaled Left Click: 298,276,814,522</Task>
   <Task>Pause: 3000</Task>
   <Task>Press Key(s): E, 3000</Task>
   <Task>Pause: 30000</Task>
@@ -34,13 +34,15 @@
   <Task>Goto Waypoint: 2065.45,1453.57,136.98</Task>
   <Task>Goto Waypoint: 2065.77,1478.33,124.72</Task>
   <Task>Goto Waypoint: 2068.47,1507.7,123.07</Task>
-  <Task>Goto Waypoint: 2039.64,1532.98,121.85</Task>
-  <Task>Goto Waypoint: 2018.25,1546.65,113.05</Task>
-  <Task>Goto Waypoint: 2018.44,1557.02,114.31</Task>
+  <Task>Goto Waypoint: 2017.69,1545.31,113.29</Task>
+  <Task>Goto Waypoint: 2018.34,1553.05,113.35</Task>
+  <Task>Goto Waypoint: 2018.74,1552.93,113.27</Task>
   <Task>Pause: 1000</Task>
   <Task>Target NPC: Sentinel Wayshrine</Task>
+  <Task>Pause: 1000</Task>
+  <Task>Press Key(s): E, 1000</Task>
   <Task>Pause: 3000</Task>
-  <Task>Scaled Left Click: 644,249,1156,566</Task>
+  <Task>Scaled Left Click: 469,229,814,522</Task>
   <Task>Pause: 1000</Task>
   <Task>Press Key(s): E, 300</Task>
   <Task>Pause: 30000</Task>
