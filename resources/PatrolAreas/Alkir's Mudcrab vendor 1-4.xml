@@ -10,6 +10,6 @@
   <TargetsPerHotspot>5</TargetsPerHotspot>
   <TaskList Name="Alkir's Mudcrab vendor 1-4">
     <Loops>9999</Loops>
-    <Task>Goto Hotspot: auto, 2174.96,1346.49,155.96</Task>
+    <Task>Goto Hotspot: auto, 2109.25,1373.44,141.81</Task>
   </TaskList>
 </PatrolArea>

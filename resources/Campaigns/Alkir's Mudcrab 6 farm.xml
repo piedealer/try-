@@ -4,37 +4,45 @@
   <Task>Start Patrol: Alkir's Mudcrab 6 place get rid of agro,0,1</Task>
   <Task>Press Key(s): M, 300</Task>
   <Task>Pause: 3000</Task>
-  <Task>Scaled Left Click: 298,276,814,522</Task>
+  <Task>Scaled Left Click: 314,310,876,592</Task>
   <Task>Pause: 3000</Task>
   <Task>Press Key(s): E, 3000</Task>
   <Task>Pause: 30000</Task>
   <Task>Start Patrol: Alkir's Mudcrab vendor 1-4,0,1</Task>
-  <Task>Goto Waypoint: 2175.71,1345.78,155.96</Task>
+  <Task>Goto Waypoint: 2109.25,1373.44,141.81</Task>
   <Task>Set Waypoint Accuracy: 3</Task>
   <Task>Pause: 1000</Task>
-  <Task>Target NPC: Audric</Task>
-  <Task>Pause: 5000</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Goto Waypoint: 2094.77,1371.12,51.9</Task>
+  <Task>Goto Waypoint: 2102.94,1367.77,51.9</Task>
+  <Task>Target NPC: Rudabeh</Task>
+  <Task>Pause: 1500</Task>
   <Task>Press Key(s): E, 300</Task>
   <Task>Pause: 10000</Task>
   <Task>Press Key(s): E, 300</Task>
   <Task>Pause: 5000</Task>
+  <Task>Press Key(s): X, 2000</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Press Key(s): E, 2000</Task>
+  <Task>Pause: 2000</Task>
   <Task>Press Key(s): ESCAPE, 1000</Task>
   <Task>Pause: 1000</Task>
-  <Task>Goto Waypoint: 2174.64,1346.93,155.97</Task>
-  <Task>Goto Waypoint: 2176.56,1339.53,155.97</Task>
-  <Task>Goto Waypoint: 2185.86,1330.54,153.19</Task>
-  <Task>Goto Waypoint: 2196.52,1340.25,152.86</Task>
-  <Task>Goto Waypoint: 2177.65,1360.83,149.89</Task>
-  <Task>Goto Waypoint: 2170.47,1361.16,150.78</Task>
-  <Task>Goto Waypoint: 2173.97,1385.62,137.8</Task>
-  <Task>Goto Waypoint: 2132.59,1394.13,137.62</Task>
-  <Task>Goto Waypoint: 2107.85,1431.05,138.37</Task>
-  <Task>Goto Waypoint: 2103.59,1455.81,139.44</Task>
-  <Task>Goto Waypoint: 2083.16,1457.03,140.15</Task>
-  <Task>Goto Waypoint: 2065.45,1453.57,136.98</Task>
-  <Task>Goto Waypoint: 2065.77,1478.33,124.72</Task>
-  <Task>Goto Waypoint: 2068.47,1507.7,123.07</Task>
-  <Task>Goto Waypoint: 2017.69,1545.31,113.29</Task>
+  <Task>Goto Waypoint: 2095.66,1369.81,51.9</Task>
+  <Task>Goto Waypoint: 2099.93,1377.98,51.9</Task>
+  <Task>Press Key(s): E, 1000</Task>
+  <Task>Pause: 1000</Task>
+  <Task>Goto Waypoint: 2100.28,1380.93,141.72</Task>
+  <Task>Goto Waypoint: 2100.28,1389.87,141.72</Task>
+  <Task>Goto Waypoint: 2112.12,1390.11,137.75</Task>
+  <Task>Goto Waypoint: 2111.09,1413.38,137.79</Task>
+  <Task>Goto Waypoint: 2104.33,1455.32,139.29</Task>
+  <Task>Goto Waypoint: 2085.16,1457.88,139.9</Task>
+  <Task>Goto Waypoint: 2063.47,1454.09,136.31</Task>
+  <Task>Goto Waypoint: 2064.99,1480.46,123.92</Task>
+  <Task>Goto Waypoint: 2065.67,1502.87,122.69</Task>
+  <Task>Goto Waypoint: 2042.99,1528,122.56</Task>
+  <Task>Goto Waypoint: 2017.04,1532.58,117.87</Task>
   <Task>Goto Waypoint: 2018.34,1553.05,113.35</Task>
   <Task>Goto Waypoint: 2018.74,1552.93,113.27</Task>
   <Task>Pause: 1000</Task>
@@ -42,7 +50,7 @@
   <Task>Pause: 1000</Task>
   <Task>Press Key(s): E, 1000</Task>
   <Task>Pause: 3000</Task>
-  <Task>Scaled Left Click: 469,229,814,522</Task>
+  <Task>Scaled Left Click: 509,258,876,592</Task>
   <Task>Pause: 1000</Task>
   <Task>Press Key(s): E, 300</Task>
   <Task>Pause: 30000</Task>
