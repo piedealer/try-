@@ -8,15 +8,8 @@
   <Task>Pause: 3000</Task>
   <Task>Press Key(s): E, 3000</Task>
   <Task>Pause: 30000</Task>
-  <Task>Start Patrol: Alkir's Mudcrab vendor 1-4,0,1</Task>
-  <Task>Goto Waypoint: 2109.25,1373.44,141.81</Task>
-  <Task>Set Waypoint Accuracy: 3</Task>
-  <Task>Pause: 1000</Task>
-  <Task>Press Key(s): E, 300</Task>
-  <Task>Pause: 3000</Task>
-  <Task>Goto Waypoint: 2094.77,1371.12,51.9</Task>
-  <Task>Goto Waypoint: 2102.94,1367.77,51.9</Task>
-  <Task>Target NPC: Rudabeh</Task>
+  <Task>Start Patrol: Alkir Mudcrab 6 vendor def edition,0,1</Task>
+  <Task>Target NPC: Gabir</Task>
   <Task>Pause: 1500</Task>
   <Task>Press Key(s): E, 300</Task>
   <Task>Pause: 10000</Task>
@@ -28,7 +21,7 @@
   <Task>Pause: 2000</Task>
   <Task>Press Key(s): ESCAPE, 1000</Task>
   <Task>Pause: 1000</Task>
-  <Task>Target NPC: Rudabeh</Task>
+  <Task>Target NPC: Gabir</Task>
   <Task>Pause: 1500</Task>
   <Task>Press Key(s): E, 300</Task>
   <Task>Pause: 10000</Task>
@@ -40,25 +33,15 @@
   <Task>Pause: 2000</Task>
   <Task>Press Key(s): ESCAPE, 1000</Task>
   <Task>Pause: 1000</Task>
+  <Task>Goto Waypoint: 2138.76,1504.51,118.97</Task>
+  <Task>Goto Waypoint: 2110.02,1504.01,119.29</Task>
+  <Task>Goto Waypoint: 2074.26,1505.42,123.39</Task>
+  <Task>Goto Waypoint: 2025.15,1512.05,120.25</Task>
+  <Task>Goto Waypoint: 2004.17,1515.72,122.09</Task>
+  <Task>Goto Waypoint: 2010.4,1523.97,121.42</Task>
+  <Task>Goto Waypoint: 2014.74,1539.26,115.09</Task>
+  <Task>Goto Waypoint: 2018.09,1550.82,113.02</Task>
   <Task>Set Waypoint Accuracy: 3</Task>
-  <Task>Start Patrol: Alkir's Mudcrab 6 from inn to door,0,1</Task>
-  <Task>Set Waypoint Accuracy: 3</Task>
-  <Task>Press Key(s): E, 1000</Task>
-  <Task>Pause: 5000</Task>
-  <Task>Goto Waypoint: 2100.28,1381.29,141.72</Task>
-  <Task>Goto Waypoint: 2100.18,1390.43,141.72</Task>
-  <Task>Goto Waypoint: 2123.59,1389.13,137.52</Task>
-  <Task>Goto Waypoint: 2134.42,1399.19,137.62</Task>
-  <Task>Goto Waypoint: 2106.14,1428.39,138.48</Task>
-  <Task>Goto Waypoint: 2105.52,1451.53,138.85</Task>
-  <Task>Goto Waypoint: 2081.92,1457.16,140.17</Task>
-  <Task>Goto Waypoint: 2064.68,1453.35,136.81</Task>
-  <Task>Goto Waypoint: 2063.52,1500.04,122.27</Task>
-  <Task>Goto Waypoint: 2047.7,1511.98,120.5</Task>
-  <Task>Goto Waypoint: 2029.78,1522.52,121.68</Task>
-  <Task>Goto Waypoint: 2017.04,1532.58,117.87</Task>
-  <Task>Goto Waypoint: 2018.34,1553.05,113.35</Task>
-  <Task>Goto Waypoint: 2018.74,1552.93,113.27</Task>
   <Task>Pause: 1000</Task>
   <Task>Target NPC: Sentinel Wayshrine</Task>
   <Task>Pause: 1000</Task>
