@@ -1,0 +1,506 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Viper.Scripting.Core</name>
+    </assembly>
+    <members>
+        <member name="M:Viper.Scripting.Core.Classes.CCombat.Initialize(System.Dynamic.ExpandoObject)">
+            <summary>
+            Internal Viper Initialization
+            </summary>
+            <param name="o"></param>
+        </member>
+        <member name="P:Viper.Scripting.Core.Classes.CCombat.AutoUpdateWebPath">
+            <summary>
+            This is the download path of the bot on the forum. 
+            This should be in the format of http:/some.download.link.com/file.zip
+            If you have not created a thread yet, go ahead and create a thread for your bot on the forums and then use that link.
+            </summary>
+        </member>
+        <member name="P:Viper.Scripting.Core.Classes.CCombat.Url">
+            <summary>
+            Optional website URL for description/info.
+            </summary>
+        </member>
+        <member name="M:Viper.Scripting.Core.Classes.CCombat.OnPulse">
+            <summary>
+            Called on every "tick" of the bot. This is called several times a second when the bot is idle/out of combat
+            </summary>
+        </member>
+        <member name="M:Viper.Scripting.Core.Classes.CCombat.OnAttack">
+            <summary>
+            Called on every "tick" of the bot. This is called several times a second when the bot is trying to fight a target
+            </summary>
+        </member>
+        <member name="M:Viper.Scripting.Core.Classes.CCombat.OnBotStart(Viper.Scripting.Core.Interfaces.IGame)">
+            <summary>
+            Called when the bot is started
+            </summary>
+        </member>
+        <member name="M:Viper.Scripting.Core.Classes.CCombat.OnBotStop">
+            <summary>
+            Called when the bot is stopped
+            </summary>
+        </member>
+        <member name="M:Viper.Scripting.Core.Classes.HighResTimer.#ctor">
+            <summary>
+            Starts a new High Resolution Timer. 
+            Useful for easily checking if a certain amount of time has passed.
+            Timer starts ticking when its created.
+            </summary>
+        </member>
+        <member name="F:Viper.Scripting.Core.Classes.HighResTimer.ticksStart">
+            <summary>
+            Holds the Start Ticks
+            </summary>
+        </member>
+        <member name="P:Viper.Scripting.Core.Classes.CPlugin.AutoUpdateWebPath">
+            <summary>
+            This is the download path of the bot on the forum. 
+            This should be in the format of http://www.mmoviper.com/gw2-viperbot-f81/ElementalistNoLoot-t841.html
+            If you have not created a thread yet, go ahead and create a thread for your bot on the forums and then use that link.
+            </summary>
+        </member>
+        <member name="P:Viper.Scripting.Core.Classes.CPlugin.Url">
+            <summary>
+            Optional website URL for description/info.
+            </summary>
+        </member>
+        <member name="M:Viper.Scripting.Core.Classes.CPlugin.DoRun">
+            <summary>
+            Called whenever NeedsToRun is true 
+            </summary>
+        </member>
+        <member name="M:Viper.Scripting.Core.Classes.CPlugin.OnIdle">
+            <summary>
+            If NeedsToRun == true, and the plugin task list is empty, this will be called.
+            Good to insert tasks to do here if you need something done.
+            </summary>
+        </member>
+        <member name="P:Viper.Scripting.Core.Classes.CPlugin.NeedsToRun">
+            <summary>
+            Check to see if this plugin needs some BOT CPU time.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Viper.Scripting.Core.Classes.CPlugin.OnConfigure">
+            <summary>
+            Called when the configure button is pressed in the plugins page
+            </summary>
+        </member>
+        <member name="P:Viper.Scripting.Core.Classes.CPlugin.WantsButton">
+            <summary>
+            Show a tab in plugins page yes/no?
+            </summary>
+        </member>
+        <member name="M:Viper.Scripting.Core.Classes.CPlugin.OnBotStart(Viper.Scripting.Core.Interfaces.IGame)">
+            <summary>
+            Called when the bot is started
+            </summary>
+        </member>
+        <member name="M:Viper.Scripting.Core.Classes.CPlugin.OnBotStop">
+            <summary>
+            Called when the bot is stopped
+            </summary>
+        </member>
+        <member name="P:Viper.Scripting.Core.Interfaces.IGame.ChatLog">
+            <summary>
+            Returns the IChatLog object for interacting with the IChatLog API
+            </summary>
+        </member>
+        <member name="P:Viper.Scripting.Core.Interfaces.IGame.Inventory">
+            <summary>
+            Returns the IInventory interface
+            </summary>
+        </member>
+        <member name="P:Viper.Scripting.Core.Interfaces.IGame.Fishing">
+            <summary>
+            Returns the IFishing interface
+            </summary>
+        </member>
+        <member name="P:Viper.Scripting.Core.Interfaces.IGame.GetAttackers">
+            <summary>
+            Get a list of mobs that are attacking/targeting the player
+            </summary>
+        </member>
+        <member name="P:Viper.Scripting.Core.Interfaces.IGame.GetMobArray">
+            <summary>
+            Get a list of all known/seen mobs/NPC/players 
+            </summary>
+        </member>
+        <member name="P:Viper.Scripting.Core.Interfaces.IGame.CurrentPatrol">
+            <summary>
+            Gets the Current running patrol interface
+            </summary>
+        </member>
+        <member name="M:Viper.Scripting.Core.Interfaces.IGame.GetPlugin(System.String)">
+            <summary>
+            Finds a loaded plugin and returns the plugin or NULL
+            </summary>
+            <param name="pluginName"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Viper.Scripting.Core.Interfaces.IGame.Plugins">
+            <summary>
+            Returns a list of all loaded plugins.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Viper.Scripting.Core.Interfaces.IGame.DisableAggroChecks(System.Boolean)">
+            <summary>
+            Disabled aggro checking (use to preserve tasks while NeedtoRun)
+            If enabled and plugin is running, the bot can add tasks 
+            </summary>
+            <param name="bDisable">true to stop checking for aggro, false to fight back</param>
+            <returns>Returns the previous setting</returns>
+        </member>
+        <member name="M:Viper.Scripting.Core.Interfaces.IGame.DisableStuckCheck(System.Boolean)">
+            <summary>
+            Disable anti-unstuck code for places that do not need it, ie swimming, etc
+            </summary>
+            <param name="bDisable"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Viper.Scripting.Core.Interfaces.IGame.KillMob(Viper.Scripting.Core.Interfaces.IMob)">
+            <summary>
+            Kill the mob referenced by object
+            </summary>
+            <param name="aMob"></param>
+        </member>
+        <member name="M:Viper.Scripting.Core.Interfaces.IGame.KillMob(System.String)">
+            <summary>
+            Kill the mob referenece by name
+            </summary>
+            <param name="mobName"></param>
+        </member>
+        <member name="P:Viper.Scripting.Core.Interfaces.IGame.GetTaskManager">
+            <summary>
+            Returns the ITaskManager Interface
+            </summary>
+        </member>
+        <member name="M:Viper.Scripting.Core.Interfaces.IFishing.getFishingLure">
+            <summary>
+            Returns the current fishing lureIndex
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Viper.Scripting.Core.Interfaces.IFishing.setFishingLure(System.Int32)">
+            <summary>
+            Sets the current fishing lureIndex
+            </summary>
+            <param name="lureIndex"></param>
+        </member>
+        <member name="P:Viper.Scripting.Core.Interfaces.IMob.PCID">
+            <summary>
+            Returns the server player ID if exists
+            </summary>
+        </member>
+        <member name="P:Viper.Scripting.Core.Interfaces.IMob.hasLoot">
+            <summary>
+            Returns true if the mob has loot
+            </summary>
+        </member>
+        <member name="P:Viper.Scripting.Core.Interfaces.IMob.OwnerID">
+            <summary>
+            Returns the OwnerID (WGUID) of the player that owns this pet
+            </summary>
+        </member>
+        <member name="P:Viper.Scripting.Core.Interfaces.IMob.HP">
+            <summary>
+            Returns HP as a % (Percentage) 0 to 100
+            </summary>
+        </member>
+        <member name="P:Viper.Scripting.Core.Interfaces.IMob.CurHP">
+            <summary>
+            Returns the Actual HP Value at that instance. Ie, 2249
+            </summary>
+        </member>
+        <member name="P:Viper.Scripting.Core.Interfaces.IMob.MaxHP">
+            <summary>
+            Returns the MAX hp
+            </summary>
+        </member>
+        <member name="P:Viper.Scripting.Core.Interfaces.IMob.MP">
+            <summary>
+            Returns the Mana % (percentage) 0 to 100
+            </summary>
+        </member>
+        <member name="P:Viper.Scripting.Core.Interfaces.IMob.CurMP">
+            <summary>
+            Returns the Current MP (actual value) 
+            </summary>
+        </member>
+        <member name="P:Viper.Scripting.Core.Interfaces.IMob.MaxMP">
+            <summary>
+            Returns the MaxMP
+            </summary>
+        </member>
+        <member name="P:Viper.Scripting.Core.Interfaces.IMob.Speed">
+            <summary>
+            Returns the current average speed over the last second
+            </summary>
+        </member>
+        <member name="P:Viper.Scripting.Core.Interfaces.IMob.Level">
+            <summary>
+            Returns the mob Level
+            </summary>
+        </member>
+        <member name="M:Viper.Scripting.Core.Interfaces.IMob.DistanceTo(Viper.Scripting.Core.Interfaces.IMob)">
+            <summary>
+            Returns distance to a specific mob from the player
+            </summary>
+            <param name="mob"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Viper.Scripting.Core.Interfaces.IMob.Heading">
+            <summary>
+            Returns the current direction the mob is facing
+            </summary>
+        </member>
+        <member name="P:Viper.Scripting.Core.Interfaces.IMob.Direction">
+            <summary>
+            Returns the direction you would need to face to be looking at the mob
+            </summary>
+        </member>
+        <member name="P:Viper.Scripting.Core.Interfaces.IMob.Type">
+            <summary>
+            Returns the TYPE of the mob (a integer value, see enums)
+            </summary>
+        </member>
+        <member name="P:Viper.Scripting.Core.Interfaces.IMob.Target">
+            <summary>
+            Gets the Mob's Target ID. This is a WGUID of a mob or 0 if no target
+            </summary>
+        </member>
+        <member name="P:Viper.Scripting.Core.Interfaces.IMob.Status">
+            <summary>
+            Returns the Mob's Status (casting, etc) if Available
+            </summary>
+        </member>
+        <member name="P:Viper.Scripting.Core.Interfaces.IMob.Invulnerable">
+            <summary>
+            Returns the time in seconds that this mob is considered invulnerable (bad target), set to 0 to reset/remove invulnerable flag.
+            </summary>
+        </member>
+        <member name="P:Viper.Scripting.Core.Interfaces.IMob.FirstSeenTime">
+            <summary>
+            Returns the time in milliseconds that the bot has known about this mob. Once a mob goes off radar this will get reset when the bot "sees" the mob again.
+            </summary>
+        </member>
+        <member name="P:Viper.Scripting.Core.Interfaces.IMob.UserObjects">
+            <summary>
+            User defined hashtable useable by plugins, etc
+            </summary>
+        </member>
+        <member name="P:Viper.Scripting.Core.Interfaces.IPlayer.SP">
+            <summary>
+            Returns the Player Stamina (run stamina, etc) in % (Percentage) 0 to 100
+            </summary>
+        </member>
+        <member name="P:Viper.Scripting.Core.Interfaces.IPlayer.CurSP">
+            <summary>
+            Returns the Player Stamina current value, ie 3202
+            </summary>
+        </member>
+        <member name="P:Viper.Scripting.Core.Interfaces.IPlayer.MaxSP">
+            <summary>
+            Returns the MaxSP
+            </summary>
+        </member>
+        <member name="P:Viper.Scripting.Core.Interfaces.IPlayer.UP">
+            <summary>
+            Returns the Player Ultimate current value in %, ie 80
+            </summary>    
+        </member>
+        <member name="P:Viper.Scripting.Core.Interfaces.IPlayer.CurUP">
+            <summary>
+            Returns the Player Stamina current value, ie 158
+            </summary>
+        </member>
+        <member name="P:Viper.Scripting.Core.Interfaces.IPlayer.MaxUP">
+            <summary>
+            Returns the MaxUP
+            </summary>
+        </member>
+        <member name="T:Viper.Scripting.Core.Interfaces.NextTask">
+            <summary>
+            Event is called when a Task in the bot is fixing to be executed.
+            </summary>
+            <param name="txtTask">Task as a string. Ie. Pause: 1000</param>
+            <returns>True if handled, false to let othere plugin or bot handle it</returns>
+        </member>
+        <member name="T:Viper.Scripting.Core.Interfaces.ITaskManager">
+            <summary>
+            Task Manager handles everything related to "tasks" being executed in the bot
+            </summary>
+        </member>
+        <member name="E:Viper.Scripting.Core.Interfaces.ITaskManager.OnNextTask">
+            <summary>
+            Event fired when a new Patrol or campaign task is about to be executed
+            </summary>
+        </member>
+        <member name="P:Viper.Scripting.Core.Interfaces.IPlugin.Panel">
+            <summary>
+            Return the form/panel if drawing in the viper scripting tab
+            </summary>
+        </member>
+        <member name="P:Viper.Scripting.Core.Interfaces.IPlugin.Tasks">
+            <summary>
+            List of tasks the the plugin needs to perform. These will pause any current tasks that the bot is performing
+            </summary>
+        </member>
+        <member name="P:Viper.Scripting.Core.Interfaces.IPlugin.AutoUpdateWebPath">
+            <summary>
+            This is the download path of the bot on the forum. 
+            This should be in the format of http://www.mmoviper.com/gw2-viperbot-f81/ElementalistNoLoot-t841.html
+            If you have not created a thread yet, go ahead and create a thread for your bot on the forums and then use that link.
+            </summary>
+        </member>
+        <member name="P:Viper.Scripting.Core.Interfaces.IPlugin.Url">
+            <summary>
+            Optional website URL for description/info.
+            </summary>
+        </member>
+        <member name="M:Viper.Scripting.Core.Interfaces.IPlugin.DoRun">
+            <summary>
+            Called whenever NeedsToRun is true. This is good place to queue up tasks, or do some logic
+            </summary>
+        </member>
+        <member name="M:Viper.Scripting.Core.Interfaces.IPlugin.OnIdle">
+            <summary>
+            If NeedsToRun == true, AND the plugin task list is empty, this will be called.
+            Good place to let NeedsToRun that it can return false...because all tasks have been completed.
+            </summary>
+        </member>
+        <member name="P:Viper.Scripting.Core.Interfaces.IPlugin.NeedsToRun">
+            <summary>
+            Check to see if this plugin needs some BOT CPU time.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Viper.Scripting.Core.Interfaces.IPlugin.OnConfigure">
+            <summary>
+            Called when the configure button is pressed in the plugins page
+            </summary>
+        </member>
+        <member name="P:Viper.Scripting.Core.Interfaces.IPlugin.WantsButton">
+            <summary>
+            Show a tab in plugins page yes/no?
+            </summary>
+        </member>
+        <member name="M:Viper.Scripting.Core.Interfaces.IPlugin.OnEnabled(Viper.Scripting.Core.Interfaces.IGame)">
+            <summary>
+            Called whenever the plugin is "enabled" in the plugins tab.
+            </summary>
+            <param name="PluginHelper"></param>
+        </member>
+        <member name="M:Viper.Scripting.Core.Interfaces.IPlugin.OnDisabled">
+            <summary>
+            Called when the plugin is "disabled" in the plugins tab.
+            </summary>
+        </member>
+        <member name="M:Viper.Scripting.Core.Interfaces.IPlugin.OnBotStart(Viper.Scripting.Core.Interfaces.IGame)">
+            <summary>
+            Called when the bot is started
+            </summary>
+        </member>
+        <member name="M:Viper.Scripting.Core.Interfaces.IPlugin.OnBotStop">
+            <summary>
+            Called when the bot is stopped
+            </summary>
+        </member>
+        <member name="M:Viper.Scripting.Core.Interfaces.IPlugin.OnSendMessage(Viper.Scripting.Core.Interfaces.IPlugin,System.String)">
+            <summary>
+            Called when the plugin receivs a message from another plugin
+            </summary>
+            <param name="fromPlugin"></param>
+            <param name="text"></param>
+        </member>
+        <member name="M:Viper.Scripting.Core.Interfaces.IPlugin.OnSendObject(Viper.Scripting.Core.Interfaces.IPlugin,System.Object)">
+            <summary>
+            Called when the plugin receivs a object from another plugin
+            </summary>
+            <param name="fromPlugin"></param>
+            <param name="o"></param>
+        </member>
+        <member name="M:Viper.Scripting.Core.Interfaces.IPlugin.SendMessage(Viper.Scripting.Core.Interfaces.IPlugin,System.String)">
+            <summary>
+            Send a message to another plugin.
+            </summary>
+            <param name="p"></param>
+            <param name="text"></param>
+        </member>
+        <member name="M:Viper.Scripting.Core.Interfaces.IPlugin.SendObject(Viper.Scripting.Core.Interfaces.IPlugin,System.Object)">
+            <summary>
+            Send a object to another plugin.
+            </summary>
+            <param name="p"></param>
+            <param name="o"></param>
+        </member>
+        <member name="M:Viper.Scripting.Core.Interfaces.IInput.SendText(System.String)">
+            <summary>
+            Send a string of text to the game window
+            Can use keys like {F1}
+            + = Shift ie, +5 = Shift 5
+            ^ = Control ie, ^P = Ctrl P
+            % = Alt, ie %X = Alt X
+            To send +, you have to use {+}, etc.
+            For a full list of {} keys, google VK Keys
+            </summary>
+            <param name="text"></param>
+        </member>
+        <member name="M:Viper.Scripting.Core.Interfaces.IInput.SendCommand(System.String)">
+            <summary>
+            Same as Send Text, but automatically 
+            presses {RETURN} then sends text, then sends a final {RETURN}
+            </summary>
+            <param name="action"></param>
+        </member>
+        <member name="M:Viper.Scripting.Core.Interfaces.IInput.keysDown(System.String)">
+            <summary>
+            Hold these keys down
+            </summary>
+            <param name="text"></param>
+        </member>
+        <member name="M:Viper.Scripting.Core.Interfaces.IInput.PressKey(System.String,System.Int32)">
+            <summary>
+            Press and release these keys
+            </summary>
+            <param name="key"></param>
+            <param name="msHowLong"></param>
+        </member>
+        <member name="M:Viper.Scripting.Core.Interfaces.IInput.PressKey(System.String)">
+            <summary>
+            Press this key and release it quickly
+            Time to hold can be adjusted via SetKeyDelay
+            </summary>
+            <param name="key"></param>
+        </member>
+        <member name="M:Viper.Scripting.Core.Interfaces.IInput.SetKeyDelay(System.Int32)">
+            <summary>
+            How long to wait between key presses
+            </summary>
+            <param name="ms">Default is 75 ms</param>
+        </member>
+        <member name="P:Viper.Scripting.Core.Interfaces.IPatrol.Name">
+            <summary>
+            Gets the patrol name
+            </summary>
+        </member>
+        <member name="M:Viper.Scripting.Core.Interfaces.IPatrol.MarkHotspotCompleted">
+            <summary>
+            Informs bot that hotspot can switch to next
+            </summary>
+        </member>
+        <member name="P:Viper.Scripting.Core.Interfaces.IPatrol.CurrentPatrolTask">
+            <summary>
+            Gets the nearest navmesh point from the passed in point
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="z"></param>
+            <param name="distance">Distance from xyz to nav point</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
