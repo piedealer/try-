@@ -1,0 +1,1 @@
+SafeAddString(SI_SCOOTWORKS_FUNCTIONS_UPDATE_ADDON, "Cet addon ne fonctionne pas avec cette version du jeu.", 0)
