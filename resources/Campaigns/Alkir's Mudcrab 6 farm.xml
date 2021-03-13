@@ -17,7 +17,7 @@
   <Task>Goto Waypoint: 2158.33,1493.28,119.41</Task>
   <Task>Start Patrol: Alkir Mudcrab 6 vendor def edition,0,1</Task>
   <Task>Pause: 20000</Task>
-  <Task>Goto Waypoint: 2174.23,1497.61,120</Task>
+  <Task>Goto Waypoint: 2174.54,1498.1,120</Task>
   <Task>Target NPC: Muruuna</Task>
   <Task>Pause: 1500</Task>
   <Task>Press Key(s): E, 300</Task>
