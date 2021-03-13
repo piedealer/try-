@@ -1,9 +1,10 @@
 <Settings>
-  <MainForm>
+  <MainForm Name="Templar 2H simple farm">
     <Coords X="1159" Y="32" W="576" H="570" />
-    <Profile Name="Templar 2H simple farm" />
+    <Profile Name="Soccerer 1-6lv" />
   </MainForm>
-  <MiniForm>
+  <MiniForm Name="">
     <Coords X="825" Y="595" />
   </MiniForm>
+  <Login Name="" Auto="True" />
 </Settings>
