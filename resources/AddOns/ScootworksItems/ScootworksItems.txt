@@ -1,0 +1,24 @@
+## Title: |cFF3DA5Scootworks|r Items
+## Author: Scootworks
+## Version: 28
+## AddOnVersion: 28
+## APIVersion: 100032 100033
+## SavedVariables: ScootworksItems_Save ScootworksItems_SaveChar ScootworksItemsSets_Save ScootworksItemsSets_SaveChar
+## DependsOn: LibAsync>=20100 LibSavedVars>=60001 LibChatMessage>=100 LibSets>=000200 LibItemLink>=3 LibHarvensAddonSettings>=10705 LibLootSummary>=20202
+## OptionalDependsOn: pChat rChat ChatLogger iChat FCOItemSaver>=194
+
+; This Add-on is not created by, affiliated with or sponsored by ZeniMax
+; Media Inc. or its affiliates. The Elder Scrolls® and related logos are
+; registered trademarks or trademarks of ZeniMax Media Inc. in the United
+; States and/or other countries. All rights reserved.
+; You can read the full terms at https://account.elderscrollsonline.com/add-on-terms
+
+lang\en.lua
+lang\$(language).lua
+
+Constants.lua
+FCOIS.lua
+Loot.lua
+Vendor.lua
+Settings.lua
+ScootworksItems.lua
