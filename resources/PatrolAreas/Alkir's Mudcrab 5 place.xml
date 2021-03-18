@@ -11,7 +11,7 @@
   <Target Name="Mudcrab" />
   <Target Name="Water Hyacinth" />
   <TaskList Name="Alkir's Mudcrab 5 place">
-    <Loops>9999</Loops>
+    <Loops>150</Loops>
     <Task>Goto Hotspot: auto, 2501.6,1143.18,100.3</Task>
     <Task>Goto Hotspot: auto, 2475.93,1129.47,100.32</Task>
     <Task>Goto Hotspot: auto, 2450.38,1110.44,101.05</Task>
