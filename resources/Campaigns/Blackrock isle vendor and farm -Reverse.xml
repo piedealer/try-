@@ -1,0 +1,23 @@
+<TaskList Name="Blackrock isle vendor and farm">
+  <Loops>1</Loops>
+  <Task>REPEAT LOOP: 99</Task>
+  <Task>Start Patrol: Blarock zone farm and vendor,0,1</Task>
+  <Task>Rest: 60000</Task>
+  <Task>Goto Waypoint: 944.27,1206.88,113.53</Task>
+  <Task>Pause: 2000</Task>
+  <Task>Face Heading: 11</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Target NPC: Sjarla</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Press Key(s): E, 2000</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Press Key(s): E, 3000</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Press Key(s): X, 1000</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Press Key(s): E, 1000</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Press Key(s): ESCAPE, 3000</Task>
+  <Task>Start Patrol: Bleakrock gathering,0,1</Task>
+  <Task>END REPEAT LOOP</Task>
+</TaskList>
