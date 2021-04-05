@@ -10,6 +10,6 @@
   <TargetsPerHotspot>5</TargetsPerHotspot>
   <TaskList Name="Bethnik - Zone farm to vendor">
     <Loops>9999</Loops>
-    <Task>Goto Hotspot: auto, 1002.36,972.35,138.9</Task>
+    <Task>Goto Hotspot: auto, 1129.85,979.44,108.95</Task>
   </TaskList>
 </PatrolArea>
