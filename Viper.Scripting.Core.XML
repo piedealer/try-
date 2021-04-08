@@ -103,6 +103,33 @@
             Called when the bot is stopped
             </summary>
         </member>
+        <member name="M:Viper.Scripting.Core.Interfaces.IGame.RunLua(System.String)">
+            <summary>
+            Runs a LUA script, returns 0 if no errors.
+            </summary>
+            <param name="strLuaScript"></param>
+        </member>
+        <member name="M:Viper.Scripting.Core.Interfaces.IGame.ReadLuaString(System.String)">
+            <summary>
+            Returns a string from a global variable
+            </summary>
+            <param name="GlobalVarName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Viper.Scripting.Core.Interfaces.IGame.ReadLuaNumber(System.String)">
+            <summary>
+            Returns a number from a global variable
+            </summary>
+            <param name="GlobalVarName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Viper.Scripting.Core.Interfaces.IGame.ReadLuaBoolean(System.String)">
+            <summary>
+            Returns a boolean from a global variable
+            </summary>
+            <param name="GlobalVarName"></param>
+            <returns></returns>
+        </member>
         <member name="P:Viper.Scripting.Core.Interfaces.IGame.ChatLog">
             <summary>
             Returns the IChatLog object for interacting with the IChatLog API
@@ -116,6 +143,11 @@
         <member name="P:Viper.Scripting.Core.Interfaces.IGame.Fishing">
             <summary>
             Returns the IFishing interface
+            </summary>
+        </member>
+        <member name="P:Viper.Scripting.Core.Interfaces.IGame.ReticleOver">
+            <summary>
+            Returns the mob Wguid under the cursor IMob
             </summary>
         </member>
         <member name="P:Viper.Scripting.Core.Interfaces.IGame.GetAttackers">
@@ -203,6 +235,11 @@
         <member name="P:Viper.Scripting.Core.Interfaces.IMob.OwnerID">
             <summary>
             Returns the OwnerID (WGUID) of the player that owns this pet
+            </summary>
+        </member>
+        <member name="P:Viper.Scripting.Core.Interfaces.IMob.Buffs">
+            <summary>
+            Returns the interface which contains all buffs on the Mob
             </summary>
         </member>
         <member name="P:Viper.Scripting.Core.Interfaces.IMob.HP">
@@ -321,6 +358,30 @@
             <summary>
             Returns the MaxUP
             </summary>
+        </member>
+        <member name="T:Viper.Scripting.Core.Interfaces.IBuffs">
+            <summary>
+            IBuffs is a collection of all buffs
+            </summary>
+        </member>
+        <member name="M:Viper.Scripting.Core.Interfaces.IBuffs.GetBuffByID(System.UInt32)">
+            <summary>
+            Finds a specific buff based on the ID
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Viper.Scripting.Core.Interfaces.IBuffs.GetBuffByName(System.String)">
+            <summary>
+            Finds the buff with the name (partial match ok)
+            </summary>
+            <param name="partialName"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Viper.Scripting.Core.Interfaces.IBuffs.Dictionary">
+             <summary>
+            Returns the dictionary of the known spells on the hotbar (id, name)
+             </summary>
         </member>
         <member name="T:Viper.Scripting.Core.Interfaces.NextTask">
             <summary>

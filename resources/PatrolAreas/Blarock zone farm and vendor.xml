@@ -9,7 +9,7 @@
   <PatrolMaxLevel>999</PatrolMaxLevel>
   <TargetsPerHotspot>5</TargetsPerHotspot>
   <TaskList Name="Blarock zone farm and vendor">
-    <Loops>9999</Loops>
+    <Loops>1</Loops>
     <Task>Goto Hotspot: auto, 944.01,1208.32,113.54</Task>
   </TaskList>
 </PatrolArea>

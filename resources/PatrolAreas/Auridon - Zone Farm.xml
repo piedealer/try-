@@ -2,7 +2,7 @@
   <WaypointDistance>50</WaypointDistance>
   <TargetMaxLevel>999</TargetMaxLevel>
   <TargetMinLevel>0</TargetMinLevel>
-  <TargetRange>55</TargetRange>
+  <TargetRange>45</TargetRange>
   <Type>1</Type>
   <UseClosestWaypoint>True</UseClosestWaypoint>
   <PatrolMinLevel>1</PatrolMinLevel>
@@ -39,6 +39,8 @@
   <Target Name="Stinkhorn" />
   <Target Name="Violet Coprinus" />
   <Target Name="Oak" />
+  <Target Name="Flax" />
+  <Target Name="Mudcrab" />
   <TaskList Name="Auridon - Zone Farm">
     <Loops>1</Loops>
     <Task>Goto Hotspot: auto, 2497.67,3781.2,120.38</Task>
