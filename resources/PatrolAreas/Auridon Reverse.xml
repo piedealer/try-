@@ -1,10 +1,10 @@
-<PatrolArea Name="AuridonReverse">
+<PatrolArea Name="Auridon Reverse">
   <WaypointDistance>50</WaypointDistance>
   <TargetMaxLevel>999</TargetMaxLevel>
   <TargetMinLevel>0</TargetMinLevel>
   <TargetRange>45</TargetRange>
   <Type>1</Type>
-  <UseClosestWaypoint>True</UseClosestWaypoint>
+  <UseClosestWaypoint>False</UseClosestWaypoint>
   <PatrolMinLevel>1</PatrolMinLevel>
   <PatrolMaxLevel>999</PatrolMaxLevel>
   <TargetsPerHotspot>5</TargetsPerHotspot>
@@ -41,7 +41,7 @@
   <Target Name="Oak" />
   <Target Name="Flax" />
   <Target Name="Mudcrab" />
-  <TaskList Name="AuridonReverse">
+  <TaskList Name="Auridon Reverse">
     <Loops>1</Loops>
     <Task>Goto Hotspot: auto, 2497.67,3781.2,120.38</Task>
     <Task>Goto Hotspot: auto, 2550.46,3779.22,121.15</Task>

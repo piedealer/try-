@@ -1,4 +1,4 @@
-<TaskList Name="Auridone - Zone Farm">
+<TaskList Name="Auridone Reverse">
   <Loops>1</Loops>
   <Task>REPEAT LOOP: 9999999</Task>
   <Task>Start Patrol: Aurdon -Vendor Run,0,1</Task>
@@ -25,6 +25,6 @@
   <Task>Press Key(s): E, 1000</Task>
   <Task>Pause: 3000</Task>
   <Task>Press Key(s): ESCAPE, 3000</Task>
-  <Task>Start Patrol: Auridon - Zone Farm,0,1</Task>
+  <Task>Start Patrol: Auridon Reverse,1,1</Task>
   <Task>END REPEAT LOOP</Task>
 </TaskList>
