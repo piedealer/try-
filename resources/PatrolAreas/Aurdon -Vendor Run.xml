@@ -9,7 +9,7 @@
   <PatrolMaxLevel>999</PatrolMaxLevel>
   <TargetsPerHotspot>5</TargetsPerHotspot>
   <TaskList Name="Aurdon -Vendor Run">
-    <Loops>9999</Loops>
+    <Loops>1</Loops>
     <Task>Goto Hotspot: auto, 2433.79,4062.61,102.18</Task>
   </TaskList>
 </PatrolArea>
