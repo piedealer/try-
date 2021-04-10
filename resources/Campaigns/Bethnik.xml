@@ -17,6 +17,6 @@
   <Task>Press Key(s): E, 1000</Task>
   <Task>Pause: 3000</Task>
   <Task>Press Key(s): ESCAPE, 3000</Task>
-  <Task>Start Patrol: Betnikh - Zone farm,0,1</Task>
+  <Task>Start Patrol: Betnikh - Zone farm Forward,0,1</Task>
   <Task>END REPEAT LOOP</Task>
 </TaskList>

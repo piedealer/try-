@@ -1,10 +1,10 @@
-<PatrolArea Name="Betnikh - Zone farm">
+<PatrolArea Name="Betnikh - Zone farm Forward">
   <WaypointDistance>100</WaypointDistance>
   <TargetMaxLevel>999</TargetMaxLevel>
   <TargetMinLevel>0</TargetMinLevel>
   <TargetRange>60</TargetRange>
   <Type>1</Type>
-  <UseClosestWaypoint>True</UseClosestWaypoint>
+  <UseClosestWaypoint>False</UseClosestWaypoint>
   <PatrolMinLevel>1</PatrolMinLevel>
   <PatrolMaxLevel>999</PatrolMaxLevel>
   <TargetsPerHotspot>5</TargetsPerHotspot>
@@ -42,7 +42,7 @@
     <MeleeDistance>5</MeleeDistance>
     <AggroRange>999</AggroRange>
   </Target>
-  <TaskList Name="Betnikh - Zone farm">
+  <TaskList Name="Betnikh - Zone farm Forward">
     <Loops>1</Loops>
     <Task>Goto Hotspot: auto, 1084.21,1097.19,112.67</Task>
     <Task>Goto Hotspot: auto, 1057.55,1076.19,119.46</Task>
