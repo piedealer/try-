@@ -1,4 +1,4 @@
-<PatrolArea Name="Auridon - Zone Farm">
+<PatrolArea Name="AuridonReverse">
   <WaypointDistance>50</WaypointDistance>
   <TargetMaxLevel>999</TargetMaxLevel>
   <TargetMinLevel>0</TargetMinLevel>
@@ -41,7 +41,7 @@
   <Target Name="Oak" />
   <Target Name="Flax" />
   <Target Name="Mudcrab" />
-  <TaskList Name="Auridon - Zone Farm">
+  <TaskList Name="AuridonReverse">
     <Loops>1</Loops>
     <Task>Goto Hotspot: auto, 2497.67,3781.2,120.38</Task>
     <Task>Goto Hotspot: auto, 2550.46,3779.22,121.15</Task>
