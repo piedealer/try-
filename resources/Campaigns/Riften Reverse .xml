@@ -1,7 +1,7 @@
-<TaskList Name="Riften Zone Gather and vendor">
+<TaskList Name="Riften Reverse ">
   <Loops>1</Loops>
   <Task>REPEAT LOOP: 99</Task>
-  <Task>Start Patrol: Riften - Zone Farm,0,1</Task>
+  <Task>Start Patrol: Riften - Zone Farm,1,1</Task>
   <Task>Start Patrol: Rift Zone Farm vendor,0,1</Task>
   <Task>Goto Waypoint: 3631.86,2011.5,247.14</Task>
   <Task>Pause: 60000</Task>
