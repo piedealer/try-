@@ -2,7 +2,7 @@
   <WaypointDistance>30</WaypointDistance>
   <TargetMaxLevel>999</TargetMaxLevel>
   <TargetMinLevel>0</TargetMinLevel>
-  <TargetRange>60</TargetRange>
+  <TargetRange>56</TargetRange>
   <Type>1</Type>
   <UseClosestWaypoint>False</UseClosestWaypoint>
   <PatrolMinLevel>1</PatrolMinLevel>
@@ -64,8 +64,10 @@
   <Target Name="Columbine" />
   <Target Name="Nightshade" />
   <Target Name="Water Hyacinth" />
+  <Target Name="Flax" />
+  <Target Name="Violet Coprinus" />
   <TaskList Name="Riften - Zone Farm">
-    <Loops>1</Loops>
+    <Loops>100</Loops>
     <Task>Goto Hotspot: auto, 3863.29,2088.19,247.35</Task>
     <Task>Goto Hotspot: auto, 3891.32,2098.76,245.52</Task>
     <Task>Goto Hotspot: auto, 3927.05,2105.13,239.22</Task>
