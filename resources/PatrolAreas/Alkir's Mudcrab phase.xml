@@ -1,0 +1,18 @@
+<PatrolArea Name="Alkir's Mudcrab phase">
+  <WaypointDistance>30</WaypointDistance>
+  <TargetMaxLevel>999</TargetMaxLevel>
+  <TargetMinLevel>0</TargetMinLevel>
+  <TargetRange>30</TargetRange>
+  <Type>1</Type>
+  <UseClosestWaypoint>False</UseClosestWaypoint>
+  <PatrolMinLevel>1</PatrolMinLevel>
+  <PatrolMaxLevel>999</PatrolMaxLevel>
+  <TargetsPerHotspot>5</TargetsPerHotspot>
+  <Target Name="Mudcrab" />
+  <TaskList Name="Alkir's Mudcrab phase">
+    <Loops>9999</Loops>
+    <Task>Goto Hotspot: auto, 1699.47,1401.47,100.22</Task>
+    <Task>Goto Hotspot: auto, 1730.76,1418.51,102.32</Task>
+    <Task>Goto Hotspot: auto, 1698.34,1402.02,100.2</Task>
+  </TaskList>
+</PatrolArea>
