@@ -1,0 +1,15 @@
+<PatrolArea Name="3 -  Grahan beach farm - to Vendor">
+  <WaypointDistance>30</WaypointDistance>
+  <TargetMaxLevel>999</TargetMaxLevel>
+  <TargetMinLevel>0</TargetMinLevel>
+  <TargetRange>30</TargetRange>
+  <Type>1</Type>
+  <UseClosestWaypoint>False</UseClosestWaypoint>
+  <PatrolMinLevel>1</PatrolMinLevel>
+  <PatrolMaxLevel>999</PatrolMaxLevel>
+  <TargetsPerHotspot>5</TargetsPerHotspot>
+  <TaskList Name="3 -  Grahan beach farm - to Vendor">
+    <Loops>9999</Loops>
+    <Task>Goto Hotspot: auto, 3081.56,2680.33,118.12</Task>
+  </TaskList>
+</PatrolArea>

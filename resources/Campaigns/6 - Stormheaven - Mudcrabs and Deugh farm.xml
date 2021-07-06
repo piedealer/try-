@@ -1,0 +1,33 @@
+<TaskList Name="6 - Stormheaven - Mudcrabs and Deugh farm">
+  <Loops>1</Loops>
+  <Task>REPEAT LOOP: 99999</Task>
+  <Task>Start Patrol: 6 -  Stormheaven - Vendor,0,1</Task>
+  <Task>Pause: 20000</Task>
+  <Task>Goto Waypoint: 2316.62,2423.15,134.73</Task>
+  <Task>Target NPC: Brazzideh</Task>
+  <Task>Pause: 1500</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 10000</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 5000</Task>
+  <Task>Press Key(s): X, 2000</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Press Key(s): E, 2000</Task>
+  <Task>Pause: 2000</Task>
+  <Task>Press Key(s): ESCAPE, 1000</Task>
+  <Task>Pause: 1000</Task>
+  <Task>Target NPC: Brazzideh</Task>
+  <Task>Pause: 1500</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 10000</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 5000</Task>
+  <Task>Press Key(s): X, 2000</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Press Key(s): E, 2000</Task>
+  <Task>Pause: 2000</Task>
+  <Task>Press Key(s): ESCAPE, 1000</Task>
+  <Task>Pause: 1000</Task>
+  <Task>Start Patrol: 6 - Stormheaven - Mudcrab and Deugh,0,10</Task>
+  <Task>END REPEAT LOOP</Task>
+</TaskList>

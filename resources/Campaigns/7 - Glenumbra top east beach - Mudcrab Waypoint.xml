@@ -1,0 +1,59 @@
+<TaskList Name="7 - Glenumbra top east beach - Mudcrab Waypoint">
+  <Loops>1</Loops>
+  <Task>REPEAT LOOP: 99999</Task>
+  <Task>Press Key(s): M, 300</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Scaled Left Click: 380,459,999,686</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Press Key(s): E, 3000</Task>
+  <Task>Pause: 60000</Task>
+  <Task>Goto Waypoint: 1023.46,2975.14,167.88</Task>
+  <Task>Goto Waypoint: 1017.28,2989.44,167.14</Task>
+  <Task>Goto Waypoint: 1003.58,3006.19,166.18</Task>
+  <Task>Goto Waypoint: 1001.59,3019.72,166.19</Task>
+  <Task>Rest: 5000</Task>
+  <Task>Target NPC: Fabio Previa</Task>
+  <Task>Pause: 1500</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 10000</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 5000</Task>
+  <Task>Press Key(s): X, 2000</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Press Key(s): E, 2000</Task>
+  <Task>Pause: 2000</Task>
+  <Task>Press Key(s): ESCAPE, 1000</Task>
+  <Task>Pause: 1000</Task>
+  <Task>Target NPC: Fabio Previa</Task>
+  <Task>Pause: 1500</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 10000</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 5000</Task>
+  <Task>Press Key(s): X, 2000</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Press Key(s): E, 2000</Task>
+  <Task>Pause: 2000</Task>
+  <Task>Press Key(s): ESCAPE, 1000</Task>
+  <Task>Pause: 1000</Task>
+  <Task>Set Waypoint Accuracy: 3</Task>
+  <Task>Goto Waypoint: 1002.92,3014.51,166.25</Task>
+  <Task>Goto Waypoint: 1010.78,2997.29,166.38</Task>
+  <Task>Goto Waypoint: 1020.49,2988.58,167.22</Task>
+  <Task>Goto Waypoint: 1027.43,2970.26,167.85</Task>
+  <Task>Goto Waypoint: 1026.05,2966.14,168.9</Task>
+  <Task>Rest: 5000</Task>
+  <Task>Face Heading: 68</Task>
+  <Task>Set Waypoint Accuracy: 3</Task>
+  <Task>Pause: 1000</Task>
+  <Task>Target NPC: Daggerfall Wayshrine</Task>
+  <Task>Pause: 1000</Task>
+  <Task>Press Key(s): E, 1000</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Scaled Left Click: 554,220,999,686</Task>
+  <Task>Pause: 1000</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 60000</Task>
+  <Task>Start Patrol: 7 - Glenubra east beach - Mudcrab farm,0,20</Task>
+  <Task>END REPEAT LOOP</Task>
+</TaskList>

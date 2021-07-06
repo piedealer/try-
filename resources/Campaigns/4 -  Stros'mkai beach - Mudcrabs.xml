@@ -1,0 +1,33 @@
+<TaskList Name="4 -  Stros'mkai beach - Mudcrabs">
+  <Loops>1</Loops>
+  <Task>REPEAT LOOP: 99999</Task>
+  <Task>Start Patrol: 4 - Stros'mkai beach farm - Vendor,0,1</Task>
+  <Task>Pause: 20000</Task>
+  <Task>Goto Waypoint: 1045.29,993.68,102.02</Task>
+  <Task>Target NPC: Candariel</Task>
+  <Task>Pause: 1500</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 10000</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 5000</Task>
+  <Task>Press Key(s): X, 2000</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Press Key(s): E, 2000</Task>
+  <Task>Pause: 2000</Task>
+  <Task>Press Key(s): ESCAPE, 1000</Task>
+  <Task>Pause: 1000</Task>
+  <Task>Target NPC: Candariel</Task>
+  <Task>Pause: 1500</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 10000</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 5000</Task>
+  <Task>Press Key(s): X, 2000</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Press Key(s): E, 2000</Task>
+  <Task>Pause: 2000</Task>
+  <Task>Press Key(s): ESCAPE, 1000</Task>
+  <Task>Pause: 1000</Task>
+  <Task>Start Patrol: 4 -  Stros'mkai beach farm - Mudcrab farming,0,30</Task>
+  <Task>END REPEAT LOOP</Task>
+</TaskList>

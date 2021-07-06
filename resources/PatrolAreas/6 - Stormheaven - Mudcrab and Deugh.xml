@@ -1,0 +1,42 @@
+<PatrolArea Name="6 - Stormheaven - Mudcrab and Deugh">
+  <WaypointDistance>30</WaypointDistance>
+  <TargetMaxLevel>999</TargetMaxLevel>
+  <TargetMinLevel>0</TargetMinLevel>
+  <TargetRange>30</TargetRange>
+  <Type>1</Type>
+  <UseClosestWaypoint>False</UseClosestWaypoint>
+  <PatrolMinLevel>1</PatrolMinLevel>
+  <PatrolMaxLevel>999</PatrolMaxLevel>
+  <TargetsPerHotspot>5</TargetsPerHotspot>
+  <Target Name="Mudcrab" />
+  <Target Name="Dreugh" />
+  <Target Name="Pure Water" />
+  <Target Name="Deer" />
+  <Target Name="Jute" />
+  <Target Name="Wormwood" />
+  <Target Name="Maple" />
+  <Target Name="Violet Coprinus" />
+  <Target Name="Blessed Thistle" />
+  <Target Name="Mountain Flower" />
+  <Target Name="Luminous Russula" />
+  <Target Name="Water Hyacinth" />
+  <Target Name="Namira's Rot" />
+  <TaskList Name="6 - Stormheaven - Mudcrab and Deugh">
+    <Loops>10</Loops>
+    <Task>Goto Hotspot: auto, 2010.9,2399.77,110.74</Task>
+    <Task>Goto Hotspot: auto, 2035.38,2420.72,111.08</Task>
+    <Task>Goto Hotspot: auto, 2066.28,2426.21,111.1</Task>
+    <Task>Goto Hotspot: auto, 2096.99,2427.29,111.1</Task>
+    <Task>Goto Hotspot: auto, 2129.42,2437.84,115.81</Task>
+    <Task>Goto Hotspot: auto, 2155.59,2458.15,105.17</Task>
+    <Task>Goto Hotspot: auto, 2149.04,2425.41,105.54</Task>
+    <Task>Goto Hotspot: auto, 2132.31,2399.17,105.04</Task>
+    <Task>Goto Hotspot: auto, 2119.34,2371.83,105.29</Task>
+    <Task>Goto Hotspot: auto, 2149.61,2365.56,108.05</Task>
+    <Task>Goto Hotspot: auto, 2122.26,2379.81,105.39</Task>
+    <Task>Goto Hotspot: auto, 2114.14,2349.23,104.91</Task>
+    <Task>Goto Hotspot: auto, 2083.11,2344.64,109.33</Task>
+    <Task>Goto Hotspot: auto, 2062.94,2369.91,109.08</Task>
+    <Task>Goto Hotspot: auto, 2032.85,2385.86,109.88</Task>
+  </TaskList>
+</PatrolArea>

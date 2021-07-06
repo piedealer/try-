@@ -1,0 +1,34 @@
+<PatrolArea Name="3 - Grahanwood beach farm - Mudcrabs">
+  <WaypointDistance>30</WaypointDistance>
+  <TargetMaxLevel>999</TargetMaxLevel>
+  <TargetMinLevel>0</TargetMinLevel>
+  <TargetRange>30</TargetRange>
+  <Type>1</Type>
+  <UseClosestWaypoint>False</UseClosestWaypoint>
+  <PatrolMinLevel>1</PatrolMinLevel>
+  <PatrolMaxLevel>999</PatrolMaxLevel>
+  <TargetsPerHotspot>5</TargetsPerHotspot>
+  <Target Name="Mudcrab" />
+  <TaskList Name="3 - Grahanwood beach farm - Mudcrabs">
+    <Loops>10</Loops>
+    <Task>Goto Hotspot: auto, 3296.47,2716.27,100.27</Task>
+    <Task>Goto Hotspot: auto, 3288.84,2686.6,101.46</Task>
+    <Task>Goto Hotspot: auto, 3290.75,2654.49,107.21</Task>
+    <Task>Goto Hotspot: auto, 3261.81,2661.42,101.67</Task>
+    <Task>Goto Hotspot: auto, 3268.57,2696.26,101.13</Task>
+    <Task>Goto Hotspot: auto, 3238.69,2676.23,102.55</Task>
+    <Task>Goto Hotspot: auto, 3221.03,2700.69,101.46</Task>
+    <Task>Goto Hotspot: auto, 3186.33,2700.79,102.67</Task>
+    <Task>Goto Hotspot: auto, 3199.87,2729.82,101.05</Task>
+    <Task>Goto Hotspot: auto, 3229.36,2748.7,100.93</Task>
+    <Task>Goto Hotspot: auto, 3216.48,2780.13,101.13</Task>
+    <Task>Goto Hotspot: auto, 3204.14,2810.55,105.2</Task>
+    <Task>Goto Hotspot: auto, 3220.45,2835.58,100.16</Task>
+    <Task>Goto Hotspot: auto, 3223.84,2801.52,101.03</Task>
+    <Task>Goto Hotspot: auto, 3228.9,2770.63,100.92</Task>
+    <Task>Goto Hotspot: auto, 3223.77,2740.39,100.59</Task>
+    <Task>Goto Hotspot: auto, 3217.12,2708.78,101.03</Task>
+    <Task>Goto Hotspot: auto, 3243.82,2694.99,100.37</Task>
+    <Task>Goto Hotspot: auto, 3278.77,2701.98,100.34</Task>
+  </TaskList>
+</PatrolArea>

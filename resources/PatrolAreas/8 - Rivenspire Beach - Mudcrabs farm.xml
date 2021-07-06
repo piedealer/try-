@@ -1,0 +1,39 @@
+<PatrolArea Name="8 - Rivenspire Beach - Mudcrabs farm">
+  <WaypointDistance>30</WaypointDistance>
+  <TargetMaxLevel>999</TargetMaxLevel>
+  <TargetMinLevel>0</TargetMinLevel>
+  <TargetRange>30</TargetRange>
+  <Type>1</Type>
+  <UseClosestWaypoint>False</UseClosestWaypoint>
+  <PatrolMinLevel>1</PatrolMinLevel>
+  <PatrolMaxLevel>999</PatrolMaxLevel>
+  <TargetsPerHotspot>5</TargetsPerHotspot>
+  <Target Name="Mountain Flower" />
+  <Target Name="High Iron Ore" />
+  <Target Name="Water Hyacinth" />
+  <Target Name="Mudcrab" />
+  <Target Name="Iron Ore" />
+  <Target Name="Bugloss" />
+  <Target Name="Jute" />
+  <Target Name="Flax" />
+  <Target Name="Blessed Thistle" />
+  <Target Name="Maple" />
+  <Target Name="Pewter Seam" />
+  <Target Name="Oak" />
+  <TaskList Name="8 - Rivenspire Beach - Mudcrabs farm">
+    <Loops>9999</Loops>
+    <Task>Goto Hotspot: auto, 2505.02,1316.07,102.91</Task>
+    <Task>Goto Hotspot: auto, 2539.56,1308.88,100.12</Task>
+    <Task>Goto Hotspot: auto, 2539.67,1274.53,101.64</Task>
+    <Task>Goto Hotspot: auto, 2569.43,1266.92,99.72</Task>
+    <Task>Goto Hotspot: auto, 2596.83,1249.07,101.16</Task>
+    <Task>Goto Hotspot: auto, 2632.24,1243.53,100.17</Task>
+    <Task>Goto Hotspot: auto, 2664.38,1229.62,100.72</Task>
+    <Task>Goto Hotspot: auto, 2630.89,1246.31,100.9</Task>
+    <Task>Goto Hotspot: auto, 2594.6,1250.74,101.36</Task>
+    <Task>Goto Hotspot: auto, 2559.68,1251.69,100.64</Task>
+    <Task>Goto Hotspot: auto, 2542.1,1280.62,101.86</Task>
+    <Task>Goto Hotspot: auto, 2530.2,1312.2,100.67</Task>
+    <Task>Goto Hotspot: auto, 2498.74,1307.3,102.01</Task>
+  </TaskList>
+</PatrolArea>

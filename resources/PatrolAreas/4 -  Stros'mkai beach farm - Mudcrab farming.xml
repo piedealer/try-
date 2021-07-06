@@ -1,0 +1,41 @@
+<PatrolArea Name="4 -  Stros'mkai beach farm - Mudcrab farming">
+  <WaypointDistance>30</WaypointDistance>
+  <TargetMaxLevel>999</TargetMaxLevel>
+  <TargetMinLevel>0</TargetMinLevel>
+  <TargetRange>30</TargetRange>
+  <Type>1</Type>
+  <UseClosestWaypoint>False</UseClosestWaypoint>
+  <PatrolMinLevel>1</PatrolMinLevel>
+  <PatrolMaxLevel>999</PatrolMaxLevel>
+  <TargetsPerHotspot>5</TargetsPerHotspot>
+  <Target Name="Mudcrab" />
+  <Target Name="High Iron Ore" />
+  <Target Name="Dragonthorn" />
+  <Target Name="Iron Ore" />
+  <Target Name="Blessed Thistle" />
+  <Target Name="Pewter Seam" />
+  <Target Name="Maple" />
+  <Target Name="Corn Flower" />
+  <TaskList Name="4 -  Stros'mkai beach farm - Mudcrab farming">
+    <Loops>9999</Loops>
+    <Task>Goto Hotspot: auto, 893.37,1605.83,100.09</Task>
+    <Task>Goto Hotspot: auto, 916.58,1625.78,100.06</Task>
+    <Task>Goto Hotspot: auto, 946.31,1634.66,104.08</Task>
+    <Task>Goto Hotspot: auto, 981.38,1627.95,100.14</Task>
+    <Task>Goto Hotspot: auto, 965.07,1595.66,99.99</Task>
+    <Task>Goto Hotspot: auto, 937.29,1569.55,100.07</Task>
+    <Task>Goto Hotspot: auto, 910.07,1545.61,100.01</Task>
+    <Task>Goto Hotspot: auto, 895.13,1511.57,100.65</Task>
+    <Task>Goto Hotspot: auto, 874.21,1480.91,103.01</Task>
+    <Task>Goto Hotspot: auto, 844.8,1466.44,99.73</Task>
+    <Task>Goto Hotspot: auto, 870.45,1492.38,100.8</Task>
+    <Task>Goto Hotspot: auto, 882.55,1524.06,100.01</Task>
+    <Task>Goto Hotspot: auto, 888.16,1553.72,102.28</Task>
+    <Task>Goto Hotspot: auto, 871.57,1580.68,103.32</Task>
+    <Task>Goto Hotspot: auto, 881.73,1610.78,99.96</Task>
+    <Task>Goto Hotspot: auto, 908.7,1635.9,99.99</Task>
+    <Task>Goto Hotspot: auto, 940.97,1641.86,104.24</Task>
+    <Task>Goto Hotspot: auto, 922.88,1612.72,100.88</Task>
+    <Task>Goto Hotspot: auto, 891.37,1604.1,100.63</Task>
+  </TaskList>
+</PatrolArea>
