@@ -85,19 +85,25 @@
   <Task>Goto Waypoint: 657.84,413.82,101.94</Task>
   <Task>Goto Waypoint: 647.63,435.17,102.14</Task>
   <Task>Goto Waypoint: 653.85,453.59,102.15</Task>
-  <Task>Goto Waypoint: 657.16,464.01,103.12</Task>
-  <Task>Rest: 3000</Task>
+  <Task>Goto Waypoint: 657.31,466.43,104.15</Task>
+  <Task>Rest: 6000</Task>
   <Task>Press Key(s): E, 3000</Task>
   <Task>Goto Waypoint: 828.3,808.49,90.38</Task>
   <Task>Goto Waypoint: 837.35,833.14,90.82</Task>
   <Task>Rest: 10000</Task>
   <Task>Goto Waypoint: 839.58,838.36,91.35</Task>
   <Task>Rest: 5000</Task>
-  <Task>Goto Waypoint: 839.56,838.81,91.35</Task>
+  <Task>Goto Waypoint: 838.97,839.6,91.35</Task>
   <Task>Rest: 3000</Task>
   <Task>Target NPC: Skyshard</Task>
   <Task>Press Key(s): E, 3000</Task>
-  <Task>Goto Waypoint: 837.61,833.45,90.82</Task>
+  <Task>Goto Waypoint: 826.59,802.71,90.38</Task>
+  <Task>Rest: 5000</Task>
+  <Task>Goto Waypoint: 832.33,820.22,90.43</Task>
+  <Task>Rest: 5000</Task>
+  <Task>Goto Waypoint: 839.61,839.37,91.35</Task>
+  <Task>Rest: 5000</Task>
+  <Task>Press Key(s): E, 3000</Task>
   <Task>Goto Waypoint: 823.72,795.54,90.38</Task>
   <Task>Goto Waypoint: 822.61,792.14,90.38</Task>
   <Task>Rest: 3000</Task>
