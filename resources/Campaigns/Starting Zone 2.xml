@@ -9,14 +9,18 @@
   <Task>Press Key(s): E, 3000</Task>
   <Task>Press Key(s): E, 3000</Task>
   <Task>Press Key(s): E, 3000</Task>
+  <Task>Press Key(s): ESCAPE, 3000</Task>
   <Task>Goto Waypoint: 109.73,763.89,89.94</Task>
   <Task>Rest: 3000</Task>
   <Task>Target NPC: Belfiera Ruins</Task>
   <Task>Press Key(s): E, 3000</Task>
-  <Task>Goto Waypoint: 109.99,749.87,89.94</Task>
-  <Task>Goto Waypoint: 94.64,754.85,94.67</Task>
-  <Task>Goto Waypoint: 88.11,767.96,101.42</Task>
+  <Task>Goto Waypoint: 109.91,748.42,89.94</Task>
+  <Task>Goto Waypoint: 95.27,753.88,94.18</Task>
+  <Task>Goto Waypoint: 80.96,766.7,102.06</Task>
+  <Task>Goto Waypoint: 81.47,778.1,102.71</Task>
+  <Task>Rest: 3000</Task>
   <Task>Press Key(s): L_CONTROL, 1000</Task>
+  <Task>Rest: 3000</Task>
   <Task>Goto Waypoint: 97.21,778.48,102.73</Task>
   <Task>Goto Waypoint: 126.13,778.89,102.73</Task>
   <Task>Rest: 3000</Task>
@@ -40,8 +44,10 @@
   <Task>Goto Waypoint: 669.48,396.9,107.21</Task>
   <Task>Goto Waypoint: 660.09,386.28,107.24</Task>
   <Task>Goto Waypoint: 672.33,375.23,108.9</Task>
+  <Task>Goto Waypoint: 675.23,373.29,109.79</Task>
   <Task>Goto Waypoint: 673.8,374.06,109.73</Task>
   <Task>Rest: 3000</Task>
+  <Task>Target NPC: Gallery</Task>
   <Task>Press Key(s): E, 3000</Task>
   <Task>Goto Waypoint: 425.47,905.35,103.12</Task>
   <Task>Goto Waypoint: 439.2,905.92,107.16</Task>
@@ -84,6 +90,9 @@
   <Task>Press Key(s): E, 3000</Task>
   <Task>Goto Waypoint: 828.3,808.49,90.38</Task>
   <Task>Goto Waypoint: 837.35,833.14,90.82</Task>
+  <Task>Rest: 10000</Task>
+  <Task>Goto Waypoint: 839.58,838.36,91.35</Task>
+  <Task>Rest: 5000</Task>
   <Task>Goto Waypoint: 839.56,838.81,91.35</Task>
   <Task>Rest: 3000</Task>
   <Task>Target NPC: Skyshard</Task>
@@ -93,7 +102,7 @@
   <Task>Goto Waypoint: 822.61,792.14,90.38</Task>
   <Task>Rest: 3000</Task>
   <Task>Press Key(s): E, 3000</Task>
-  <Task>Goto Waypoint: 647.33,425.9,101.99</Task>
+  <Task>Goto Waypoint: 653.07,415.28,102.14</Task>
   <Task>Goto Waypoint: 670.16,415.41,101.87</Task>
   <Task>Goto Waypoint: 692.17,412.37,107.25</Task>
   <Task>Goto Waypoint: 685.74,402.91,107.21</Task>
@@ -110,14 +119,45 @@
   <Task>Rest: 3000</Task>
   <Task>Target NPC: Skyshard Aperture</Task>
   <Task>Press Key(s): E, 3000</Task>
-  <Task>Rest: 7000</Task>
+  <Task>Rest: 15000</Task>
   <Task>Target NPC: Norianwe</Task>
   <Task>Press Key(s): E, 3000</Task>
   <Task>Press Key(s): E, 3000</Task>
   <Task>Press Key(s): E, 3000</Task>
+  <Task>Press Key(s): ESCAPE, 3000</Task>
   <Task>Goto Waypoint: 455.98,878.72,115.67</Task>
   <Task>Goto Waypoint: 459.22,871.46,115.52</Task>
   <Task>Rest: 3000</Task>
   <Task>Press Key(s): E, 3000</Task>
   <Task>Goto Waypoint: 482.79,848.07,114.7</Task>
+  <Task>Goto Waypoint: 499.32,831.46,115.57</Task>
+  <Task>Rest: 3000</Task>
+  <Task>Press Key(s): E, 3000</Task>
+  <Task>Goto Waypoint: 541.41,789.39,102.71</Task>
+  <Task>Goto Waypoint: 510.41,756.94,102.71</Task>
+  <Task>Goto Waypoint: 509.54,735.38,93.38</Task>
+  <Task>Goto Waypoint: 513.13,727.98,89.94</Task>
+  <Task>Rest: 3000</Task>
+  <Task>Press Key(s): E, 3000</Task>
+  <Task>Goto Waypoint: 522.01,716.77,89.94</Task>
+  <Task>Goto Waypoint: 541.7,737.51,89.94</Task>
+  <Task>Goto Waypoint: 552.27,770.73,90.24</Task>
+  <Task>Goto Waypoint: 556.48,772.77,90.24</Task>
+  <Task>Rest: 20000</Task>
+  <Task>Target NPC: Norianwe</Task>
+  <Task>Press Key(s): E, 3000</Task>
+  <Task>Press Key(s): E, 3000</Task>
+  <Task>Press Key(s): E, 3000</Task>
+  <Task>Press Key(s): E, 3000</Task>
+  <Task>Press Key(s): E, 3000</Task>
+  <Task>Press Key(s): E, 3000</Task>
+  <Task>Press Key(s): E, 3000</Task>
+  <Task>Press Key(s): E, 3000</Task>
+  <Task>Press Key(s): E, 3000</Task>
+  <Task>Press Key(s): E, 3000</Task>
+  <Task>Press Key(s): E, 3000</Task>
+  <Task>Press Key(s): E, 3000</Task>
+  <Task>Press Key(s): E, 3000</Task>
+  <Task>Press Key(s): E, 3000</Task>
+  <Task>Press Key(s): ESCAPE, 3000</Task>
 </TaskList>
