@@ -1,0 +1,52 @@
+<TaskList Name="Starting Zone">
+  <Loops>1</Loops>
+  <Task>Goto Waypoint: 88.54,899.56,89.94</Task>
+  <Task>Target NPC: Norianwe</Task>
+  <Task>Press Key(s): E, 2000</Task>
+  <Task>Press Key(s): E, 2000</Task>
+  <Task>Press Key(s): E, 2000</Task>
+  <Task>Press Key(s): E, 2000</Task>
+  <Task>Press Key(s): E, 2000</Task>
+  <Task>Goto Waypoint: 83.3,899.68,89.96</Task>
+  <Task>Goto Waypoint: 88.2,899.18,89.94</Task>
+  <Task>Rest: 3000</Task>
+  <Task>Target NPC: Cell Door</Task>
+  <Task>Press Key(s): E, 2000</Task>
+  <Task>Goto Waypoint: 96.38,892.6,89.94</Task>
+  <Task>Goto Waypoint: 96.74,871.69,89.94</Task>
+  <Task>Rest: 3000</Task>
+  <Task>Target NPC: Norianwe</Task>
+  <Task>Press Key(s): E, 2000</Task>
+  <Task>Press Key(s): E, 2000</Task>
+  <Task>Press Key(s): E, 2000</Task>
+  <Task>Press Key(s): E, 2000</Task>
+  <Task>Press Key(s): E, 2000</Task>
+  <Task>Press Key(s): E, 2000</Task>
+  <Task>Press Key(s): E, 2000</Task>
+  <Task>Press Key(s): E, 2000</Task>
+  <Task>Press Key(s): E, 2000</Task>
+  <Task>Press Key(s): E, 2000</Task>
+  <Task>Press Key(s): E, 2000</Task>
+  <Task>Press Key(s): ESCAPE, 3000</Task>
+  <Task>Goto Waypoint: 99.17,871.15,89.94</Task>
+  <Task>Goto Waypoint: 106.68,863.32,89.94</Task>
+  <Task>Goto Waypoint: 106.2,859.7,89.94</Task>
+  <Task>Rest: 3000</Task>
+  <Task>Press Key(s): E, 2000</Task>
+  <Task>Rest: 3000</Task>
+  <Task>Press Key(s): R, 2000</Task>
+  <Task>Rest: 3000</Task>
+  <Task>Press Key(s): I, 2000</Task>
+  <Task>Rest: 3000</Task>
+  <Task>Left Click: 820,303</Task>
+  <Task>Rest: 3000</Task>
+  <Task>Press Key(s): E, 2000</Task>
+  <Task>Rest: 3000</Task>
+  <Task>Goto Waypoint: 109.44,859.48,89.94</Task>
+  <Task>Goto Waypoint: 109.6,838.04,89.94</Task>
+  <Task>Rest: 3000</Task>
+  <Task>Press Key(s): E, 2000</Task>
+  <Task>Goto Waypoint: 109.61,797.46,90.09</Task>
+  <Task>Goto Waypoint: 109.61,781.46,90.36</Task>
+  <Task>Rest: 3000</Task>
+</TaskList>
