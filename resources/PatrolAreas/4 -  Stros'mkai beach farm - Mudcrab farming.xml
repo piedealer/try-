@@ -17,7 +17,7 @@
   <Target Name="Maple" />
   <Target Name="Corn Flower" />
   <TaskList Name="4 -  Stros'mkai beach farm - Mudcrab farming">
-    <Loops>9999</Loops>
+    <Loops>30</Loops>
     <Task>Goto Hotspot: auto, 893.37,1605.83,100.09</Task>
     <Task>Goto Hotspot: auto, 916.58,1625.78,100.06</Task>
     <Task>Goto Hotspot: auto, 946.31,1634.66,104.08</Task>

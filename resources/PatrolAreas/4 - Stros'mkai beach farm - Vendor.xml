@@ -9,7 +9,7 @@
   <PatrolMaxLevel>999</PatrolMaxLevel>
   <TargetsPerHotspot>5</TargetsPerHotspot>
   <TaskList Name="4 - Stros'mkai beach farm - Vendor">
-    <Loops>9999</Loops>
-    <Task>Goto Hotspot: auto, 1045.87,992.18,101.96</Task>
+    <Loops>1</Loops>
+    <Task>Goto Hotspot: auto, 1045.03,991.92,101.95</Task>
   </TaskList>
 </PatrolArea>
