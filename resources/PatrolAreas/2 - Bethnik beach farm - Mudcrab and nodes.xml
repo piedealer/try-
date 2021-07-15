@@ -22,7 +22,7 @@
   <Target Name="Luminous Russula" />
   <Target Name="Water Skin" />
   <TaskList Name="2 - Bethnik beach farm - Mudcrab and nodes">
-    <Loops>10</Loops>
+    <Loops>5</Loops>
     <Task>Goto Hotspot: auto, 640.76,626.54,105.1</Task>
     <Task>Goto Hotspot: auto, 641.56,659.84,106.37</Task>
     <Task>Goto Hotspot: auto, 616.18,679.56,105.76</Task>
