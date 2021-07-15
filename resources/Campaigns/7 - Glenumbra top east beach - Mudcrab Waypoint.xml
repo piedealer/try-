@@ -3,7 +3,7 @@
   <Task>REPEAT LOOP: 99999</Task>
   <Task>Press Key(s): M, 300</Task>
   <Task>Pause: 3000</Task>
-  <Task>Scaled Left Click: 380,459,999,686</Task>
+  <Task>Scaled Left Click: 376,502,1008,752</Task>
   <Task>Pause: 3000</Task>
   <Task>Press Key(s): E, 3000</Task>
   <Task>Pause: 60000</Task>
@@ -37,20 +37,19 @@
   <Task>Press Key(s): ESCAPE, 1000</Task>
   <Task>Pause: 1000</Task>
   <Task>Set Waypoint Accuracy: 3</Task>
-  <Task>Goto Waypoint: 1002.92,3014.51,166.25</Task>
-  <Task>Goto Waypoint: 1010.78,2997.29,166.38</Task>
-  <Task>Goto Waypoint: 1020.49,2988.58,167.22</Task>
-  <Task>Goto Waypoint: 1027.43,2970.26,167.85</Task>
-  <Task>Goto Waypoint: 1026.05,2966.14,168.9</Task>
+  <Task>Goto Waypoint: 1003.01,3014.21,166.27</Task>
+  <Task>Goto Waypoint: 1011.11,3000.35,166.8</Task>
+  <Task>Goto Waypoint: 1026.13,2987.75,167.22</Task>
+  <Task>Goto Waypoint: 1035.17,2978.82,167.55</Task>
+  <Task>Goto Waypoint: 1032.16,2969.71,167.84</Task>
   <Task>Rest: 5000</Task>
-  <Task>Face Heading: 68</Task>
   <Task>Set Waypoint Accuracy: 3</Task>
   <Task>Pause: 1000</Task>
   <Task>Target NPC: Daggerfall Wayshrine</Task>
   <Task>Pause: 1000</Task>
   <Task>Press Key(s): E, 1000</Task>
   <Task>Pause: 3000</Task>
-  <Task>Scaled Left Click: 554,220,999,686</Task>
+  <Task>Scaled Left Click: 530,228,952,696</Task>
   <Task>Pause: 1000</Task>
   <Task>Press Key(s): E, 300</Task>
   <Task>Pause: 60000</Task>
