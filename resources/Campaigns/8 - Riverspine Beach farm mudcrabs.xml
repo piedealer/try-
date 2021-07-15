@@ -1,0 +1,56 @@
+<TaskList Name="8 - Riverspine Beach farm mudcrabs">
+  <Loops>1</Loops>
+  <Task>REPEAT LOOP: 99999</Task>
+  <Task>Press Key(s): M, 300</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Scaled Left Click: 546,435,1016,760</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Press Key(s): E, 3000</Task>
+  <Task>Pause: 60000</Task>
+  <Task>Goto Waypoint: 2691.53,2304.16,174.36</Task>
+  <Task>Goto Waypoint: 2705.31,2303.73,168.51</Task>
+  <Task>Goto Waypoint: 2713.15,2301.79,167.75</Task>
+  <Task>Rest: 5000</Task>
+  <Task>Target NPC: Agdesh</Task>
+  <Task>Pause: 1500</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 10000</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 5000</Task>
+  <Task>Press Key(s): X, 2000</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Press Key(s): E, 2000</Task>
+  <Task>Pause: 2000</Task>
+  <Task>Press Key(s): ESCAPE, 1000</Task>
+  <Task>Pause: 1000</Task>
+  <Task>Target NPC: Agdesh</Task>
+  <Task>Pause: 1500</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 10000</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 5000</Task>
+  <Task>Press Key(s): X, 2000</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Press Key(s): E, 2000</Task>
+  <Task>Pause: 2000</Task>
+  <Task>Press Key(s): ESCAPE, 1000</Task>
+  <Task>Pause: 1000</Task>
+  <Task>Set Waypoint Accuracy: 3</Task>
+  <Task>Goto Waypoint: 2713.15,2301.79,167.75</Task>
+  <Task>Goto Waypoint: 2698.51,2302.66,170.84</Task>
+  <Task>Goto Waypoint: 2685.65,2303.09,175.34</Task>
+  <Task>Rest: 5000</Task>
+  <Task>Face Heading: 356</Task>
+  <Task>Set Waypoint Accuracy: 3</Task>
+  <Task>Pause: 1000</Task>
+  <Task>Target NPC: Hoarfrost</Task>
+  <Task>Pause: 1000</Task>
+  <Task>Press Key(s): E, 1000</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Scaled Left Click: 475,299,1016,760</Task>
+  <Task>Pause: 1000</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 60000</Task>
+  <Task>Start Patrol: 8 - Rivenspire Beach - Mudcrabs farm,0,25</Task>
+  <Task>END REPEAT LOOP</Task>
+</TaskList>
