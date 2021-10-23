@@ -9,7 +9,7 @@
   <PatrolMaxLevel>999</PatrolMaxLevel>
   <TargetsPerHotspot>5</TargetsPerHotspot>
   <TaskList Name="1- Knetari's Roost beach Farm - Vendor run">
-    <Loops>9999</Loops>
+    <Loops>1</Loops>
     <Task>Goto Hotspot: auto, 997.98,1263.88,156.7</Task>
   </TaskList>
 </PatrolArea>
