@@ -20,8 +20,10 @@
   <Target Name="Maple" />
   <Target Name="Pewter Seam" />
   <Target Name="Oak" />
+  <Target Name="Dragonthorn" />
+  <Target Name="Water Hyacinth" />
   <TaskList Name="8 - Rivenspire Beach - Mudcrabs farm">
-    <Loops>9999</Loops>
+    <Loops>50</Loops>
     <Task>Goto Hotspot: auto, 2505.02,1316.07,102.91</Task>
     <Task>Goto Hotspot: auto, 2539.56,1308.88,100.12</Task>
     <Task>Goto Hotspot: auto, 2539.67,1274.53,101.64</Task>
