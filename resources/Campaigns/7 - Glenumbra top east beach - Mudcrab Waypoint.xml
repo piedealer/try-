@@ -3,7 +3,7 @@
   <Task>REPEAT LOOP: 99999</Task>
   <Task>Press Key(s): M, 300</Task>
   <Task>Pause: 3000</Task>
-  <Task>Scaled Left Click: 376,502,1008,752</Task>
+  <Task>Scaled Left Click: 384,440,998,655</Task>
   <Task>Pause: 3000</Task>
   <Task>Press Key(s): E, 3000</Task>
   <Task>Pause: 60000</Task>
@@ -11,7 +11,7 @@
   <Task>Goto Waypoint: 1017.28,2989.44,167.14</Task>
   <Task>Goto Waypoint: 1003.58,3006.19,166.18</Task>
   <Task>Goto Waypoint: 1001.59,3019.72,166.19</Task>
-  <Task>Rest: 5000</Task>
+  <Task>Rest: 20000</Task>
   <Task>Target NPC: Fabio Previa</Task>
   <Task>Pause: 1500</Task>
   <Task>Press Key(s): E, 300</Task>
@@ -49,10 +49,10 @@
   <Task>Pause: 1000</Task>
   <Task>Press Key(s): E, 1000</Task>
   <Task>Pause: 3000</Task>
-  <Task>Scaled Left Click: 530,228,952,696</Task>
+  <Task>Scaled Left Click: 548,213,998,655</Task>
   <Task>Pause: 1000</Task>
   <Task>Press Key(s): E, 300</Task>
   <Task>Pause: 60000</Task>
-  <Task>Start Patrol: 7 - Glenubra east beach - Mudcrab farm,0,20</Task>
+  <Task>Start Patrol: 7 - Glenumbra - Top east mudcrab farm,0,5</Task>
   <Task>END REPEAT LOOP</Task>
 </TaskList>
