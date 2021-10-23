@@ -3,7 +3,7 @@
   <Task>REPEAT LOOP: 99999</Task>
   <Task>Press Key(s): M, 300</Task>
   <Task>Pause: 3000</Task>
-  <Task>Scaled Left Click: 546,435,1016,760</Task>
+  <Task>Scaled Left Click: 488,379,912,656</Task>
   <Task>Pause: 3000</Task>
   <Task>Press Key(s): E, 3000</Task>
   <Task>Pause: 60000</Task>
@@ -47,10 +47,10 @@
   <Task>Pause: 1000</Task>
   <Task>Press Key(s): E, 1000</Task>
   <Task>Pause: 3000</Task>
-  <Task>Scaled Left Click: 475,299,1016,760</Task>
+  <Task>Scaled Left Click: 423,258,912,656</Task>
   <Task>Pause: 1000</Task>
   <Task>Press Key(s): E, 300</Task>
   <Task>Pause: 60000</Task>
-  <Task>Start Patrol: 8 - Rivenspire Beach - Mudcrabs farm,0,25</Task>
+  <Task>Start Patrol: 8 - Rivenspire Beach - Mudcrabs farm,0,50</Task>
   <Task>END REPEAT LOOP</Task>
 </TaskList>
