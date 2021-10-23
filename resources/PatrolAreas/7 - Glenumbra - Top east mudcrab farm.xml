@@ -1,0 +1,46 @@
+<PatrolArea Name="7 - Glenumbra - Top east mudcrab farm">
+  <WaypointDistance>30</WaypointDistance>
+  <TargetMaxLevel>999</TargetMaxLevel>
+  <TargetMinLevel>0</TargetMinLevel>
+  <TargetRange>17</TargetRange>
+  <Type>1</Type>
+  <UseClosestWaypoint>False</UseClosestWaypoint>
+  <PatrolMinLevel>1</PatrolMinLevel>
+  <PatrolMaxLevel>999</PatrolMaxLevel>
+  <TargetsPerHotspot>5</TargetsPerHotspot>
+  <Target Name="Mudcrab" />
+  <Target Name="Water Skin" />
+  <Target Name="Iron Ore" />
+  <Target Name="Mountain Flower" />
+  <Target Name="Pewter Seam" />
+  <TaskList Name="7 - Glenumbra - Top east mudcrab farm">
+    <Loops>5</Loops>
+    <Task>Goto Hotspot: auto, 1942.76,1235.66,100.46</Task>
+    <Task>Goto Hotspot: auto, 1963.26,1211.23,100.29</Task>
+    <Task>Goto Hotspot: auto, 1994.3,1217.15,100.55</Task>
+    <Task>Goto Hotspot: auto, 2006.76,1187.86,100.62</Task>
+    <Task>Goto Hotspot: auto, 2062.19,1155.38,100.51</Task>
+    <Task>Goto Hotspot: auto, 2047.89,1121.07,100.97</Task>
+    <Task>Goto Hotspot: auto, 2077.34,1105.57,101.24</Task>
+    <Task>Goto Hotspot: auto, 2044.44,1095.69,101.61</Task>
+    <Task>Goto Hotspot: auto, 2019.64,1075.24,101.29</Task>
+    <Task>Goto Hotspot: auto, 2027.06,1042.98,101.79</Task>
+    <Task>Goto Hotspot: auto, 2060.37,1048.45,101.89</Task>
+    <Task>Goto Hotspot: auto, 2090.28,1054.9,100.68</Task>
+    <Task>Goto Hotspot: auto, 2115.14,1027.63,101.72</Task>
+    <Task>Goto Hotspot: auto, 2127.37,994.59,105.48</Task>
+    <Task>Goto Hotspot: auto, 2126.68,958.27,111.52</Task>
+    <Task>Goto Hotspot: auto, 2123.03,990.09,105.82</Task>
+    <Task>Goto Hotspot: auto, 2112.71,1022.77,102.14</Task>
+    <Task>Goto Hotspot: auto, 2089.25,1048.88,100.6</Task>
+    <Task>Goto Hotspot: auto, 2058.21,1046.81,102.05</Task>
+    <Task>Goto Hotspot: auto, 2024.67,1045.92,102.59</Task>
+    <Task>Goto Hotspot: auto, 2023.43,1080.91,102.06</Task>
+    <Task>Goto Hotspot: auto, 2050.4,1105.36,100.76</Task>
+    <Task>Goto Hotspot: auto, 2050.96,1136.05,100.16</Task>
+    <Task>Goto Hotspot: auto, 2004.99,1167.29,99.98</Task>
+    <Task>Goto Hotspot: auto, 2008.46,1197.44,101.7</Task>
+    <Task>Goto Hotspot: auto, 1982.44,1220.88,100.3</Task>
+    <Task>Goto Hotspot: auto, 1949.03,1229.5,100.74</Task>
+  </TaskList>
+</PatrolArea>
