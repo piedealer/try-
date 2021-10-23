@@ -21,6 +21,11 @@
   <Target Name="Blue Entoloma" />
   <Target Name="Luminous Russula" />
   <Target Name="Water Skin" />
+  <Target Name="Jute" />
+  <Target Name="Corn Flower" />
+  <Target Name="Mountain Flower" />
+  <Target Name="Voidstone Ore" />
+  <Target Name="Nightwood" />
   <TaskList Name="2 - Bethnik beach farm - Mudcrab and nodes">
     <Loops>5</Loops>
     <Task>Goto Hotspot: auto, 640.76,626.54,105.1</Task>
@@ -49,7 +54,6 @@
     <Task>Goto Hotspot: auto, 485.12,1260.11,105.07</Task>
     <Task>Goto Hotspot: auto, 509.39,1282.22,105.03</Task>
     <Task>Goto Hotspot: auto, 531.18,1311.81,105.01</Task>
-    <Task>Goto Hotspot: auto, 537.05,1344.34,104.91</Task>
     <Task>Goto Hotspot: auto, 561.63,1367.69,105.16</Task>
     <Task>Goto Hotspot: auto, 586.52,1394.6,105.2</Task>
     <Task>Goto Hotspot: auto, 617.52,1414.69,105.18</Task>
