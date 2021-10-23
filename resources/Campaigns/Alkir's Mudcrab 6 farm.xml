@@ -4,7 +4,7 @@
   <Task>Start Patrol: Alkir's Mudcrab 6 place get rid of agro,0,1</Task>
   <Task>Press Key(s): M, 300</Task>
   <Task>Pause: 3000</Task>
-  <Task>Scaled Left Click: 365,351,1015,677</Task>
+  <Task>Scaled Left Click: 393,350,1070,679</Task>
   <Task>Pause: 3000</Task>
   <Task>Press Key(s): E, 3000</Task>
   <Task>Pause: 60000</Task>
@@ -15,8 +15,8 @@
   <Task>Goto Waypoint: 2100.57,1542.62,118.62</Task>
   <Task>Goto Waypoint: 2127.03,1516.09,118.66</Task>
   <Task>Goto Waypoint: 2158.33,1493.28,119.41</Task>
-  <Task>Start Patrol: Alkir Mudcrab 6 vendor def edition,0,1</Task>
-  <Task>Pause: 20000</Task>
+  <Task>Goto Waypoint: 2161.9,1489.06,119.34</Task>
+  <Task>Rest: 20000</Task>
   <Task>Goto Waypoint: 2174.54,1498.1,120</Task>
   <Task>Target NPC: Muruuna</Task>
   <Task>Pause: 1500</Task>
@@ -58,7 +58,7 @@
   <Task>Pause: 1000</Task>
   <Task>Press Key(s): E, 1000</Task>
   <Task>Pause: 3000</Task>
-  <Task>Scaled Left Click: 591,291,1015,677</Task>
+  <Task>Scaled Left Click: 618,294,1070,679</Task>
   <Task>Pause: 1000</Task>
   <Task>Press Key(s): E, 300</Task>
   <Task>Pause: 60000</Task>
