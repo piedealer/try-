@@ -28,6 +28,6 @@
   <Task>Pause: 2000</Task>
   <Task>Press Key(s): ESCAPE, 1000</Task>
   <Task>Pause: 1000</Task>
-  <Task>Start Patrol: 1- Knetari's Roost beach farm - Mudcrabs and nodes,0,10</Task>
+  <Task>Start Patrol: 1- Knetari's Roost beach farm - Mudcrabs and nodes,0,30</Task>
   <Task>END REPEAT LOOP</Task>
 </TaskList>
