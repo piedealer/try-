@@ -359,6 +359,11 @@
             Returns the MaxUP
             </summary>
         </member>
+        <member name="P:Viper.Scripting.Core.Interfaces.IPlayer.CharName">
+            <summary>
+            Returns the Character name currently logged in
+            </summary>
+        </member>
         <member name="T:Viper.Scripting.Core.Interfaces.IBuffs">
             <summary>
             IBuffs is a collection of all buffs
