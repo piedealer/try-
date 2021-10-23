@@ -3,8 +3,8 @@
   <Task>REPEAT LOOP: 99999</Task>
   <Task>Start Patrol: 2 -  Bethnik beach farm vendor run.,0,1</Task>
   <Task>Pause: 20000</Task>
-  <Task>Goto Waypoint: 1130.07,978.84,108.95</Task>
-  <Task>Target NPC: Ograt</Task>
+  <Task>Goto Waypoint: 1094.01,981.96,108.87</Task>
+  <Task>Target NPC: Meerana</Task>
   <Task>Pause: 1500</Task>
   <Task>Press Key(s): E, 300</Task>
   <Task>Pause: 10000</Task>
@@ -16,7 +16,7 @@
   <Task>Pause: 2000</Task>
   <Task>Press Key(s): ESCAPE, 1000</Task>
   <Task>Pause: 1000</Task>
-  <Task>Target NPC: Ograt</Task>
+  <Task>Target NPC: Meerana</Task>
   <Task>Pause: 1500</Task>
   <Task>Press Key(s): E, 300</Task>
   <Task>Pause: 10000</Task>
