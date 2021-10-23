@@ -1,0 +1,15 @@
+<PatrolArea Name="10 - Bethnick Wolf and Node farm vendor">
+  <WaypointDistance>30</WaypointDistance>
+  <TargetMaxLevel>999</TargetMaxLevel>
+  <TargetMinLevel>0</TargetMinLevel>
+  <TargetRange>30</TargetRange>
+  <Type>1</Type>
+  <UseClosestWaypoint>False</UseClosestWaypoint>
+  <PatrolMinLevel>1</PatrolMinLevel>
+  <PatrolMaxLevel>999</PatrolMaxLevel>
+  <TargetsPerHotspot>5</TargetsPerHotspot>
+  <TaskList Name="10 - Bethnick Wolf and Node farm vendor">
+    <Loops>9999</Loops>
+    <Task>Goto Hotspot: auto, 1094.38,982.58,108.82</Task>
+  </TaskList>
+</PatrolArea>

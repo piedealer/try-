@@ -1,0 +1,15 @@
+<PatrolArea Name="15- Bankorai Mudcrab vendor part 1">
+  <WaypointDistance>30</WaypointDistance>
+  <TargetMaxLevel>999</TargetMaxLevel>
+  <TargetMinLevel>0</TargetMinLevel>
+  <TargetRange>30</TargetRange>
+  <Type>1</Type>
+  <UseClosestWaypoint>False</UseClosestWaypoint>
+  <PatrolMinLevel>1</PatrolMinLevel>
+  <PatrolMaxLevel>999</PatrolMaxLevel>
+  <TargetsPerHotspot>5</TargetsPerHotspot>
+  <TaskList Name="15- Bankorai Mudcrab vendor part 1">
+    <Loops>1</Loops>
+    <Task>Goto Hotspot: auto, 1972.6,1010.39,111.03</Task>
+  </TaskList>
+</PatrolArea>

@@ -1,0 +1,59 @@
+<PatrolArea Name="17- Bankorai - Mudcrab farm and nodes">
+  <WaypointDistance>30</WaypointDistance>
+  <TargetMaxLevel>999</TargetMaxLevel>
+  <TargetMinLevel>0</TargetMinLevel>
+  <TargetRange>30</TargetRange>
+  <Type>1</Type>
+  <UseClosestWaypoint>False</UseClosestWaypoint>
+  <PatrolMinLevel>1</PatrolMinLevel>
+  <PatrolMaxLevel>999</PatrolMaxLevel>
+  <TargetsPerHotspot>5</TargetsPerHotspot>
+  <Target Name="Mudcrab" />
+  <Target Name="High Iron Ore" />
+  <Target Name="Maple" />
+  <Target Name="Pewter Seam" />
+  <Target Name="Water Skin" />
+  <Target Name="Iron Ore" />
+  <Target Name="Runestone" />
+  <Target Name="Water Hyacinth" />
+  <Target Name="Flax" />
+  <Target Name="Emetic Russula" />
+  <Target Name="Columbine" />
+  <TaskList Name="17- Bankorai - Mudcrab farm and nodes">
+    <Loops>9999</Loops>
+    <Task>Goto Hotspot: auto, 2061.06,1458.79,102.61</Task>
+    <Task>Goto Hotspot: auto, 2083.04,1432.12,101.17</Task>
+    <Task>Goto Hotspot: auto, 2052.82,1438.83,101.51</Task>
+    <Task>Goto Hotspot: auto, 2025.11,1461.95,100.99</Task>
+    <Task>Goto Hotspot: auto, 1994.2,1461.77,100.07</Task>
+    <Task>Goto Hotspot: auto, 1984.76,1423.15,99.79</Task>
+    <Task>Goto Hotspot: auto, 1978.11,1390.94,99.38</Task>
+    <Task>Goto Hotspot: auto, 1971.33,1359.42,100.31</Task>
+    <Task>Goto Hotspot: auto, 1975.87,1322.93,100.98</Task>
+    <Task>Goto Hotspot: auto, 1988.22,1289.36,101.79</Task>
+    <Task>Goto Hotspot: auto, 1979.09,1258.11,101.11</Task>
+    <Task>Goto Hotspot: auto, 1948.11,1240.67,100.81</Task>
+    <Task>Goto Hotspot: auto, 1925.29,1265.99,103.04</Task>
+    <Task>Goto Hotspot: auto, 1938.12,1302.38,102.34</Task>
+    <Task>Goto Hotspot: auto, 1950.88,1336.57,100.37</Task>
+    <Task>Goto Hotspot: auto, 1969.75,1366.16,99.85</Task>
+    <Task>Goto Hotspot: auto, 1976.48,1399.21,99.54</Task>
+    <Task>Goto Hotspot: auto, 1948.84,1417.4,100.49</Task>
+    <Task>Goto Hotspot: auto, 1915.91,1401.49,99.7</Task>
+    <Task>Goto Hotspot: auto, 1888.88,1431.2,100.79</Task>
+    <Task>Goto Hotspot: auto, 1861.16,1448.41,100.45</Task>
+    <Task>Goto Hotspot: auto, 1838.99,1476.99,100.5</Task>
+    <Task>Goto Hotspot: auto, 1807.76,1471.72,100.27</Task>
+    <Task>Goto Hotspot: auto, 1776.69,1487.82,99.4</Task>
+    <Task>Goto Hotspot: auto, 1751.49,1509.82,99.63</Task>
+    <Task>Goto Hotspot: auto, 1788.39,1509.83,100.24</Task>
+    <Task>Goto Hotspot: auto, 1822.99,1515.68,100.12</Task>
+    <Task>Goto Hotspot: auto, 1852.15,1507.97,101.32</Task>
+    <Task>Goto Hotspot: auto, 1870.36,1482.79,102.76</Task>
+    <Task>Goto Hotspot: auto, 1901.72,1474.83,103.12</Task>
+    <Task>Goto Hotspot: auto, 1934.55,1472.42,105.1</Task>
+    <Task>Goto Hotspot: auto, 1966.87,1470.24,104.35</Task>
+    <Task>Goto Hotspot: auto, 1998.48,1471.16,101.02</Task>
+    <Task>Goto Hotspot: auto, 2037.04,1455.76,101.48</Task>
+  </TaskList>
+</PatrolArea>
