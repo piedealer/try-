@@ -39,6 +39,6 @@
   <Task>Pause: 2000</Task>
   <Task>Press Key(s): ESCAPE, 1000</Task>
   <Task>Pause: 1000</Task>
-  <Task>Start Patrol: 12 -  Stonefalls - Shalk and nodes farm,0,5</Task>
+  <Task>Start Patrol: 12 -  Stonefalls - Shalk and nodes farm,0,2</Task>
   <Task>END REPEAT LOOP</Task>
 </TaskList>

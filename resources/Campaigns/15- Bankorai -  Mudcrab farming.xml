@@ -4,7 +4,7 @@
   <Task>Start Patrol: 15- Bankorai Mudcrab vendor part 1,0,1</Task>
   <Task>Press Key(s): E, 300</Task>
   <Task>Pause: 6000</Task>
-  <Task>Scaled Left Click: 413,232,880,624</Task>
+  <Task>Scaled Left Click: 623,340,1342,932</Task>
   <Task>Pause: 3000</Task>
   <Task>Press Key(s): E, 3000</Task>
   <Task>Pause: 60000</Task>
@@ -62,7 +62,7 @@
   <Task>Press Key(s): E, 1000</Task>
   <Task>Pause: 3000</Task>
   <Task>Face Heading: 85</Task>
-  <Task>Scaled Left Click: 451,119,880,624</Task>
+  <Task>Scaled Left Click: 688,170,1342,932</Task>
   <Task>Pause: 1000</Task>
   <Task>Press Key(s): E, 300</Task>
   <Task>Pause: 60000</Task>
