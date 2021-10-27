@@ -1,0 +1,67 @@
+<TaskList Name="16- Stonefall Scrib and node farm">
+  <Loops>1</Loops>
+  <Task>REPEAT LOOP: 99999</Task>
+  <Task>Start Patrol: 16 - Stonefalls scrib and node farm vendor 1-st,0,1</Task>
+  <Task>Face Heading: 360</Task>
+  <Task>Press Key(s): E, 3000</Task>
+  <Task>Scaled Left Click: 949,407,1342,932</Task>
+  <Task>Press Key(s): E, 3000</Task>
+  <Task>Rest: 60000</Task>
+  <Task>Start Patrol: 16 - Stonefalls scrib and node farm vendor,0,1</Task>
+  <Task>Pause: 20000</Task>
+  <Task>Target NPC: Merail Avani</Task>
+  <Task>Pause: 1500</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 10000</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 5000</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 5000</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 5000</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 5000</Task>
+  <Task>Press Key(s): X, 2000</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Press Key(s): E, 2000</Task>
+  <Task>Pause: 2000</Task>
+  <Task>Press Key(s): ESCAPE, 1000</Task>
+  <Task>Pause: 1000</Task>
+  <Task>Target NPC: Merail Avani</Task>
+  <Task>Pause: 1500</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 10000</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 5000</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 5000</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 5000</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 5000</Task>
+  <Task>Press Key(s): X, 2000</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Press Key(s): E, 2000</Task>
+  <Task>Pause: 2000</Task>
+  <Task>Press Key(s): ESCAPE, 1000</Task>
+  <Task>Pause: 1000</Task>
+  <Task>Goto Waypoint: 3741.57,1800.67,143.99</Task>
+  <Task>Goto Waypoint: 3735.69,1811.74,144</Task>
+  <Task>Goto Waypoint: 3720.7,1827.49,143.91</Task>
+  <Task>Goto Waypoint: 3689.03,1829.41,143.88</Task>
+  <Task>Goto Waypoint: 3708.25,1858.69,145.2</Task>
+  <Task>Goto Waypoint: 3727.31,1878.38,142.76</Task>
+  <Task>Goto Waypoint: 3719.33,1891.78,142.75</Task>
+  <Task>Goto Waypoint: 3731.58,1927.89,142.95</Task>
+  <Task>Goto Waypoint: 3721.32,1942.99,144.03</Task>
+  <Task>Goto Waypoint: 3679.7,1939.78,145.31</Task>
+  <Task>Goto Waypoint: 3644.18,1936.58,151.66</Task>
+  <Task>Face Heading: 268</Task>
+  <Task>Face Heading: 268</Task>
+  <Task>Press Key(s): E, 3000</Task>
+  <Task>Scaled Left Click: 547,557,1342,932</Task>
+  <Task>Press Key(s): E, 3000</Task>
+  <Task>Rest: 60000</Task>
+  <Task>Start Patrol: 16- Stonefalls scrib and node farm,0,10</Task>
+  <Task>END REPEAT LOOP</Task>
+</TaskList>
