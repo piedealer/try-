@@ -36,7 +36,7 @@
   <Target Name="Blue Entoloma" />
   <TaskList Name="15- Bankorai - Mudcrab and node farm">
     <Loops>10</Loops>
-    <Task>Goto Hotspot: auto, 1746.51,1334.02,99.94</Task>
+    <Task>Goto Hotspot: auto, 1760.97,1341.79,99.64</Task>
     <Task>Goto Hotspot: auto, 1781.89,1326.25,99.88</Task>
     <Task>Goto Hotspot: auto, 1817.09,1322.09,99.95</Task>
     <Task>Goto Hotspot: auto, 1844.87,1303.02,99.5</Task>
