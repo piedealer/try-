@@ -1,0 +1,55 @@
+<PatrolArea Name="17- Stonefals Shalk farm at field">
+  <WaypointDistance>30</WaypointDistance>
+  <TargetMaxLevel>999</TargetMaxLevel>
+  <TargetMinLevel>0</TargetMinLevel>
+  <TargetRange>30</TargetRange>
+  <Type>1</Type>
+  <UseClosestWaypoint>False</UseClosestWaypoint>
+  <PatrolMinLevel>1</PatrolMinLevel>
+  <PatrolMaxLevel>999</PatrolMaxLevel>
+  <TargetsPerHotspot>5</TargetsPerHotspot>
+  <Target Name="Shalk" />
+  <Target Name="High Iron Ore" />
+  <Target Name="Mountain Flower" />
+  <Target Name="Oak" />
+  <Target Name="Runestone" />
+  <Target Name="Imp Stool" />
+  <Target Name="Mountain Flower" />
+  <Target Name="Flax" />
+  <TaskList Name="17- Stonefals Shalk farm at field">
+    <Loops>9999</Loops>
+    <Task>Goto Hotspot: auto, 1730.5,2198.68,139.75</Task>
+    <Task>Goto Hotspot: auto, 1744.95,2225.17,136.17</Task>
+    <Task>Goto Hotspot: auto, 1717.51,2241.66,127.42</Task>
+    <Task>Goto Hotspot: auto, 1720.26,2274.92,132.17</Task>
+    <Task>Goto Hotspot: auto, 1712.14,2309.74,136.49</Task>
+    <Task>Goto Hotspot: auto, 1686.51,2293.28,124.8</Task>
+    <Task>Goto Hotspot: auto, 1699.32,2259.35,126.46</Task>
+    <Task>Goto Hotspot: auto, 1703.94,2227.32,125.92</Task>
+    <Task>Goto Hotspot: auto, 1671.97,2210.19,126.22</Task>
+    <Task>Goto Hotspot: auto, 1640.13,2214.74,125.92</Task>
+    <Task>Goto Hotspot: auto, 1633,2256.39,128.31</Task>
+    <Task>Goto Hotspot: auto, 1621.96,2283.95,132.89</Task>
+    <Task>Goto Hotspot: auto, 1586.79,2272.27,136.17</Task>
+    <Task>Goto Hotspot: auto, 1600.16,2239.24,131.86</Task>
+    <Task>Goto Hotspot: auto, 1630.53,2217.48,125.9</Task>
+    <Task>Goto Hotspot: auto, 1631.33,2183.8,125.87</Task>
+    <Task>Goto Hotspot: auto, 1601.23,2163.56,126.08</Task>
+    <Task>Goto Hotspot: auto, 1569.68,2150.71,126.98</Task>
+    <Task>Goto Hotspot: auto, 1537.47,2164.34,132.51</Task>
+    <Task>Goto Hotspot: auto, 1520.46,2196.86,137.76</Task>
+    <Task>Goto Hotspot: auto, 1492.52,2214.3,145.94</Task>
+    <Task>Goto Hotspot: auto, 1484.2,2245.23,146.31</Task>
+    <Task>Goto Hotspot: auto, 1506.26,2219.16,141.62</Task>
+    <Task>Goto Hotspot: auto, 1509.1,2185.68,134.93</Task>
+    <Task>Goto Hotspot: auto, 1518.69,2151.68,130.42</Task>
+    <Task>Goto Hotspot: auto, 1530.07,2120.35,125.03</Task>
+    <Task>Goto Hotspot: auto, 1556.47,2101.18,129.82</Task>
+    <Task>Goto Hotspot: auto, 1587.86,2118.31,134.52</Task>
+    <Task>Goto Hotspot: auto, 1623.04,2130.62,135.03</Task>
+    <Task>Goto Hotspot: auto, 1653.34,2139.22,133.85</Task>
+    <Task>Goto Hotspot: auto, 1657.76,2168.25,126.66</Task>
+    <Task>Goto Hotspot: auto, 1694,2177.09,131.61</Task>
+    <Task>Goto Hotspot: auto, 1732.48,2184,135.99</Task>
+  </TaskList>
+</PatrolArea>

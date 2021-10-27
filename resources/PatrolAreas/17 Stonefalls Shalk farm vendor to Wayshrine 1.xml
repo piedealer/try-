@@ -1,0 +1,15 @@
+<PatrolArea Name="17 Stonefalls Shalk farm vendor to Wayshrine 1">
+  <WaypointDistance>30</WaypointDistance>
+  <TargetMaxLevel>999</TargetMaxLevel>
+  <TargetMinLevel>0</TargetMinLevel>
+  <TargetRange>30</TargetRange>
+  <Type>1</Type>
+  <UseClosestWaypoint>False</UseClosestWaypoint>
+  <PatrolMinLevel>1</PatrolMinLevel>
+  <PatrolMaxLevel>999</PatrolMaxLevel>
+  <TargetsPerHotspot>5</TargetsPerHotspot>
+  <TaskList Name="17 Stonefalls Shalk farm vendor to Wayshrine 1">
+    <Loops>9999</Loops>
+    <Task>Goto Hotspot: auto, 1585.57,2067.3,134.93</Task>
+  </TaskList>
+</PatrolArea>
