@@ -1,0 +1,15 @@
+<PatrolArea Name="16 - Stonefalls scrib and node farm vendor">
+  <WaypointDistance>30</WaypointDistance>
+  <TargetMaxLevel>999</TargetMaxLevel>
+  <TargetMinLevel>0</TargetMinLevel>
+  <TargetRange>30</TargetRange>
+  <Type>1</Type>
+  <UseClosestWaypoint>False</UseClosestWaypoint>
+  <PatrolMinLevel>1</PatrolMinLevel>
+  <PatrolMaxLevel>999</PatrolMaxLevel>
+  <TargetsPerHotspot>5</TargetsPerHotspot>
+  <TaskList Name="16 - Stonefalls scrib and node farm vendor">
+    <Loops>9999</Loops>
+    <Task>Goto Hotspot: auto, 3754.21,1795.68,144.7</Task>
+  </TaskList>
+</PatrolArea>
