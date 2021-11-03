@@ -1,0 +1,75 @@
+<PatrolArea Name="14 - Shadowfan Mudcrab farm">
+  <WaypointDistance>30</WaypointDistance>
+  <TargetMaxLevel>999</TargetMaxLevel>
+  <TargetMinLevel>0</TargetMinLevel>
+  <TargetRange>30</TargetRange>
+  <Type>1</Type>
+  <UseClosestWaypoint>False</UseClosestWaypoint>
+  <PatrolMinLevel>1</PatrolMinLevel>
+  <PatrolMaxLevel>999</PatrolMaxLevel>
+  <TargetsPerHotspot>5</TargetsPerHotspot>
+  <Target Name="Mudcrab" />
+  <Target Name="Guar" />
+  <Target Name="Pure Water" />
+  <Target Name="Water Hyacinth" />
+  <Target Name="Nirnroot" />
+  <Target Name="Iron Ore" />
+  <Target Name="Crocodile" />
+  <Target Name="Runestone" />
+  <Target Name="Pure Water" />
+  <Target Name="Pewter Seam" />
+  <Target Name="Wormwood" />
+  <Target Name="Flax" />
+  <Target Name="Water Hyacinth" />
+  <Target Name="Bugloss" />
+  <Target Name="Maple" />
+  <Target Name="Nightshade" />
+  <Target Name="Lady's Smock" />
+  <Target Name="Oak" />
+  <Target Name="Luminous Russula" />
+  <Target Name="Columbine" />
+  <Target Name="Jute" />
+  <TaskList Name="14 - Shadowfan Mudcrab farm">
+    <Loops>9999</Loops>
+    <Task>Goto Hotspot: auto, 2371.07,1079.33,101.46</Task>
+    <Task>Goto Hotspot: auto, 2385.19,1048.3,99.66</Task>
+    <Task>Goto Hotspot: auto, 2403.01,1021.34,108.92</Task>
+    <Task>Goto Hotspot: auto, 2373.64,1008.4,103.22</Task>
+    <Task>Goto Hotspot: auto, 2360.33,980.2,104.71</Task>
+    <Task>Goto Hotspot: auto, 2363.23,1009.68,99.69</Task>
+    <Task>Goto Hotspot: auto, 2337.58,1026.23,100.35</Task>
+    <Task>Goto Hotspot: auto, 2308.61,1014.2,100.1</Task>
+    <Task>Goto Hotspot: auto, 2278.79,1005.49,100.62</Task>
+    <Task>Goto Hotspot: auto, 2263.14,1032.32,102.27</Task>
+    <Task>Goto Hotspot: auto, 2243.76,1003.6,100.68</Task>
+    <Task>Goto Hotspot: auto, 2224.57,978.69,99.52</Task>
+    <Task>Goto Hotspot: auto, 2195.03,968.62,101.05</Task>
+    <Task>Goto Hotspot: auto, 2180.29,940.41,99.85</Task>
+    <Task>Goto Hotspot: auto, 2143.4,940.08,100.06</Task>
+    <Task>Goto Hotspot: auto, 2110.16,951.46,99.71</Task>
+    <Task>Goto Hotspot: auto, 2079.84,974.25,100.1</Task>
+    <Task>Goto Hotspot: auto, 2044.68,1001.14,99.77</Task>
+    <Task>Goto Hotspot: auto, 2043.71,1036.3,101.66</Task>
+    <Task>Goto Hotspot: auto, 2020.04,1017.83,100.31</Task>
+    <Task>Goto Hotspot: auto, 1991.64,1004.93,100.08</Task>
+    <Task>Goto Hotspot: auto, 1960.37,1001.32,101.58</Task>
+    <Task>Goto Hotspot: auto, 1946.69,965.03,100.04</Task>
+    <Task>Goto Hotspot: auto, 1971.61,940.72,101.83</Task>
+    <Task>Goto Hotspot: auto, 1983.73,911.77,104.54</Task>
+    <Task>Goto Hotspot: auto, 2006.06,885.18,100.08</Task>
+    <Task>Goto Hotspot: auto, 2036.81,882.58,99.87</Task>
+    <Task>Goto Hotspot: auto, 2067.14,895.2,100.63</Task>
+    <Task>Goto Hotspot: auto, 2097.72,897.39,100.08</Task>
+    <Task>Goto Hotspot: auto, 2131.78,880.81,100.38</Task>
+    <Task>Goto Hotspot: auto, 2150.9,905.46,104.42</Task>
+    <Task>Goto Hotspot: auto, 2171.28,929.43,102.08</Task>
+    <Task>Goto Hotspot: auto, 2208.46,916.91,99.99</Task>
+    <Task>Goto Hotspot: auto, 2229.37,947.36,101.16</Task>
+    <Task>Goto Hotspot: auto, 2248.48,973.57,101.23</Task>
+    <Task>Goto Hotspot: auto, 2272.93,993.79,100.98</Task>
+    <Task>Goto Hotspot: auto, 2298.99,1011.78,101.25</Task>
+    <Task>Goto Hotspot: auto, 2333.6,1025.11,100.51</Task>
+    <Task>Goto Hotspot: auto, 2343.07,1062.76,108.69</Task>
+    <Task>Goto Hotspot: auto, 2368.99,1076.77,100.14</Task>
+  </TaskList>
+</PatrolArea>
