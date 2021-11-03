@@ -1,17 +1,14 @@
 -- authors: votan, sirinsidiator
 -- thanks to: baertram & circonian
 
--- Register with LibStub, if LibStub is loaded.
-local MAJOR, MINOR = "LibCustomMenu", 9999
-local lib, oldminor = LibStub and LibStub:NewLibrary(MAJOR, MINOR)
-if LibStub and lib then
-	assert(MAJOR .. " still loaded via LibStub.")
-end
-lib = lib or {}
+local MAJOR = "LibCustomMenu"
+local lib = {}
 
 local wm = WINDOW_MANAGER
 
 ----- Common -----
+MENU_ADD_OPTION_HEADER = 100
+
 local function SetupDivider(pool, control)
 	local function GetTextDimensions(self)
 		return 32, 7
@@ -34,10 +31,43 @@ local function SetupDivider(pool, control)
 	label:SetHidden(false)
 	control.nameLabel = label
 
+	control.isDivider = true
+	control.item = control
 	control:SetMouseEnabled(false)
 end
 
 lib.DIVIDER = "-"
+
+lib.headerFont = "ZoFontWinH3"
+
+local function SetupHeader(pool, control)
+	local label = control:GetNamedChild("Text")
+	local divider = control:GetNamedChild("Divider")
+	local orgGetTextDimensions = label.GetTextDimensions
+	function label:GetTextDimensions()
+		local w, h = orgGetTextDimensions(self)
+		local hdivider = divider and (select(2, divider:GetDimensions()) + 9) or 0
+		return w, h + hdivider
+	end
+
+	label:ClearAnchors()
+	label:SetAnchor(TOPLEFT, control, TOPLEFT, 0, 3)
+	label:SetAnchor(TOPRIGHT, control, TOPRIGHT, 0, 3)
+	label:SetMaxLineCount(1)
+
+	label:SetHidden(false)
+	control.nameLabel = label
+
+	control.isHeader = true
+	control.item = control
+	control:SetMouseEnabled(false)
+
+	if divider then
+		divider:ClearAnchors()
+		divider:SetAnchor(TOPLEFT, label, BOTTOMLEFT, 0, 3)
+		divider:SetAnchor(RIGHT, control, RIGHT, 0, 0, ANCHOR_CONSTRAINS_X)
+	end
+end
 
 local function GetValueOrCallback(arg, ...)
 	if type(arg) == "function" then
@@ -61,12 +91,36 @@ local function runTooltip(control, inside)
 	end
 end
 
+local function cleanupDivider(items)
+	local wasDivider = true
+	local height = 0
+	for i = #items, 1, -1 do
+		local menuEntry = items[i]
+		local isDivider = menuEntry.isDivider
+		if isDivider then
+			if wasDivider or i == 1 then
+				height = height + menuEntry.item.storedHeight
+				menuEntry.item.storedHeight = 0
+				menuEntry.item:SetHidden(true)
+			else
+				menuEntry.item:SetHidden(false)
+			end
+			wasDivider = isDivider
+			isDivider = true
+		else
+			wasDivider = false
+		end
+	end
+	return height
+end
+
 ----- Sub Menu -----
 
 local Submenu = ZO_Object:Subclass()
 
 local SUBMENU_ITEM_MOUSE_ENTER = 1
 local SUBMENU_ITEM_MOUSE_EXIT = 2
+local SUBMENU_ITEM_MOUSE_CLICKED = 3
 local SUBMENU_SHOW_TIMEOUT = 350
 local SUBMENU_HIDE_TIMEOUT = 350
 
@@ -113,6 +167,12 @@ function Submenu:Initialize(name)
 	submenuControl:SetHidden(true)
 	-- OnMouseEnter: Stop hiding of submenu initiated by mouse exit of parent
 	submenuControl:SetHandler("OnMouseEnter", ClearTimeout)
+
+	local function RefreshSubMenu()
+		if self.parent and self.parent.OnSelect then
+			self.parent:OnSelect(SUBMENU_ITEM_MOUSE_ENTER)
+		end
+	end
 
 	local function ExitSubMenu()
 		if self.parent and self.parent.OnSelect then
@@ -206,6 +266,12 @@ function Submenu:Initialize(name)
 		return control
 	end
 
+	local function HeaderFactory(pool)
+		local control = CreateControlFromVirtual("ZO_CustomSubMenuHeader", submenuControl, "ZO_AddOnSectionHeaderRow", pool:GetNextControlId())
+		SetupHeader(pool, control)
+		return control
+	end
+
 	local function ResetCheckbox(checkbox)
 		ResetFunction(checkbox)
 	end
@@ -220,6 +286,8 @@ function Submenu:Initialize(name)
 		self.refCount = (self.refCount or 0) + 1
 		local parent = control:GetParent()
 		parent.OnSelect(ZO_CheckButton_IsChecked(control))
+		RefreshSubMenu()
+		control:GetHandler("OnMouseEnter")(control)
 	end
 	local function CheckBoxFactory(pool)
 		local control = CreateControlFromVirtual("ZO_CustomSubMenuItemCheckButton", submenuControl, "ZO_CheckButton", pool:GetNextControlId())
@@ -236,6 +304,7 @@ function Submenu:Initialize(name)
 	self.itemPool = ZO_ObjectPool:New(ItemFactory, ResetFunction)
 	self.dividerPool = ZO_ObjectPool:New(DividerFactory, ResetFunction)
 	self.checkBoxPool = ZO_ObjectPool:New(CheckBoxFactory, ResetCheckbox)
+	self.headerPool = ZO_ObjectPool:New(HeaderFactory, ResetFunction)
 	self.items = {}
 
 	EVENT_MANAGER:RegisterForEvent(
@@ -331,6 +400,7 @@ function Submenu:Clear()
 	self.itemPool:ReleaseAllObjects()
 	self.dividerPool:ReleaseAllObjects()
 	self.checkBoxPool:ReleaseAllObjects()
+	self.headerPool:ReleaseAllObjects()
 	self.control:SetHidden(true)
 	self.refCount = nil
 end
@@ -355,6 +425,8 @@ function Submenu:AddItem(entry, myfont, normalColor, highlightColor, itemYPad)
 		item, key = entry.label ~= lib.DIVIDER and self.itemPool:AcquireObject() or self.dividerPool:AcquireObject()
 	elseif itemType == MENU_ADD_OPTION_CHECKBOX then
 		item, key = self.itemPool:AcquireObject()
+	elseif itemType == MENU_ADD_OPTION_HEADER then
+		item, key = self.headerPool:AcquireObject()
 	else
 		error(string.format("Unknown menu entry itemType: %s", itemType))
 	end
@@ -369,8 +441,13 @@ function Submenu:AddItem(entry, myfont, normalColor, highlightColor, itemYPad)
 	local entryFont = GetValueOrCallback(entry.myfont, ZO_Menu, item) or myfont
 	local normColor = GetValueOrCallback(entry.normalColor, ZO_Menu, item) or normalColor
 	local highColor = GetValueOrCallback(entry.highlightColor, ZO_Menu, item) or highlightColor
-	myfont = entryFont or "ZoFontGame"
-	nameControl.normalColor = normColor or DEFAULT_TEXT_COLOR
+	if itemType == MENU_ADD_OPTION_HEADER then
+		myfont = entryFont or lib.headerFont
+		nameControl.normalColor = normColor or ZO_WHITE
+	else
+		myfont = entryFont or "ZoFontGame"
+		nameControl.normalColor = normColor or DEFAULT_TEXT_COLOR
+	end
 	nameControl.highlightColor = highColor or DEFAULT_TEXT_HIGHLIGHT
 
 	nameControl:SetFont(myfont)
@@ -391,10 +468,16 @@ function Submenu:AddItem(entry, myfont, normalColor, highlightColor, itemYPad)
 	item.checkbox = checkboxItemControl
 
 	nameControl:SetText(text)
+	local textWidth, textHeight = nameControl:GetTextDimensions()
+	item.storedHeight = textHeight
 
 	local enabled = not GetValueOrCallback(entry.disabled or false, ZO_Menu, item)
 	nameControl:SetColor((enabled and nameControl.normalColor or ZO_DEFAULT_DISABLED_COLOR):UnpackRGBA())
 	item:SetMouseEnabled(enabled)
+	if checkboxItemControl then
+		checkboxItemControl:SetMouseEnabled(enabled)
+		checkboxItemControl:SetAlpha(enabled and 1 or 0.6)
+	end
 end
 
 function Submenu:Show(parent)
@@ -467,6 +550,11 @@ local function SubMenuItemFactory(pool)
 		clicked = true
 		control:OnSelect(SUBMENU_ITEM_MOUSE_ENTER)
 	end
+	local function MouseUp(control, button, upInside)
+		if upInside and button == MOUSE_BUTTON_INDEX_LEFT then
+			control:OnSelect(SUBMENU_ITEM_MOUSE_CLICKED)
+		end
+	end
 
 	local label = wm:CreateControl("$(parent)Name", control, CT_LABEL)
 	label:SetAnchor(TOPLEFT)
@@ -475,6 +563,7 @@ local function SubMenuItemFactory(pool)
 	control:SetHandler("OnMouseEnter", MouseEnter)
 	control:SetHandler("OnMouseExit", MouseExit)
 	control:SetHandler("OnMouseDown", MouseDown)
+	control:SetHandler("OnMouseUp", MouseUp)
 
 	return control
 end
@@ -537,6 +626,12 @@ local function DividerFactory(pool)
 	return control
 end
 
+local function HeaderFactory(pool)
+	local control = CreateControlFromVirtual("ZO_CustomMenuHeader", ZO_Menu, "ZO_AddOnSectionHeaderRow", pool:GetNextControlId())
+	SetupHeader(pool, control)
+	return control
+end
+
 ---- Hook points for context menu -----
 lib.enabledSpecialKeys = lib.enabledSpecialKeys or {}
 
@@ -560,11 +655,7 @@ local function HookContextMenu()
 		Reset()
 		inventorySlot, slotActions = ...
 		if slotActions.m_contextMenuMode then
-			local ctrl, alt, shift, command =
-				lib.enabledSpecialKeys[KEY_CTRL] and IsControlKeyDown(),
-				lib.enabledSpecialKeys[KEY_ALT] and IsAltKeyDown(),
-				lib.enabledSpecialKeys[KEY_SHIFT] and IsShiftKeyDown(),
-				lib.enabledSpecialKeys[KEY_COMMAND] and IsCommandKeyDown()
+			local ctrl, alt, shift, command = lib.enabledSpecialKeys[KEY_CTRL] and IsControlKeyDown(), lib.enabledSpecialKeys[KEY_ALT] and IsAltKeyDown(), lib.enabledSpecialKeys[KEY_SHIFT] and IsShiftKeyDown(), lib.enabledSpecialKeys[KEY_COMMAND] and IsCommandKeyDown()
 			if ctrl or alt or shift or command then
 				registry = nil
 				lib.contextMenuRegistry:FireCallbacks("Special", inventorySlot, slotActions, ctrl, alt, shift, command)
@@ -611,20 +702,27 @@ function AddCustomMenuItem(mytext, myfunction, itemType, myFont, normalColor, hi
 	local orgItemPool = ZO_Menu.itemPool
 	local orgCheckboxItemPool = ZO_Menu.checkBoxPool
 
-	ZO_Menu.itemPool = mytext ~= lib.DIVIDER and lib.itemPool or lib.dividerPool
+	local isDivider = itemType ~= MENU_ADD_OPTION_HEADER and mytext == lib.DIVIDER
+	ZO_Menu.itemPool = isDivider and lib.dividerPool or lib.itemPool
 	ZO_Menu.checkBoxPool = lib.checkBoxPool
 
 	if itemType == MENU_ADD_OPTION_CHECKBOX then
 		mytext = string.format(" |u16:0::|u%s", mytext)
-		itemYPad = itemYPad and (itemYPad + 2) or 2
+		itemYPad = (itemYPad or 0) + 2
+	elseif itemType == MENU_ADD_OPTION_HEADER then
+		myFont = myFont or lib.headerFont
+		normalColor = normalColor or ZO_WHITE
+		ZO_Menu.itemPool = lib.headerPool
+		itemType = MENU_ADD_OPTION_LABEL
 	end
 
 	local index = AddMenuItem(mytext, myfunction, itemType, myFont, normalColor, highlightColor, itemYPad, horizontalAlignment)
 
+	local lastAdded = ZO_Menu.items[#ZO_Menu.items]
 	if itemType == MENU_ADD_OPTION_CHECKBOX then
-		local lastAdded = ZO_Menu.items[#ZO_Menu.items]
 		lastAdded.item:SetAnchor(TOPLEFT, lastAdded.checkbox, TOPLEFT, 0, -2)
 	end
+	lastAdded.isDivider = isDivider
 
 	ZO_Menu.itemPool = orgItemPool
 	ZO_Menu.checkBoxPool = orgCheckboxItemPool
@@ -638,7 +736,7 @@ function AddCustomMenuTooltip(tooltip, index)
 	ZO_Menu.items[index].item.tooltip = tooltip
 end
 
-function AddCustomSubMenuItem(mytext, entries, myfont, normalColor, highlightColor, itemYPad)
+function AddCustomSubMenuItem(mytext, entries, myfont, normalColor, highlightColor, itemYPad, callback)
 	local function CreateSubMenu(control, state)
 		if state == SUBMENU_ITEM_MOUSE_ENTER then
 			lib.submenu:Clear()
@@ -649,6 +747,12 @@ function AddCustomSubMenuItem(mytext, entries, myfont, normalColor, highlightCol
 			lib.submenu:Show(control)
 		elseif state == SUBMENU_ITEM_MOUSE_EXIT then
 			lib.submenu:Clear()
+		elseif state == SUBMENU_ITEM_MOUSE_CLICKED then
+			if callback and type(callback) == "function" then
+				lib.submenu:Clear()
+				ClearMenu()
+				callback(control)
+			end
 		end
 	end
 
@@ -658,6 +762,7 @@ function AddCustomSubMenuItem(mytext, entries, myfont, normalColor, highlightCol
 	ZO_Menu.itemPool = lib.submenuPool
 	ZO_Menu.checkBoxPool = lib.checkBoxPool
 
+	mytext = string.format("%s |u16:0::|u", mytext)
 	local index = AddMenuItem(mytext, CreateSubMenu, MENU_ADD_OPTION_LABEL, myfont, normalColor, highlightColor, itemYPad)
 
 	ZO_Menu.itemPool = orgItemPool
@@ -675,7 +780,16 @@ local function HookClearMenu()
 		lib.submenuPool:ReleaseAllObjects()
 		lib.checkBoxPool:ReleaseAllObjects()
 		lib.dividerPool:ReleaseAllObjects()
+		lib.headerPool:ReleaseAllObjects()
 		lib.submenu:Clear()
+	end
+end
+
+local function HookShowMenu()
+	local orgShowMenu = ShowMenu
+	function ShowMenu(...)
+		ZO_Menu.height = ZO_Menu.height - cleanupDivider(ZO_Menu.items)
+		return orgShowMenu(...)
 	end
 end
 
@@ -723,6 +837,11 @@ function lib:RegisterPlayerContextMenu(func, category, ...)
 	self.playerContextMenuRegistry:RegisterCallback(category, func, ...)
 end
 
+function lib:RegisterGuildRosterContextMenu(func, category, ...)
+	category = zo_clamp(category or self.CATEGORY_LATE, self.CATEGORY_EARLY, self.CATEGORY_LATE)
+	self.guildRosterContextMenuRegistry:RegisterCallback(category, func, ...)
+end
+
 function lib:RegisterKeyStripEnter(func, category, ...)
 	category = zo_clamp(category or self.CATEGORY_LATE, self.CATEGORY_EARLY, self.CATEGORY_LATE)
 	self.keybindRegistry:RegisterCallback(category, func, ...)
@@ -737,16 +856,18 @@ function lib:EnableSpecialKeyContextMenu(key)
 	lib.enabledSpecialKeys[key] = true
 end
 
-do
-	local registry, category, playerName, rawName
-	local function OneTimeHook(method, hook)
-		local org = _G[method]
-		_G[method] = function(...)
-			_G[method] = org
-			hook()
-			return org(...)
-		end
+local function OneTimeHook(method, hook)
+	local org = _G[method]
+	_G[method] = function(...)
+		_G[method] = org
+		hook()
+		return org(...)
 	end
+end
+
+local function HookShowPlayerContextMenu()
+	local registry, category, playerName, rawName
+
 	local function addCategory()
 		category = category + 1
 		registry:FireCallbacks(category, playerName, rawName)
@@ -771,27 +892,85 @@ do
 	end
 end
 
+local function HookGuildRosterContextMenu()
+	local registry, category, rowData, showing
+
+	local function addCategory()
+		category = category + 1
+		registry:FireCallbacks(category, rowData)
+	end
+	local function appendEntries()
+		while category < lib.CATEGORY_LATE do
+			addCategory()
+		end
+	end
+	local function insertEntries()
+		while category < lib.CATEGORY_SECONDARY do
+			addCategory()
+		end
+	end
+	local orgGuildRosterRow_OnMouseUp = GUILD_ROSTER_KEYBOARD.GuildRosterRow_OnMouseUp
+	function GUILD_ROSTER_KEYBOARD.GuildRosterRow_OnMouseUp(...)
+		local manager, control, button, upInside = ...
+
+		if button == MOUSE_BUTTON_INDEX_RIGHT and upInside then
+			local data = ZO_ScrollList_GetData(control)
+			showing = data ~= nil
+			if data then
+				rowData = data
+				registry, category = lib.guildRosterContextMenuRegistry, 0
+				OneTimeHook("GetPlayerGuildMemberIndex", insertEntries)
+			end
+		end
+		return orgGuildRosterRow_OnMouseUp(...)
+	end
+	local orgShowMenu = GUILD_ROSTER_KEYBOARD.ShowMenu
+	function GUILD_ROSTER_KEYBOARD.ShowMenu(...)
+		if showing then
+			appendEntries()
+			showing = false
+		end
+		return orgShowMenu(...)
+	end
+end
+
 ---- Init -----
+
+local identifier = MAJOR .. tostring(GetTimeStamp())
 
 local function OnAddonLoaded(event, name)
 	if name:find("^ZO_") then
 		return
 	end
-	EVENT_MANAGER:UnregisterForEvent(MAJOR, EVENT_ADD_ON_LOADED)
+	EVENT_MANAGER:UnregisterForEvent(identifier, EVENT_ADD_ON_LOADED)
 	lib.itemPool = ZO_ObjectPool:New(MenuItemFactory, ResetMenuItem)
 	lib.submenuPool = ZO_ObjectPool:New(SubMenuItemFactory, ResetMenuItem)
 	lib.checkBoxPool = ZO_ObjectPool:New(CheckBoxFactory, ResetCheckBox)
 	lib.dividerPool = ZO_ObjectPool:New(DividerFactory, ResetMenuItem)
+	lib.headerPool = ZO_ObjectPool:New(HeaderFactory, ResetMenuItem)
 	lib.submenu = Submenu:New("LibCustomMenuSubmenu")
 	HookClearMenu()
+	HookShowMenu()
 	HookMenuEnter()
 	HookAddSlotAction()
 	HookContextMenu()
+	HookShowPlayerContextMenu()
+
+	-- for ShissuContextMenu. Little hook war.
+	EVENT_MANAGER:RegisterForEvent(
+		identifier,
+		EVENT_PLAYER_ACTIVATED,
+		function()
+			EVENT_MANAGER:UnregisterForEvent(identifier, EVENT_PLAYER_ACTIVATED)
+			zo_callLater(HookGuildRosterContextMenu, 200)
+		end
+	)
 end
 
 lib.contextMenuRegistry = lib.contextMenuRegistry or ZO_CallbackObject:New()
 lib.keybindRegistry = lib.keybindRegistry or ZO_CallbackObject:New()
 lib.playerContextMenuRegistry = lib.playerContextMenuRegistry or ZO_CallbackObject:New()
+lib.guildRosterContextMenuRegistry = lib.guildRosterContextMenuRegistry or ZO_CallbackObject:New()
 
 lib.CATEGORY_EARLY = 1
 lib.CATEGORY_PRIMARY = 2
@@ -801,6 +980,6 @@ lib.CATEGORY_QUATERNARY = 5
 lib.CATEGORY_LATE = 6
 
 EVENT_MANAGER:UnregisterForEvent(MAJOR, EVENT_ADD_ON_LOADED)
-EVENT_MANAGER:RegisterForEvent(MAJOR, EVENT_ADD_ON_LOADED, OnAddonLoaded)
+EVENT_MANAGER:RegisterForEvent(identifier, EVENT_ADD_ON_LOADED, OnAddonLoaded)
 
 LibCustomMenu = lib

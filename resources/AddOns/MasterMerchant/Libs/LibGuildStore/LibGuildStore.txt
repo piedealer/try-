@@ -1,0 +1,25 @@
+## APIVersion: 101031
+## Title: LibGuildStore
+## Description: Addon to store all Guild Store related data accress multiple mods
+## Version 1.02
+## AddOnVersion: 102
+## SavedVariables: LibGuildStore_SavedVariables
+## DependsOn: GS00Data GS01Data GS02Data GS03Data GS04Data GS05Data GS06Data GS07Data GS08Data GS09Data GS10Data
+## DependsOn: GS11Data GS12Data GS13Data GS14Data GS15Data GS16Data GS17Data LibHistoire>=453 LibDebugLogger>=217
+## DependsOn: LibExecutionQueue>=200 LibAsync>=20302 LibAddonMenu-2.0>=32
+## OptionalDependsOn: AwesomeGuildStore>=2751 DebugLogViewer>=558
+## IsLibrary: true
+
+Init.lua
+i18n\en.lua
+i18n\$(language).lua
+Data.lua
+Iterators\Iterators_Cancelled.lua
+Iterators\Iterators_General.lua
+Iterators\Iterators_Listings.lua
+Iterators\Iterators_Posted.lua
+Iterators\Iterators_Purchase.lua
+Iterators\Iterators_Sales.lua
+Importers.lua
+Settings.lua
+LibGuildStore.lua

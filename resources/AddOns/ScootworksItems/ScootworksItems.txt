@@ -1,11 +1,11 @@
 ## Title: |cFF3DA5Scootworks|r Items
 ## Author: Scootworks
-## Version: 28
-## AddOnVersion: 28
-## APIVersion: 100032 100033
-## SavedVariables: ScootworksItems_Save ScootworksItems_SaveChar ScootworksItemsSets_Save ScootworksItemsSets_SaveChar
-## DependsOn: LibAsync>=20100 LibSavedVars>=60001 LibChatMessage>=100 LibSets>=000200 LibItemLink>=3 LibHarvensAddonSettings>=10705 LibLootSummary>=20202
-## OptionalDependsOn: pChat rChat ChatLogger iChat FCOItemSaver>=194
+## Version: 32
+## AddOnVersion: 32
+## APIVersion: 100033 100034
+## SavedVariables: ScootworksItems_SaveAccount ScootworksItems_SaveCharacter ScootworksItems_SaveSetsAccount ScootworksItems_SaveSetsCharacter ScootworksItems_SaveJunkAccount ScootworksItems_SaveJunkCharacter
+## DependsOn: LibSavedVars>=60001 LibSets>=000206 LibItemLink>=3 LibHarvensAddonSettings>=10705 LibAsync>=20302 LibChatMessage>=100 LibDebugLogger>=201
+## OptionalDependsOn: pChat rChat ChatLogger iChat FCOItemSaver
 
 ; This Add-on is not created by, affiliated with or sponsored by ZeniMax
 ; Media Inc. or its affiliates. The Elder Scrolls® and related logos are
@@ -17,8 +17,12 @@ lang\en.lua
 lang\$(language).lua
 
 Constants.lua
+StartUp.lua
+
+SavedVars.lua
+LootSummary.lua
 FCOIS.lua
-Loot.lua
-Vendor.lua
 Settings.lua
-ScootworksItems.lua
+Sets.lua
+Vendor.lua
+Loot.lua

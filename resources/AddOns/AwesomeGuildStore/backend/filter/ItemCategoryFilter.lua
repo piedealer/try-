@@ -15,7 +15,6 @@ local logger = AGS.internal.logger
 local EncodeValue = AGS.internal.EncodeValue
 local DecodeValue = AGS.internal.DecodeValue
 
-
 local ITEMFILTERTYPE_LOCAL = "itemFilterType"
 local filterDefinition = {
     [SUB_CATEGORY_ID.ALL] = {},
@@ -26,6 +25,12 @@ local filterDefinition = {
                 [EQUIP_TYPE_ONE_HAND] = true,
                 [EQUIP_TYPE_TWO_HAND] = true,
             }
+        },
+        {
+            type = TRADING_HOUSE_FILTER_TYPE_GAMEPLAY_ACTOR_CATEGORY,
+            allowed = {
+                [GAMEPLAY_ACTOR_CATEGORY_PLAYER] = true,
+            }
         }
     },
     [SUB_CATEGORY_ID.WEAPONS_ONE_HANDED] = {
@@ -33,6 +38,12 @@ local filterDefinition = {
             type = TRADING_HOUSE_FILTER_TYPE_EQUIP,
             allowed = {
                 [EQUIP_TYPE_ONE_HAND] = true,
+            }
+        },
+        {
+            type = TRADING_HOUSE_FILTER_TYPE_GAMEPLAY_ACTOR_CATEGORY,
+            allowed = {
+                [GAMEPLAY_ACTOR_CATEGORY_PLAYER] = true,
             }
         }
     },
@@ -44,6 +55,12 @@ local filterDefinition = {
                 [WEAPONTYPE_TWO_HANDED_SWORD] = true,
                 [WEAPONTYPE_TWO_HANDED_HAMMER] = true,
             }
+        },
+        {
+            type = TRADING_HOUSE_FILTER_TYPE_GAMEPLAY_ACTOR_CATEGORY,
+            allowed = {
+                [GAMEPLAY_ACTOR_CATEGORY_PLAYER] = true,
+            }
         }
     },
     [SUB_CATEGORY_ID.WEAPONS_BOW] = {
@@ -51,6 +68,12 @@ local filterDefinition = {
             type = TRADING_HOUSE_FILTER_TYPE_WEAPON,
             allowed = {
                 [WEAPONTYPE_BOW] = true,
+            }
+        },
+        {
+            type = TRADING_HOUSE_FILTER_TYPE_GAMEPLAY_ACTOR_CATEGORY,
+            allowed = {
+                [GAMEPLAY_ACTOR_CATEGORY_PLAYER] = true,
             }
         }
     },
@@ -62,6 +85,12 @@ local filterDefinition = {
                 [WEAPONTYPE_FROST_STAFF] = true,
                 [WEAPONTYPE_LIGHTNING_STAFF] = true,
             }
+        },
+        {
+            type = TRADING_HOUSE_FILTER_TYPE_GAMEPLAY_ACTOR_CATEGORY,
+            allowed = {
+                [GAMEPLAY_ACTOR_CATEGORY_PLAYER] = true,
+            }
         }
     },
     [SUB_CATEGORY_ID.WEAPONS_RESTORATION_STAFF] = {
@@ -69,6 +98,12 @@ local filterDefinition = {
             type = TRADING_HOUSE_FILTER_TYPE_WEAPON,
             allowed = {
                 [WEAPONTYPE_HEALING_STAFF] = true,
+            }
+        },
+        {
+            type = TRADING_HOUSE_FILTER_TYPE_GAMEPLAY_ACTOR_CATEGORY,
+            allowed = {
+                [GAMEPLAY_ACTOR_CATEGORY_PLAYER] = true,
             }
         }
     },
@@ -92,6 +127,12 @@ local filterDefinition = {
                 [EQUIP_TYPE_HAND] = true,
                 [EQUIP_TYPE_OFF_HAND] = true,
             }
+        },
+        {
+            type = TRADING_HOUSE_FILTER_TYPE_GAMEPLAY_ACTOR_CATEGORY,
+            allowed = {
+                [GAMEPLAY_ACTOR_CATEGORY_PLAYER] = true,
+            }
         }
     },
     [SUB_CATEGORY_ID.ARMOR_HEAVY] = {
@@ -111,6 +152,12 @@ local filterDefinition = {
                 [EQUIP_TYPE_LEGS] = true,
                 [EQUIP_TYPE_FEET] = true,
                 [EQUIP_TYPE_HAND] = true,
+            }
+        },
+        {
+            type = TRADING_HOUSE_FILTER_TYPE_GAMEPLAY_ACTOR_CATEGORY,
+            allowed = {
+                [GAMEPLAY_ACTOR_CATEGORY_PLAYER] = true,
             }
         }
     },
@@ -132,6 +179,12 @@ local filterDefinition = {
                 [EQUIP_TYPE_FEET] = true,
                 [EQUIP_TYPE_HAND] = true,
             }
+        },
+        {
+            type = TRADING_HOUSE_FILTER_TYPE_GAMEPLAY_ACTOR_CATEGORY,
+            allowed = {
+                [GAMEPLAY_ACTOR_CATEGORY_PLAYER] = true,
+            }
         }
     },
     [SUB_CATEGORY_ID.ARMOR_LIGHT] = {
@@ -152,6 +205,12 @@ local filterDefinition = {
                 [EQUIP_TYPE_FEET] = true,
                 [EQUIP_TYPE_HAND] = true,
             }
+        },
+        {
+            type = TRADING_HOUSE_FILTER_TYPE_GAMEPLAY_ACTOR_CATEGORY,
+            allowed = {
+                [GAMEPLAY_ACTOR_CATEGORY_PLAYER] = true,
+            }
         }
     },
     [SUB_CATEGORY_ID.ARMOR_SHIELD] = {
@@ -161,6 +220,12 @@ local filterDefinition = {
                 [WEAPONTYPE_SHIELD] = true,
             }
         },
+        {
+            type = TRADING_HOUSE_FILTER_TYPE_GAMEPLAY_ACTOR_CATEGORY,
+            allowed = {
+                [GAMEPLAY_ACTOR_CATEGORY_PLAYER] = true,
+            }
+        }
     },
     [SUB_CATEGORY_ID.JEWELRY_ALL] = {
         {
@@ -168,6 +233,12 @@ local filterDefinition = {
             allowed = {
                 [EQUIP_TYPE_RING] = true,
                 [EQUIP_TYPE_NECK] = true,
+            }
+        },
+        {
+            type = TRADING_HOUSE_FILTER_TYPE_GAMEPLAY_ACTOR_CATEGORY,
+            allowed = {
+                [GAMEPLAY_ACTOR_CATEGORY_PLAYER] = true,
             }
         }
     },
@@ -177,6 +248,12 @@ local filterDefinition = {
             allowed = {
                 [EQUIP_TYPE_RING] = true,
             }
+        },
+        {
+            type = TRADING_HOUSE_FILTER_TYPE_GAMEPLAY_ACTOR_CATEGORY,
+            allowed = {
+                [GAMEPLAY_ACTOR_CATEGORY_PLAYER] = true,
+            }
         }
     },
     [SUB_CATEGORY_ID.JEWELRY_NECK] = {
@@ -184,6 +261,12 @@ local filterDefinition = {
             type = TRADING_HOUSE_FILTER_TYPE_EQUIP,
             allowed = {
                 [EQUIP_TYPE_NECK] = true,
+            }
+        },
+        {
+            type = TRADING_HOUSE_FILTER_TYPE_GAMEPLAY_ACTOR_CATEGORY,
+            allowed = {
+                [GAMEPLAY_ACTOR_CATEGORY_PLAYER] = true,
             }
         }
     },
@@ -668,6 +751,79 @@ local filterDefinition = {
             }
         }
     },
+    [SUB_CATEGORY_ID.COMPANION_ALL] = {
+        {
+            type = TRADING_HOUSE_FILTER_TYPE_ITEM,
+            allowed = {
+                [ITEMTYPE_WEAPON] = true,
+                [ITEMTYPE_ARMOR] = true,
+            }
+        },
+        {
+            type = TRADING_HOUSE_FILTER_TYPE_GAMEPLAY_ACTOR_CATEGORY,
+            allowed = {
+                [GAMEPLAY_ACTOR_CATEGORY_COMPANION] = true,
+            }
+        }
+    },
+    [SUB_CATEGORY_ID.COMPANION_WEAPONS] = {
+        {
+            type = TRADING_HOUSE_FILTER_TYPE_EQUIP,
+            allowed = {
+                [EQUIP_TYPE_ONE_HAND] = true,
+                [EQUIP_TYPE_TWO_HAND] = true,
+            }
+        },
+        {
+            type = TRADING_HOUSE_FILTER_TYPE_GAMEPLAY_ACTOR_CATEGORY,
+            allowed = {
+                [GAMEPLAY_ACTOR_CATEGORY_COMPANION] = true,
+            }
+        }
+    },
+    [SUB_CATEGORY_ID.COMPANION_ARMOR] = {
+        {
+            type = TRADING_HOUSE_FILTER_TYPE_SPECIALIZED_ITEM,
+            allowed = {
+                [SPECIALIZED_ITEMTYPE_WEAPON] = true,
+                [SPECIALIZED_ITEMTYPE_ARMOR] = true,
+            }
+        },
+        {
+            type = TRADING_HOUSE_FILTER_TYPE_EQUIP,
+            allowed = {
+                [EQUIP_TYPE_HEAD] = true,
+                [EQUIP_TYPE_CHEST] = true,
+                [EQUIP_TYPE_SHOULDERS] = true,
+                [EQUIP_TYPE_WAIST] = true,
+                [EQUIP_TYPE_LEGS] = true,
+                [EQUIP_TYPE_FEET] = true,
+                [EQUIP_TYPE_HAND] = true,
+                [EQUIP_TYPE_OFF_HAND] = true,
+            }
+        },
+        {
+            type = TRADING_HOUSE_FILTER_TYPE_GAMEPLAY_ACTOR_CATEGORY,
+            allowed = {
+                [GAMEPLAY_ACTOR_CATEGORY_COMPANION] = true,
+            }
+        }
+    },
+    [SUB_CATEGORY_ID.COMPANION_JEWELRY] = {
+        {
+            type = TRADING_HOUSE_FILTER_TYPE_EQUIP,
+            allowed = {
+                [EQUIP_TYPE_RING] = true,
+                [EQUIP_TYPE_NECK] = true,
+            }
+        },
+        {
+            type = TRADING_HOUSE_FILTER_TYPE_GAMEPLAY_ACTOR_CATEGORY,
+            allowed = {
+                [GAMEPLAY_ACTOR_CATEGORY_COMPANION] = true,
+            }
+        }
+    }
 }
 
 local filterFunctions = {
@@ -687,6 +843,10 @@ local filterFunctions = {
         local itemType = GetItemLinkItemType(itemLink)
         return allowedTypes[itemType]
     end,
+    [TRADING_HOUSE_FILTER_TYPE_TRAIT] = function(itemLink, allowedTypes)
+        local traitType = GetItemLinkTraitInfo(itemLink)
+        return allowedTypes[traitType]
+    end,
     [TRADING_HOUSE_FILTER_TYPE_SPECIALIZED_ITEM] = function(itemLink, allowedTypes)
         local _, specializedItemType = GetItemLinkItemType(itemLink)
         return allowedTypes[specializedItemType]
@@ -701,9 +861,22 @@ local filterFunctions = {
         local _, subcategory = GetFurnitureDataInfo(furnitureDataId)
         return allowedTypes[subcategory]
     end,
+    [TRADING_HOUSE_FILTER_TYPE_GAMEPLAY_ACTOR_CATEGORY] = function(itemLink, allowedTypes)
+        local actorCategory = GetItemLinkActorCategory(itemLink)
+        return allowedTypes[actorCategory]
+    end,
     [ITEMFILTERTYPE_LOCAL] = function(itemLink, allowedTypes)
-        local itemFilterType = GetItemLinkFilterTypeInfo(itemLink)
-        return allowedTypes[itemFilterType]
+        local itemFilterTypes = {GetItemLinkFilterTypeInfo(itemLink)}
+        if allowedTypes.checkLastReturnOnly then
+            return allowedTypes[itemFilterTypes[#itemFilterTypes]]
+        else
+            for i = 1, #itemFilterTypes do
+                if allowedTypes[itemFilterTypes[i]] then
+                    return true
+                end
+            end
+        end
+        return false
     end,
 }
 
@@ -713,8 +886,10 @@ local function GetSubcategoryFromItem(itemLink)
     temp[TRADING_HOUSE_FILTER_TYPE_EQUIP] = GetItemLinkEquipType(itemLink)
     temp[TRADING_HOUSE_FILTER_TYPE_WEAPON] = GetItemLinkWeaponType(itemLink)
     temp[TRADING_HOUSE_FILTER_TYPE_ARMOR] = GetItemLinkArmorType(itemLink)
+    temp[TRADING_HOUSE_FILTER_TYPE_TRAIT] = GetItemLinkTraitInfo(itemLink)
     temp[TRADING_HOUSE_FILTER_TYPE_ITEM], temp[TRADING_HOUSE_FILTER_TYPE_SPECIALIZED_ITEM] = GetItemLinkItemType(itemLink)
     temp[TRADING_HOUSE_FILTER_TYPE_FURNITURE_CATEGORY], temp[TRADING_HOUSE_FILTER_TYPE_FURNITURE_SUBCATEGORY] = GetFurnitureDataInfo(GetItemLinkFurnitureDataId(itemLink))
+    temp[TRADING_HOUSE_FILTER_TYPE_GAMEPLAY_ACTOR_CATEGORY] = GetItemLinkActorCategory(itemLink)
     temp[ITEMFILTERTYPE_LOCAL] = GetItemLinkFilterTypeInfo(itemLink)
 
     for subcategoryId, filters in pairs(filterDefinition) do

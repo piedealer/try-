@@ -1,409 +1,389 @@
+local ScootworksItems = SCOOTWORKS_ITEMS
+
 local ADDON_DISPLAY_NAME = "Scootworks Items"
+local ADDON_DISPLAY_NAME_JUNK = "Scootworks Items Junk"
 local ADDON_DISPLAY_NAME_SETS = "Scootworks Items Sets"
 
 local LIB_ITEM_LINK = LIB_ITEM_LINK
+local LIBSETS_SETTYPE_CRAFTED = LIBSETS_SETTYPE_CRAFTED
 
-local QUALITY_VALUES =
-{
-	ITEM_DISPLAY_QUALITY_NORMAL,
-	ITEM_DISPLAY_QUALITY_MAGIC,
-	ITEM_DISPLAY_QUALITY_ARCANE,
-	ITEM_DISPLAY_QUALITY_ARTIFACT,
-	ITEM_DISPLAY_QUALITY_LEGENDARY,
-}
+local LibHarvensAddonSettings = LibHarvensAddonSettings
+local GetString = GetString
 
-local ITEMS_DISPLAY_QUALITY = { }
-for _, displayQuality in ipairs(QUALITY_VALUES) do
-	local color = ZO_ColorDef:New(GetInterfaceColor(INTERFACE_COLOR_TYPE_ITEM_QUALITY_COLORS, displayQuality))
-	local qualityString = color:Colorize(GetString("SI_ITEMQUALITY", displayQuality))
+local function GetDefaultValue(sv, key, data)
+	local defaults = sv.__dataSource.account.defaults
+	if data then
+		return defaults[key][data]
+	elseif key then
+		return defaults[key]
+	else
+		return defaults
+	end
+end
+
+local function GetCategoryData(t)
+	local _t = { }
+	local index = 0
+	for key, layoutData in pairs(t) do
+		index = index + 1
+		_t[index] = {
+			label = layoutData.label,
+			itemTypes = layoutData.itemTypes,
+			section = key,
+		}
+	end
+	table.sort(_t, function(left, right)
+		return left.label < right.label
+	end)
+	return _t
+end
+
+local function GetSubCategoryData(t)
+	local _t = { }
+	local index = 0
+	for key, layoutData in pairs(t) do
+		index = index + 1
+		_t[index] = {
+			label = layoutData.label,
+			tooltip = layoutData.tooltip,
+			quality = layoutData.quality,
+			itemType = key,
+		}
+	end
+	table.sort(_t, function(left, right)
+		return left.label < right.label
+	end)
+	return _t
+end
+
+local function IsTrackedSetType(setType)
+	return setType ~= LIBSETS_SETTYPE_CRAFTED and setType ~= LIBSETS_SETTYPE_MYTHIC
+end
+
+local function FormatNameWithIcon(text, isRecentlyAdded)
+	return isRecentlyAdded and zo_iconTextFormat("esoui/art/inventory/newitem_icon.dds", "80%", "80%", text) or text
+end
+
+local function SortByName(a, b)
+	return a.setTypeName < b.setTypeName
+end
+
+local ITEM_QUALITY = { }
+for quality = ITEM_FUNCTIONAL_QUALITY_NORMAL, ITEM_FUNCTIONAL_QUALITY_LEGENDARY do
+	local color = ZO_ColorDef:New(GetInterfaceColor(INTERFACE_COLOR_TYPE_ITEM_QUALITY_COLORS, quality))
+	local qualityString = color:Colorize(GetString("SI_ITEMQUALITY", quality))
 	local qualityData =
 	{
 		name = qualityString,
-		data = displayQuality,
+		data = quality,
 	}
-	ITEMS_DISPLAY_QUALITY[displayQuality] = qualityData
+	ITEM_QUALITY[quality] = qualityData
 end
 
-local function ShowTooltip(settingsControl, itemLink)
-	InitializeTooltip(ItemTooltip, settingsControl.control)
-	ItemTooltip:SetLink(itemLink)
+
+function ScootworksItems:InitializeSettings()
+	self:InitializeSettingsGeneral()
+	self:InitializeSettingsJunk()
+	self:InitializeSettingsSets()
 end
 
-local function MergeString(stringId, secondStringId)
-	if secondStringId then
-		return ZO_CachedStrFormat(SI_SCOOTWORKS_ITEMS_LAM_MERGE_SECOND, GetString(stringId), GetString(secondStringId))
-	end
-	return ZO_CachedStrFormat(SI_SCOOTWORKS_ITEMS_LAM_MERGE, GetString(stringId))
-end
-
-function ScootworksItems_InitializeSettings()
-	local scootworksItemLoot = ScootworksItems_GetLoot()
-	local scootworksItemVendor = ScootworksItems_GetVendor()
-
-	local LibHarvensAddonSettings = LibHarvensAddonSettings
-	local settings = LibHarvensAddonSettings:AddAddon(ADDON_DISPLAY_NAME, { allowRefresh = true })
-
-	local NO_CALLBACK = nil
+function ScootworksItems:InitializeSettingsSets()
+	local settings = LibHarvensAddonSettings:AddAddon(ADDON_DISPLAY_NAME_SETS, { allowRefresh = true })
+	local svSets = self.svSets
+	local svJunk = self.svJunk
 
 	settings:AddSetting {
 		type = LibHarvensAddonSettings.ST_CHECKBOX,
 		label = GetString(SI_LSV_ACCOUNT_WIDE),
 		tooltip = GetString(SI_LSV_ACCOUNT_WIDE_TT),
 		getFunction = function()
-			local savedVars = ScootworksItems_GetSetting()
-			savedVars:LoadAllSavedVars()
-			return savedVars:GetAccountSavedVarsActive()
+			svSets:LoadAllSavedVars()
+			return svSets:GetAccountSavedVarsActive()
 		end,
 		setFunction = function(value)
-			local savedVars = ScootworksItems_GetSetting()
-			savedVars:LoadAllSavedVars()
-			savedVars:SetAccountSavedVarsActive(value)
+			svSets:LoadAllSavedVars()
+			svSets:SetAccountSavedVarsActive(value)
 		end,
-		default = ScootworksItems_GetSetting().__dataSource.defaultToAccount,
-	}
-	settings:AddSetting {
-		type = LibHarvensAddonSettings.ST_SECTION,
-		label = GetString(SI_SCOOTWORKS_ITEMS_LAM_LOOT_TITLE),
-	}
-	settings:AddSetting {
-		type = LibHarvensAddonSettings.ST_CHECKBOX,
-		label = GetString(SI_SCOOTWORKS_ITEMS_LAM_LOOT),
-		tooltip = GetString(SI_SCOOTWORKS_ITEMS_LAM_LOOT_TT),
-		getFunction = function() return ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_LOOT, SCOOTWORKS_ITEMS_SETTING_ENABLED) end,
-		setFunction = function(value) ScootworksItems_SetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_LOOT, SCOOTWORKS_ITEMS_SETTING_ENABLED, value, scootworksItemLoot) end,
-	}
-	settings:AddSetting {
-		type = LibHarvensAddonSettings.ST_CHECKBOX,
-		label = GetString(SI_SCOOTWORKS_ITEMS_LAM_LOOT_ONLY_GROUP),
-		tooltip = GetString(SI_SCOOTWORKS_ITEMS_LAM_LOOT_ONLY_GROUP_TT),
-		getFunction = function() return ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_LOOT, SCOOTWORKS_ITEMS_SETTING_ONLY_IN_GROUP) end,
-		setFunction = function(value) ScootworksItems_SetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_LOOT, SCOOTWORKS_ITEMS_SETTING_ONLY_IN_GROUP, value) end,
-		disable = function() return not ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_LOOT, SCOOTWORKS_ITEMS_SETTING_ENABLED) end,
-	}
-	settings:AddSetting {
-		type = LibHarvensAddonSettings.ST_CHECKBOX,
-		label = GetString(SI_SCOOTWORKS_ITEMS_LAM_LOOT_HIDE_PLAYER_LOOT),
-		tooltip = GetString(SI_SCOOTWORKS_ITEMS_LAM_LOOT_HIDE_PLAYER_LOOT_TT),
-		getFunction = function() return ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_LOOT, SCOOTWORKS_ITEMS_SETTING_HIDE_PLAYER_ITEMS) end,
-		setFunction = function(value) ScootworksItems_SetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_LOOT, SCOOTWORKS_ITEMS_SETTING_HIDE_PLAYER_ITEMS, value) end,
-		disable = function() return not ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_LOOT, SCOOTWORKS_ITEMS_SETTING_ENABLED) or not ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_LOOT, SCOOTWORKS_ITEMS_SETTING_ONLY_IN_GROUP) end,
-	}
-	settings:AddSetting {
-		type = LibHarvensAddonSettings.ST_SECTION,
-		label = GetString(SI_SCOOTWORKS_ITEMS_LAM_SELL_JUNK_TITLE),
-	}
-	settings:AddSetting {
-		type = LibHarvensAddonSettings.ST_CHECKBOX,
-		label = GetString(SI_SCOOTWORKS_ITEMS_LAM_SELL_JUNK),
-		tooltip = GetString(SI_SCOOTWORKS_ITEMS_LAM_SELL_JUNK_TT),
-		getFunction = function() return ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_SELL_JUNK, SCOOTWORKS_ITEMS_SETTING_ENABLED) end,
-		setFunction = function(value) ScootworksItems_SetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_SELL_JUNK, SCOOTWORKS_ITEMS_SETTING_ENABLED, value, scootworksItemVendor) end,
-	}
-	settings:AddSetting {
-		type = LibHarvensAddonSettings.ST_CHECKBOX,
-		label = GetString(SI_SCOOTWORKS_ITEMS_LAM_SELL_JUNK_MESSAGE),
-		tooltip = GetString(SI_SCOOTWORKS_ITEMS_LAM_SELL_JUNK_MESSAGE_TT),
-		getFunction = function() return ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_SELL_JUNK, SCOOTWORKS_ITEMS_SETTING_MESSAGE) end,
-		setFunction = function(value) ScootworksItems_SetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_SELL_JUNK, SCOOTWORKS_ITEMS_SETTING_MESSAGE, value) end,
-		disable = function() return not ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_SELL_JUNK, SCOOTWORKS_ITEMS_SETTING_ENABLED) end,
-	}
-	settings:AddSetting {
-		type = LibHarvensAddonSettings.ST_SECTION,
-		label = GetString(SI_SCOOTWORKS_ITEMS_LAM_REPAIR_TITLE),
-	}
-	settings:AddSetting {
-		type = LibHarvensAddonSettings.ST_CHECKBOX,
-		label = GetString(SI_SCOOTWORKS_ITEMS_LAM_REPAIR),
-		tooltip = GetString(SI_SCOOTWORKS_ITEMS_LAM_REPAIR_TT),
-		getFunction = function() return ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_AUTO_REPAIR, SCOOTWORKS_ITEMS_SETTING_ENABLED) end,
-		setFunction = function(value) ScootworksItems_SetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_AUTO_REPAIR, SCOOTWORKS_ITEMS_SETTING_ENABLED, value, scootworksItemVendor) end,
-	}
-	settings:AddSetting {
-		type = LibHarvensAddonSettings.ST_CHECKBOX,
-		label = GetString(SI_SCOOTWORKS_ITEMS_LAM_REPAIR_MESSAGE),
-		tooltip = GetString(SI_SCOOTWORKS_ITEMS_LAM_REPAIR_MESSAGE_TT),
-		getFunction = function() return ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_AUTO_REPAIR, SCOOTWORKS_ITEMS_SETTING_MESSAGE) end,
-		setFunction = function(value) ScootworksItems_SetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_AUTO_REPAIR, SCOOTWORKS_ITEMS_SETTING_MESSAGE, value) end,
-		disable = function() return not ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_AUTO_REPAIR, SCOOTWORKS_ITEMS_SETTING_ENABLED) end,
-	}
-	settings:AddSetting {
-		type = LibHarvensAddonSettings.ST_SECTION,
-		label = GetString(SI_SCOOTWORKS_ITEMS_LAM_MARK_ITEMS_TITLE),
-	}
-	settings:AddSetting {
-		type = LibHarvensAddonSettings.ST_LABEL,
-		label = GetString(SI_SCOOTWORKS_ITEMS_LAM_MARK_ITEMS_DESC),
-	}
-	settings:AddSetting {
-		type = LibHarvensAddonSettings.ST_CHECKBOX,
-		label = GetString(SI_SCOOTWORKS_ITEMS_LAM_MARK_ITEMS),
-		tooltip = GetString(SI_SCOOTWORKS_ITEMS_LAM_MARK_ITEMS_TT),
-		getFunction = function() return ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_ENABLED) end,
-		setFunction = function(value) ScootworksItems_SetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_ENABLED, value, scootworksItemLoot) end,
-	}
-	settings:AddSetting {
-		type = LibHarvensAddonSettings.ST_CHECKBOX,
-		label = GetString(SI_SCOOTWORKS_ITEMS_LAM_MARK_ITEMS_MESSAGE),
-		tooltip = GetString(SI_SCOOTWORKS_ITEMS_LAM_MARK_ITEMS_MESSAGE_TT),
-		getFunction = function() return ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_MESSAGE) end,
-		setFunction = function(value) ScootworksItems_SetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_MESSAGE, value) end,
-		disable = function() return not ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_ENABLED) end,
-	}
-	settings:AddSetting {
-		type = LibHarvensAddonSettings.ST_CHECKBOX,
-		label = MergeString(SI_SCOOTWORKS_ITEMS_LAM_MARK_ITEMS_NON_MONSTER_PCS),
-		tooltip = GetString(SI_SCOOTWORKS_ITEMS_LAM_MARK_ITEMS_NON_MONSTER_PCS_TT),
-		getFunction = function() return ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_MARK_ITEMS, SCOOTWORKS_ITEMS_SUB_SETTING_MARK_ITEMS_HEAD_AND_SHOULDER) end,
-		setFunction = function(value) ScootworksItems_SetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_MARK_ITEMS, value, NO_CALLBACK, SCOOTWORKS_ITEMS_SUB_SETTING_MARK_ITEMS_HEAD_AND_SHOULDER) end,
-		disable = function() return not ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_ENABLED) end,
+		default = svSets.__dataSource.defaultToAccount,
 	}
 
-	settings:AddSetting {
-		type = LibHarvensAddonSettings.ST_DROPDOWN,
-		label = GetString(SI_SCOOTWORKS_ITEMS_LAM_MARK_QUALITY),
-		tooltip = GetString(SI_SCOOTWORKS_ITEMS_LAM_MARK_QUALITY_TT),
-		items = ITEMS_DISPLAY_QUALITY,
-		getFunction = function()
-			local item = ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_MARK_ITEMS_QUALITY, SCOOTWORKS_ITEMS_SUB_SETTING_MARK_ITEMS_HEAD_AND_SHOULDER_QUALITY)
-			return ITEMS_DISPLAY_QUALITY[item].name
-		end,
-		setFunction = function(combobox, name, item)
-			ScootworksItems_SetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_MARK_ITEMS_QUALITY, item.data, NO_CALLBACK, SCOOTWORKS_ITEMS_SUB_SETTING_MARK_ITEMS_HEAD_AND_SHOULDER_QUALITY)
-		end,
-		disable = function()
-			local markEnabled = ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_ENABLED)
-			local subSettingEnabled = ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_MARK_ITEMS, SCOOTWORKS_ITEMS_SUB_SETTING_MARK_ITEMS_HEAD_AND_SHOULDER)
-			return not markEnabled and not subSettingEnabled
-		end,
-	}
-	
-	settings:AddSetting {
-		type = LibHarvensAddonSettings.ST_CHECKBOX,
-		label = MergeString(SI_ITEMTYPE1, SI_SCOOTWORKS_ITEMS_LAM_MARK_ITEMS_WITHOUT_SET),
-		getFunction = function() return ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_MARK_ITEMS, SCOOTWORKS_ITEMS_SUB_SETTING_MARK_ITEMS_WEAPON) end,
-		setFunction = function(value) ScootworksItems_SetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_MARK_ITEMS, value, NO_CALLBACK, SCOOTWORKS_ITEMS_SUB_SETTING_MARK_ITEMS_WEAPON) end,
-		disable = function() return not ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_ENABLED) end,
-	}
-	
-	settings:AddSetting {
-		type = LibHarvensAddonSettings.ST_DROPDOWN,
-		label = zo_strformat(SI_SCOOTWORKS_ITEMS_LAM_MARK_QUALITY, GetString(SI_TRADINGHOUSEFEATURECATEGORY5)),
-		tooltip = GetString(SI_SCOOTWORKS_ITEMS_LAM_MARK_QUALITY_TT),
-		items = ITEMS_DISPLAY_QUALITY,
-		getFunction = function()
-			local item = ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_MARK_ITEMS_QUALITY, SCOOTWORKS_ITEMS_SUB_SETTING_MARK_ITEMS_WEAPON_QUALITY)
-			return ITEMS_DISPLAY_QUALITY[item].name
-		end,
-		setFunction = function(combobox, name, item)
-			ScootworksItems_SetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_MARK_ITEMS_QUALITY, item.data, NO_CALLBACK, SCOOTWORKS_ITEMS_SUB_SETTING_MARK_ITEMS_WEAPON_QUALITY)
-		end,
-		disable = function()
-			local markEnabled = ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_ENABLED)
-			local subSettingEnabled = ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_MARK_ITEMS, SCOOTWORKS_ITEMS_SUB_SETTING_MARK_ITEMS_WEAPON)
-			return not markEnabled and not subSettingEnabled
-		end,
-	}
-	
-	settings:AddSetting {
-		type = LibHarvensAddonSettings.ST_CHECKBOX,
-		label = MergeString(SI_EQUIPSLOTVISUALCATEGORY2, SI_SCOOTWORKS_ITEMS_LAM_MARK_ITEMS_WITHOUT_SET),
-		getFunction = function() return ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_MARK_ITEMS, SCOOTWORKS_ITEMS_SUB_SETTING_MARK_ITEMS_APPAREL) end,
-		setFunction = function(value) ScootworksItems_SetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_MARK_ITEMS, value, NO_CALLBACK, SCOOTWORKS_ITEMS_SUB_SETTING_MARK_ITEMS_APPAREL) end,
-		disable = function() return not ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_ENABLED) end,
-	}
-	
-	settings:AddSetting {
-		type = LibHarvensAddonSettings.ST_DROPDOWN,
-		label = GetString(SI_SCOOTWORKS_ITEMS_LAM_MARK_QUALITY),
-		tooltip = GetString(SI_SCOOTWORKS_ITEMS_LAM_MARK_QUALITY_TT),
-		items = ITEMS_DISPLAY_QUALITY,
-		getFunction = function()
-			local item = ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_MARK_ITEMS_QUALITY, SCOOTWORKS_ITEMS_SUB_SETTING_MARK_ITEMS_APPAREL_QUALITY)
-			return ITEMS_DISPLAY_QUALITY[item].name
-		end,
-		setFunction = function(combobox, name, item)
-			ScootworksItems_SetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_MARK_ITEMS_QUALITY, item.data, NO_CALLBACK, SCOOTWORKS_ITEMS_SUB_SETTING_MARK_ITEMS_APPAREL_QUALITY)
-		end,
-		disable = function()
-			local markEnabled = ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_ENABLED)
-			local subSettingEnabled = ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_MARK_ITEMS, SCOOTWORKS_ITEMS_SUB_SETTING_MARK_ITEMS_APPAREL)
-			return not markEnabled and not subSettingEnabled
-		end,
-	}
-
-	
-	settings:AddSetting {
-		type = LibHarvensAddonSettings.ST_CHECKBOX,
-		label = MergeString(SI_ITEMFILTERTYPE25, SI_SCOOTWORKS_ITEMS_LAM_MARK_ITEMS_WITHOUT_SET),
-		getFunction = function() return ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_MARK_ITEMS, SCOOTWORKS_ITEMS_SUB_SETTING_MARK_ITEMS_JEWELERY) end,
-		setFunction = function(value) ScootworksItems_SetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_MARK_ITEMS, value, NO_CALLBACK, SCOOTWORKS_ITEMS_SUB_SETTING_MARK_ITEMS_JEWELERY) end,
-		disable = function() return not ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_ENABLED) end,
-	}
-
-	settings:AddSetting {
-		type = LibHarvensAddonSettings.ST_DROPDOWN,
-		label = GetString(SI_SCOOTWORKS_ITEMS_LAM_MARK_QUALITY),
-		tooltip = GetString(SI_SCOOTWORKS_ITEMS_LAM_MARK_QUALITY_TT),
-		items = ITEMS_DISPLAY_QUALITY,
-		getFunction = function()
-			local item = ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_MARK_ITEMS_QUALITY, SCOOTWORKS_ITEMS_SUB_SETTING_MARK_ITEMS_JEWELERY_QUALITY)
-			return ITEMS_DISPLAY_QUALITY[item].name
-		end,
-		setFunction = function(combobox, name, item)
-			ScootworksItems_SetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_MARK_ITEMS_QUALITY, item.data, NO_CALLBACK, SCOOTWORKS_ITEMS_SUB_SETTING_MARK_ITEMS_JEWELERY_QUALITY)
-		end,
-		disable = function()
-			local markEnabled = ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_ENABLED)
-			local subSettingEnabled = ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_MARK_ITEMS, SCOOTWORKS_ITEMS_SUB_SETTING_MARK_ITEMS_JEWELERY)
-			return not markEnabled and not subSettingEnabled
-		end,
-	}
-
-	settings:AddSetting {
-		type = LibHarvensAddonSettings.ST_CHECKBOX,
-		label = MergeString(SI_ITEMFILTERTYPE25, SI_ITEMTRAITTYPE24),
-		getFunction = function() return ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_MARK_ITEMS, SCOOTWORKS_ITEMS_SUB_SETTING_MARK_ITEMS_ORNATE_JEWELERY) end,
-		setFunction = function(value) ScootworksItems_SetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_MARK_ITEMS, value, NO_CALLBACK, SCOOTWORKS_ITEMS_SUB_SETTING_MARK_ITEMS_ORNATE_JEWELERY) end,
-		disable = function() return not ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_ENABLED) end,
-	}
-	settings:AddSetting {
-		type = LibHarvensAddonSettings.ST_CHECKBOX,
-		label = MergeString(SI_ITEMTYPE2, SI_ITEMTRAITTYPE10),
-		getFunction = function() return ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_MARK_ITEMS, SCOOTWORKS_ITEMS_SUB_SETTING_MARK_ITEMS_ORNATE_ARMOR) end,
-		setFunction = function(value) ScootworksItems_SetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_MARK_ITEMS, value, NO_CALLBACK, SCOOTWORKS_ITEMS_SUB_SETTING_MARK_ITEMS_ORNATE_ARMOR) end,
-		disable = function() return not ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_ENABLED) end,
-	}
-	settings:AddSetting {
-		type = LibHarvensAddonSettings.ST_CHECKBOX,
-		label = MergeString(SI_ITEMTYPE1, SI_ITEMTRAITTYPE19),
-		getFunction = function() return ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_MARK_ITEMS, SCOOTWORKS_ITEMS_SUB_SETTING_MARK_ITEMS_ORNATE_WEAPON) end,
-		setFunction = function(value) ScootworksItems_SetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_MARK_ITEMS, value, NO_CALLBACK, SCOOTWORKS_ITEMS_SUB_SETTING_MARK_ITEMS_ORNATE_WEAPON) end,
-		disable = function() return not ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_ENABLED) end,
-	}
-	settings:AddSetting {
-		type = LibHarvensAddonSettings.ST_CHECKBOX,
-		label = MergeString(SI_SPECIALIZEDITEMTYPE2150),
-		getFunction = function() return ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_MARK_ITEMS, SCOOTWORKS_ITEMS_SUB_SETTING_MARK_ITEMS_TRASH) end,
-		setFunction = function(value) ScootworksItems_SetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_MARK_ITEMS, value, NO_CALLBACK, SCOOTWORKS_ITEMS_SUB_SETTING_MARK_ITEMS_TRASH) end,
-		disable = function() return not ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_ENABLED) end,
-	}
-	settings:AddSetting {
-		type = LibHarvensAddonSettings.ST_CHECKBOX,
-		label = MergeString(SI_SPECIALIZEDITEMTYPE81),
-		getFunction = function() return ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_MARK_ITEMS, SCOOTWORKS_ITEMS_SUB_SETTING_MARK_ITEMS_TROPHY) end,
-		setFunction = function(value) ScootworksItems_SetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_MARK_ITEMS, value, NO_CALLBACK, SCOOTWORKS_ITEMS_SUB_SETTING_MARK_ITEMS_TROPHY) end,
-		disable = function() return not ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_ENABLED) end,
-	}
-	settings:AddSetting {
-		type = LibHarvensAddonSettings.ST_CHECKBOX,
-		label = MergeString(SI_SPECIALIZEDITEMTYPE80),
-		getFunction = function() return ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_MARK_ITEMS, SCOOTWORKS_ITEMS_SUB_SETTING_MARK_ITEMS_RAREFISH) end,
-		setFunction = function(value) ScootworksItems_SetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_MARK_ITEMS, value, NO_CALLBACK, SCOOTWORKS_ITEMS_SUB_SETTING_MARK_ITEMS_RAREFISH) end,
-		disable = function() return not ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_ENABLED) end,
-	}
-	settings:AddSetting {
-		type = LibHarvensAddonSettings.ST_CHECKBOX,
-		label = MergeString(SI_SPECIALIZEDITEMTYPE2550),
-		getFunction = function() return ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_MARK_ITEMS, SCOOTWORKS_ITEMS_SUB_SETTING_MARK_ITEMS_TREASURE) end,
-		setFunction = function(value) ScootworksItems_SetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_MARK_ITEMS, value, NO_CALLBACK, SCOOTWORKS_ITEMS_SUB_SETTING_MARK_ITEMS_TREASURE) end,
-		disable = function() return not ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_ENABLED) end,
-	}
-	settings:AddSetting {
-		type = LibHarvensAddonSettings.ST_CHECKBOX,
-		label = MergeString(SI_GAMEPADITEMCATEGORY13),
-		getFunction = function() return ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_MARK_ITEMS, SCOOTWORKS_ITEMS_SUB_SETTING_MARK_ITEMS_GLYPHE) end,
-		setFunction = function(value) ScootworksItems_SetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_MARK_ITEMS, value, NO_CALLBACK, SCOOTWORKS_ITEMS_SUB_SETTING_MARK_ITEMS_GLYPHE) end,
-		disable = function() return not ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_ENABLED) end,
-	}
-	settings:AddSetting {
-		type = LibHarvensAddonSettings.ST_CHECKBOX,
-		label = MergeString(SI_SPECIALIZEDITEMTYPE450),
-		getFunction = function() return ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_MARK_ITEMS, SCOOTWORKS_ITEMS_SUB_SETTING_MARK_ITEMS_POTION) end,
-		setFunction = function(value) ScootworksItems_SetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_MARK_ITEMS, value, NO_CALLBACK, SCOOTWORKS_ITEMS_SUB_SETTING_MARK_ITEMS_POTION) end,
-		disable = function() return not ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_ENABLED) end,
-	}
-	settings:AddSetting {
-		type = LibHarvensAddonSettings.ST_CHECKBOX,
-		label = MergeString(SI_SPECIALIZEDITEMTYPE1400),
-		getFunction = function() return ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_MARK_ITEMS, SCOOTWORKS_ITEMS_SUB_SETTING_MARK_ITEMS_POISON) end,
-		setFunction = function(value) ScootworksItems_SetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_MARK_ITEMS, value, NO_CALLBACK, SCOOTWORKS_ITEMS_SUB_SETTING_MARK_ITEMS_POISON) end,
-		disable = function() return not ScootworksItems_GetSetting(SCOOTWORKS_ITEMS_SETTING_TYPE_MARK_ITEMS, SCOOTWORKS_ITEMS_SETTING_ENABLED) end,
-	}
-	settings:AddSetting {
-		type = LibHarvensAddonSettings.ST_SECTION,
-		label = GetString(SI_INVENTORY_MENU_INVENTORY),
-	}
-	settings:AddSetting {
-		type = LibHarvensAddonSettings.ST_BUTTON,
-		label = GetString(SI_SCOOTWORKS_ITEMS_LAM_MARK_SCAN),
-		tooltip = GetString(SI_SCOOTWORKS_ITEMS_LAM_MARK_SCAN_TT),
-		buttonText = GetString(SI_KEYCODE127),
-		clickHandler = ScootworksItems_ScanBagForJunk,
-	}
-
-	local settingsSets = LibHarvensAddonSettings:AddAddon(ADDON_DISPLAY_NAME_SETS, { allowRefresh = true })
-	local savedVarsSet = ScootworksItems_GetSettingSetId()
-	settingsSets:AddSetting {
-		type = LibHarvensAddonSettings.ST_CHECKBOX,
-		label = GetString(SI_LSV_ACCOUNT_WIDE),
-		tooltip = GetString(SI_LSV_ACCOUNT_WIDE_TT),
-		getFunction = function() 
-			savedVarsSet:LoadAllSavedVars()
-			return savedVarsSet:GetAccountSavedVarsActive()
-		end,
-		setFunction = function(value)
-			savedVarsSet:LoadAllSavedVars()
-			savedVarsSet:SetAccountSavedVarsActive(value)
-		end,
-		default = savedVarsSet.__dataSource.defaultToAccount,
-	}
-	settingsSets:AddSetting {
-		type = LibHarvensAddonSettings.ST_SECTION,
-		label = "",
-	}
-	settingsSets:AddSetting {
-		type = LibHarvensAddonSettings.ST_LABEL,
-		label = GetString(SI_SCOOTWORKS_ITEMS_SETTINGS_SETS_DESC),
-	}
-
-	local LIBSETS_SETTYPE_CRAFTED = LIBSETS_SETTYPE_CRAFTED
 	local GetSetTypeName = LibSets.GetSetTypeName
 	local clientLanguage = LibSets.clientLang or "en"
-	local setNameToIndexTable = ScootworksItems_GetSetsTable()
+	local setIdData = self.setIdData
+	local task = self.task
+	local setTypes = { }
 
-	for setType = LIBSETS_SETTYPE_ITERATION_BEGIN, LIBSETS_SETTYPE_ITERATION_END do
-		if setType ~= LIBSETS_SETTYPE_CRAFTED and setType ~= LIBSETS_SETTYPE_MYTHIC then
-			settingsSets:AddSetting {
-				type = LibHarvensAddonSettings.ST_SECTION,
-				label = GetSetTypeName(setType, clientLanguage),
+	task:For(LIBSETS_SETTYPE_ITERATION_BEGIN, LIBSETS_SETTYPE_ITERATION_END):Do(function(setType)
+		if IsTrackedSetType(setType) then
+			local data =
+			{
+				setTypeName = GetSetTypeName(setType, clientLanguage),
+				setType = setType,
 			}
+			setTypes[#setTypes + 1] = data
 		end
-		for _, layoutData in ipairs(setNameToIndexTable) do
-			if layoutData.setType ~= LIBSETS_SETTYPE_CRAFTED and layoutData.setType ~= LIBSETS_SETTYPE_MYTHIC and layoutData.setType == setType then
-				settingsSets:AddSetting {
-					type = LibHarvensAddonSettings.ST_CHECKBOX,
-					label = function()
-						if layoutData.isRecentlyAdded then
-							return zo_iconTextFormat("esoui/art/inventory/newitem_icon.dds", "100%", "100%", layoutData.setName)
-						end
-						return layoutData.setName
+	end):Then(function()
+		table.sort(setTypes, SortByName)
+	end):Then(function(task)
+		task:For(ipairs(setTypes)):Do(function(_, data)
+			settings:AddSetting {
+				type = LibHarvensAddonSettings.ST_SECTION,
+				label = data.setTypeName,
+			}
+			task:For(ipairs(setIdData)):Do(function(_, layoutData)
+				if layoutData.setType == data.setType then
+					settings:AddSetting {
+						type = LibHarvensAddonSettings.ST_CHECKBOX,
+						label = FormatNameWithIcon(layoutData.setName, layoutData.isRecentlyAdded),
+						tooltip = function(settingsControl)
+							return LIB_ITEM_LINK:ShowTooltip(settingsControl.control, LIB_ITEM_LINK:BuildItemLink(layoutData.setItemId, ITEM_QUALITY_LEGENDARY, 50, 160, nil, nil, nil, ITEM_QUALITY_LEGENDARY))
+						end,
+						getFunction = function()
+							return svSets[layoutData.setId]
+						end,
+						setFunction = function(value)
+							layoutData.enabled = value
+							svSets[layoutData.setId] = value
+						end,
+						disable = function() return not svJunk.enable end,
+					}
+				end
+			end)
+		end)
+	end)
+end
+
+function ScootworksItems:InitializeSettingsJunk()
+	local settings = LibHarvensAddonSettings:AddAddon(ADDON_DISPLAY_NAME_JUNK, { allowRefresh = true })
+	local svJunk = self.svJunk
+	local svJunkFilters = svJunk.filters
+
+	settings:AddSetting {
+		type = LibHarvensAddonSettings.ST_CHECKBOX,
+		label = GetString(SI_LSV_ACCOUNT_WIDE),
+		tooltip = GetString(SI_LSV_ACCOUNT_WIDE_TT),
+		getFunction = function()
+			svJunk:LoadAllSavedVars()
+			return svJunk:GetAccountSavedVarsActive()
+		end,
+		setFunction = function(value)
+			svJunk:LoadAllSavedVars()
+			svJunk:SetAccountSavedVarsActive(value)
+		end,
+		default = svJunk.__dataSource.defaultToAccount,
+	}
+
+	settings:AddSetting {
+		type = LibHarvensAddonSettings.ST_SECTION,
+		label = GetString(SI_GAMEPLAY_OPTIONS_GENERAL),
+	}
+
+	settings:AddSetting {
+		type = LibHarvensAddonSettings.ST_CHECKBOX,
+		label = GetString(SI_SCOOTWORKS_ITEMS_SETTINGS_MARK_ITEMS),
+		tooltip = GetString(SI_SCOOTWORKS_ITEMS_SETTINGS_MARK_ITEMS_TT),
+		getFunction = function() return svJunk.enable end,
+		setFunction = function(value) svJunk.enable = value end,
+	}
+
+	settings:AddSetting {
+		type = LibHarvensAddonSettings.ST_CHECKBOX,
+		label = GetString(SI_SCOOTWORKS_ITEMS_SETTINGS_MARK_ITEMS_MESSAGE),
+		tooltip = GetString(SI_SCOOTWORKS_ITEMS_SETTINGS_MARK_ITEMS_MESSAGE_TT),
+		getFunction = function() return svJunk.showMessage end,
+		setFunction = function(value) svJunk.showMessage = value end,
+		disable = function() return not svJunk.enable end,
+	}
+
+	settings:AddSetting {
+		type = LibHarvensAddonSettings.ST_BUTTON,
+		label = GetString(SI_SCOOTWORKS_ITEMS_SETTINGS_MARK_SCAN),
+		tooltip = GetString(SI_SCOOTWORKS_ITEMS_SETTINGS_MARK_SCAN_TT),
+		buttonText = GetString(SI_KEYCODE127),
+		clickHandler = function() self:ScanBagForJunk() end,
+		disable = function() return not svJunk.enable end,
+	}
+
+	local sortedSections = GetCategoryData(self.JUNK_SETTINGS_DATA.filters)
+	for _, items in ipairs(sortedSections) do
+		settings:AddSetting {
+			type = LibHarvensAddonSettings.ST_SECTION,
+			label = items.label,
+		}
+
+		local sortedItemTypes = GetSubCategoryData(items.itemTypes)
+		for keys, data in ipairs(sortedItemTypes) do
+			settings:AddSetting {
+				type = LibHarvensAddonSettings.ST_CHECKBOX,
+				label = data.label,
+				tooltip = data.tooltip ~= nil and data.tooltip or nil,
+				getFunction = function()
+					return svJunkFilters[items.section].itemTypes[data.itemType].enable
+				end,
+				setFunction = function(value)
+					svJunkFilters[items.section].itemTypes[data.itemType].enable = value
+				end,
+				disable = function() return not svJunk.enable end,
+			}
+
+			if data.quality then
+				settings:AddSetting {
+					type = LibHarvensAddonSettings.ST_DROPDOWN,
+					label = GetString(SI_SCOOTWORKS_ITEMS_SETTINGS_MARK_QUALITY),
+					tooltip = GetString(SI_SCOOTWORKS_ITEMS_SETTINGS_MARK_QUALITY_TT),
+					items = ITEM_QUALITY,
+					getFunction = function()
+						return ITEM_QUALITY[svJunkFilters[items.section].itemTypes[data.itemType].quality].name
 					end,
-					tooltip = function(settingsControl)
-						local setItemId = layoutData.setItemId
-						if setItemId then
-							return LIB_ITEM_LINK:ShowTooltip(settingsControl.control, LIB_ITEM_LINK:BuildItemLink(setItemId, ITEM_QUALITY_LEGENDARY, 50, 160, nil, nil, nil, ITEM_QUALITY_LEGENDARY))
-						end
-						return nil
+					setFunction = function(combobox, name, item)
+						svJunkFilters[items.section].itemTypes[data.itemType].quality = item.data
 					end,
-					getFunction = function() return ScootworksItems_GetSettingSetId(layoutData.setId) or layoutData.enabled end,
-					setFunction = function(value)
-						layoutData.enabled = value
-						ScootworksItems_SetSettingSetId(layoutData.setId, value)
-					end,
+					disable = function() return not (svJunk.enable and svJunkFilters[items.section].itemTypes[data.itemType].enable) end,
 				}
 			end
 		end
 	end
+end
 
-	CALLBACK_MANAGER:FireCallbacks("ScootworksItems_SettingsCreated", settings, settingsSets)
+function ScootworksItems:InitializeSettingsGeneral()
+	local settings = LibHarvensAddonSettings:AddAddon(ADDON_DISPLAY_NAME, { allowRefresh = true })
+	local sv = self.sv
+
+	settings:AddSetting {
+		type = LibHarvensAddonSettings.ST_CHECKBOX,
+		label = GetString(SI_LSV_ACCOUNT_WIDE),
+		tooltip = GetString(SI_LSV_ACCOUNT_WIDE_TT),
+		getFunction = function()
+			sv:LoadAllSavedVars()
+			return sv:GetAccountSavedVarsActive()
+		end,
+		setFunction = function(value)
+			sv:LoadAllSavedVars()
+			sv:SetAccountSavedVarsActive(value)
+		end,
+		default = sv.__dataSource.defaultToAccount,
+	}
+
+	settings:AddSetting {
+		type = LibHarvensAddonSettings.ST_SECTION,
+		label = GetString(SI_SCOOTWORKS_ITEMS_SETTINGS_LOOT_TITLE),
+	}
+
+	settings:AddSetting {
+		type = LibHarvensAddonSettings.ST_CHECKBOX,
+		label = GetString(SI_SCOOTWORKS_ITEMS_SETTINGS_LOOT),
+		tooltip = GetString(SI_SCOOTWORKS_ITEMS_SETTINGS_LOOT_TT),
+		getFunction = function() return sv.trackLoot.enable end,
+		setFunction = function(value) sv.trackLoot.enable = value end,
+	}
+	do
+		local Modes = {
+			{ name = GetString(SI_SCOOTWORKS_ITEMS_SETTINGS_LOOT_OPTION1), data = SCOOTWORKS_ITEMS_SETTING_LOOT_OPTION_PLAYER },
+			{ name = GetString(SI_SCOOTWORKS_ITEMS_SETTINGS_LOOT_OPTION2), data = SCOOTWORKS_ITEMS_SETTING_LOOT_OPTION_GROUP },
+			{ name = GetString(SI_SCOOTWORKS_ITEMS_SETTINGS_LOOT_OPTION3), data = SCOOTWORKS_ITEMS_SETTING_LOOT_OPTION_ALL },
+		}
+
+		local ModeToData = { }
+		for i = 1, #Modes do
+			ModeToData[Modes[i].data] = Modes[i]
+		end
+
+		settings:AddSetting {
+			type = LibHarvensAddonSettings.ST_DROPDOWN,
+			label = GetString(SI_SCOOTWORKS_ITEMS_SETTINGS_LOOT_OPTIONS),
+			tooltip = GetString(SI_SCOOTWORKS_ITEMS_SETTINGS_LOOT_OPTIONS_TT),
+			items = Modes,
+			getFunction = function()
+				return ModeToData[sv.trackLoot.displayMode or GetDefaultValue(sv, "trackLoot", "displayMode")].name
+			end,
+			setFunction = function(combobox, name, item)
+				sv.trackLoot.displayMode = item.data
+			end,
+			disable = function() return not sv.trackLoot.enable end,
+		}
+	end
+
+	settings:AddSetting {
+		type = LibHarvensAddonSettings.ST_CHECKBOX,
+		label = GetString(SI_SCOOTWORKS_ITEMS_SETTINGS_LOOT_TRAIT_NAME),
+		tooltip = GetString(SI_SCOOTWORKS_ITEMS_SETTINGS_LOOT_TRAIT_NAME_TT),
+		getFunction = function() return sv.trackLoot.enableTraitName end,
+		setFunction = function(value) sv.trackLoot.enableTraitName = value end,
+	}
+
+	settings:AddSetting {
+		type = LibHarvensAddonSettings.ST_CHECKBOX,
+		label = GetString(SI_SCOOTWORKS_ITEMS_SETTINGS_LOOT_COLLECTION_ICON),
+		tooltip = GetString(SI_SCOOTWORKS_ITEMS_SETTINGS_LOOT_COLLECTION_ICON_TT),
+		getFunction = function() return sv.trackLoot.setCollectionIcon end,
+		setFunction = function(value) sv.trackLoot.setCollectionIcon = value end,
+	}
+
+	settings:AddSetting {
+		type = LibHarvensAddonSettings.ST_SECTION,
+		label = GetString(SI_SCOOTWORKS_ITEMS_SETTINGS_SELL_JUNK_TITLE),
+	}
+
+	settings:AddSetting {
+		type = LibHarvensAddonSettings.ST_CHECKBOX,
+		label = GetString(SI_SCOOTWORKS_ITEMS_SETTINGS_SELL_JUNK),
+		tooltip = GetString(SI_SCOOTWORKS_ITEMS_SETTINGS_SELL_JUNK_TT),
+		getFunction = function() return sv.sellJunk.enable end,
+		setFunction = function(value) sv.sellJunk.enable = value end,
+	}
+
+	settings:AddSetting {
+		type = LibHarvensAddonSettings.ST_CHECKBOX,
+		label = GetString(SI_SCOOTWORKS_ITEMS_SETTINGS_SELL_JUNK_MESSAGE),
+		tooltip = GetString(SI_SCOOTWORKS_ITEMS_SETTINGS_SELL_JUNK_MESSAGE_TT),
+		getFunction = function() return sv.sellJunk.showMessage end,
+		setFunction = function(value) sv.sellJunk.showMessage = value end,
+		disable = function() return not sv.sellJunk.enable end,
+	}
+
+	settings:AddSetting {
+		type = LibHarvensAddonSettings.ST_CHECKBOX,
+		label = GetString(SI_SCOOTWORKS_ITEMS_SETTINGS_SELL_JUNK_QUICK_SELL),
+		tooltip = GetString(SI_SCOOTWORKS_ITEMS_SETTINGS_SELL_JUNK_QUICK_SELL_TT),
+		getFunction = function() return sv.sellJunk.closeStore end,
+		setFunction = function(value) sv.sellJunk.closeStore = value end,
+		disable = function() return not sv.sellJunk.enable end,
+	}
+
+	settings:AddSetting {
+		type = LibHarvensAddonSettings.ST_SECTION,
+		label = GetString(SI_SCOOTWORKS_ITEMS_SETTINGS_REPAIR_TITLE),
+	}
+
+	settings:AddSetting {
+		type = LibHarvensAddonSettings.ST_CHECKBOX,
+		label = GetString(SI_SCOOTWORKS_ITEMS_SETTINGS_REPAIR),
+		tooltip = GetString(SI_SCOOTWORKS_ITEMS_SETTINGS_REPAIR_TT),
+		getFunction = function() return sv.repair.enable end,
+		setFunction = function(value) sv.repair.enable = value end,
+	}
+
+	settings:AddSetting {
+		type = LibHarvensAddonSettings.ST_CHECKBOX,
+		label = GetString(SI_SCOOTWORKS_ITEMS_SETTINGS_REPAIR_MESSAGE),
+		tooltip = GetString(SI_SCOOTWORKS_ITEMS_SETTINGS_REPAIR_MESSAGE_TT),
+		getFunction = function() return sv.repair.showMessage end,
+		setFunction = function(value) sv.repair.showMessage = value end,
+		disable = function() return not sv.repair.enable end,
+	}
+
+	if FCOIS then
+		settings:AddSetting {
+			type = LibHarvensAddonSettings.ST_SECTION,
+			label = FCOIS.addonVars.addonNameMenu,
+		}
+		settings:AddSetting {
+			type = LibHarvensAddonSettings.ST_CHECKBOX,
+			label = GetString(SI_SCOOTWORKS_ITEMS_SETTINGS_FCOIS),
+			tooltip = GetString(SI_SCOOTWORKS_ITEMS_SETTINGS_FCOIS_TT),
+			getFunction = function() return sv.supportFCOIS end,
+			setFunction = function(value) sv.supportFCOIS = value end,
+			disable = function() return not sv.sellJunk.enable end,
+		}
+	end
 end

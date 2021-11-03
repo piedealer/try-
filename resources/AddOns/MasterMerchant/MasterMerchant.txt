@@ -5,23 +5,28 @@
 ; You can read the full terms at https://account.elderscrollsonline.com/add-on-terms
 
 
-## Title: Master Merchant 3.5.20 by Sharlikran
-## APIVersion: 100033 100034
+## Title: Master Merchant 3.6.79 by Sharlikran
+## APIVersion: 101031
 ## Description: Tools for the Master Merchant: Sales History, Guild Sales Info, Pricing Assistance.
 ## Authors: Philgo68, Khaibit, dOpiate, Garkin, Sharlikran
-## Version: 3.5.20
-## AddOnVersion: 3520
+## Version: 3.6.79
+## AddOnVersion: 3679
 ## License: See license - distribution without license is prohibited!
-## LastUpdated: Mar 2021
+## LastUpdated: Aug 2021
 ## SavedVariables: ShopkeeperSavedVars
-## DependsOn: MM00Data MM01Data MM02Data MM03Data MM04Data MM05Data MM06Data MM07Data MM08Data MM09Data MM10Data MM11Data MM12Data MM13Data MM14Data MM15Data MM16Data
-## DependsOn: LibExecutionQueue>=200 LibAddonMenu-2.0>=32 LibMediaProvider-1.0>=17 LibGuildRoster>=10 LibHistoire>=394
-## OptionalDependsOn: AwesomeGuildStore>=2684 LibDebugLogger>=196 DebugLogViewer
+## DependsOn: LibExecutionQueue>=200 LibAddonMenu-2.0>=32 LibMediaProvider-1.0>=18 LibGuildRoster>=10
+## DependsOn: LibGuildStore>=102 LibDebugLogger>=217
+## OptionalDependsOn: MM00Data MM01Data MM02Data MM03Data MM04Data MM05Data MM06Data MM07Data MM08Data MM09Data
+## OptionalDependsOn: MM10Data MM11Data MM12Data MM13Data MM14Data MM15Data MM16Data AwesomeGuildStore>=2751
+## OptionalDependsOn: DebugLogViewer>=558 EsoPL ArkadiusTradeTools ShoppingList BeamMeUp>=247 uespLog TamrielTradeCentre
 
-MasterMerchantMisc.xml
-MasterMerchantSales.xml
-MasterMerchantGuilds.xml
 MasterMerchantListings.xml
+MasterMerchantReports.xml
+MasterMerchantFilters.xml
+MasterMerchantGuilds.xml
+MasterMerchantMisc.xml
+MasterMerchantPurchases.xml
+MasterMerchantSales.xml
 MasterMerchant_Namespace_Init.lua
 AGS_Integration\AGS_Setup.lua
 AGS_Integration\DealFilter.lua
@@ -33,8 +38,10 @@ MasterMerchant_Guild.lua
 MasterMerchant_Graph.lua
 MasterMerchant_ItemManipulation.lua
 MasterMerchant_GuildListings.lua
-MasterMerchant_Iterators.lua
+MasterMerchant_ItemNameFilter.lua
 i18n\en.lua
 i18n\$(language).lua
+MasterMerchantFilters.lua
 MasterMerchant.lua
+MasterMerchant_Alias.lua
 bindings.xml

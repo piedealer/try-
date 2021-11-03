@@ -34,8 +34,9 @@
             ShoppingListWindow:SetHidden(true)
           </OnClicked>
         </Button>
-        <Label name="$(parent)Title" height="25" inheritAlpha="true" color="D5B526" verticalAlignment="TOP" horizontalAlignment="CENTER" text="Shopping List">
-	        <Anchor point="TOP" relativeTo="$(parent)" relativePoint="TOP" offsetX="-10" offsetY="5" />
+        <Label name="$(parent)Title" height="25" inheritAlpha="true" color="D5B526" verticalAlignment="TOP"
+               horizontalAlignment="CENTER" text="ShoppingList - Purchases">
+          <Anchor point="TOP" relativeTo="$(parent)" relativePoint="TOP" offsetX="-10" offsetY="5"/>
         </Label>
         <Button name="$(parent)StatsButton" inheritAlpha="true" verticalAlignment="CENTER" horizontalAlignment="CENTER">
           <Anchor point="LEFT" relativeTo="$(parent)Title" relativePoint="RIGHT" offsetX="15" offsetY="0" />
@@ -59,10 +60,35 @@
             ZO_Tooltips_HideTextTooltip()
           </OnMouseExit>
         </Button>
-        <Button name="$(parent)FeedbackButton" inheritAlpha="true" verticalAlignment="CENTER" horizontalAlignment="CENTER">
-          <Anchor point="LEFT" relativeTo="$(parent)ViewSizeButton" relativePoint="RIGHT" offsetX="25" offsetY="0" />
-          <Dimensions x="48" y="48" />
-          <Textures normal="ESOUI/art/chatwindow/chat_mail_up.dds" mouseOver="ESOUI/art/chatwindow/chat_mail_over.dds" />
+        <Button name="$(parent)PurchaseButton" inheritAlpha="true" verticalAlignment="CENTER"
+                horizontalAlignment="CENTER">
+          <Anchor point="LEFT" relativeTo="$(parent)ViewSizeButton" relativePoint="RIGHT" offsetX="0" offsetY="0"/>
+          <Dimensions x="48" y="48"/>
+          <Textures normal="ESOUI/art/bank/bank_tabicon_withdraw_up.dds" mouseOver="ESOUI/art/bank/bank_tabicon_withdraw_up.dds"/>
+          <OnClicked>
+            MasterMerchant.ToggleMasterMerchantPurchases()
+          </OnClicked>
+          <OnMouseExit>
+            ZO_Tooltips_HideTextTooltip()
+          </OnMouseExit>
+        </Button>
+        <Button name="$(parent)ListingButton" inheritAlpha="true" verticalAlignment="CENTER"
+                horizontalAlignment="CENTER">
+          <Anchor point="LEFT" relativeTo="$(parent)PurchaseButton" relativePoint="RIGHT" offsetX="0" offsetY="0"/>
+          <Dimensions x="48" y="48"/>
+          <Textures normal="ESOUI/art/icons/servicemappins/servicepin_guildkiosk.dds" mouseOver="ESOUI/art/icons/servicemappins/servicepin_guildkiosk.dds"/>
+          <OnClicked>
+            MasterMerchant.ToggleMasterMerchantListings()
+          </OnClicked>
+          <OnMouseExit>
+            ZO_Tooltips_HideTextTooltip()
+          </OnMouseExit>
+        </Button>
+        <Button name="$(parent)FeedbackButton" inheritAlpha="true" verticalAlignment="CENTER"
+                horizontalAlignment="CENTER">
+          <Anchor point="LEFT" relativeTo="$(parent)ListingButton" relativePoint="RIGHT" offsetX="0" offsetY="0"/>
+          <Dimensions x="48" y="48"/>
+          <Textures normal="ESOUI/art/chatwindow/chat_mail_up.dds" mouseOver="ESOUI/art/chatwindow/chat_mail_over.dds"/>
           <OnClicked>
             MasterMerchant.ToggleMasterMerchantFeedback()
           </OnClicked>

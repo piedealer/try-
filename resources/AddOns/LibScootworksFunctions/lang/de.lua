@@ -1,1 +1,0 @@
-SafeAddString(SI_SCOOTWORKS_FUNCTIONS_UPDATE_ADDON, "Diese Erweiterung unterstützt diese Spielversion nicht.", 0)
