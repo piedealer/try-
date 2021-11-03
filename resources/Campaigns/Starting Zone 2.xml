@@ -54,8 +54,8 @@
   <Task>Goto Waypoint: 446.71,902.33,113.3</Task>
   <Task>Goto Waypoint: 450.09,894.93,115.52</Task>
   <Task>Goto Waypoint: 448.37,883.45,115.52</Task>
-  <Task>Goto Waypoint: 453.47,877.36,115.51</Task>
-  <Task>Rest: 3000</Task>
+  <Task>Goto Waypoint: 454.84,876.93,115.51</Task>
+  <Task>Rest: 15000</Task>
   <Task>Target NPC: Norianwe</Task>
   <Task>Press Key(s): E, 3000</Task>
   <Task>Press Key(s): E, 3000</Task>

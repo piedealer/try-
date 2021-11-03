@@ -1,0 +1,50 @@
+<TaskList Name="13 - Deshan Deepcrag Den Kwama farm">
+  <Loops>1</Loops>
+  <Task>REPEAT LOOP: 99999</Task>
+  <Task>Start Patrol: 13 - Deepcrag Den Deshan Cwarma farm,0,5</Task>
+  <Task>Goto Waypoint: 144.97,305.52,151.82</Task>
+  <Task>Face Heading: 285</Task>
+  <Task>Press Key(s): E, 3000</Task>
+  <Task>Rest: 20000</Task>
+  <Task>Start Patrol: 13- Deeepcrag Den Deshan vendor run,0,1</Task>
+  <Task>Target NPC: Am-Eepa</Task>
+  <Task>Pause: 1500</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 10000</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 5000</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 5000</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 5000</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 5000</Task>
+  <Task>Press Key(s): X, 2000</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Press Key(s): E, 2000</Task>
+  <Task>Pause: 2000</Task>
+  <Task>Press Key(s): ESCAPE, 1000</Task>
+  <Task>Pause: 1000</Task>
+  <Task>Target NPC: Am-Eepa</Task>
+  <Task>Pause: 1500</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 10000</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 5000</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 5000</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 5000</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 5000</Task>
+  <Task>Press Key(s): X, 2000</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Press Key(s): E, 2000</Task>
+  <Task>Pause: 2000</Task>
+  <Task>Press Key(s): ESCAPE, 1000</Task>
+  <Task>Pause: 1000</Task>
+  <Task>Start Patrol: 13- Deepcrag Den Deshan vendor run2,0,1</Task>
+  <Task>Face Heading: 110</Task>
+  <Task>Press Key(s): E, 3000</Task>
+  <Task>END REPEAT LOOP</Task>
+</TaskList>

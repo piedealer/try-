@@ -7,9 +7,10 @@
   <Task>Press Key(s): E, 2000</Task>
   <Task>Press Key(s): E, 2000</Task>
   <Task>Press Key(s): E, 2000</Task>
-  <Task>Goto Waypoint: 83.3,899.68,89.96</Task>
+  <Task>Goto Waypoint: 84.27,904.22,89.94</Task>
   <Task>Rest: 3000</Task>
-  <Task>Goto Waypoint: 87.27,899.44,89.95</Task>
+  <Task>Goto Waypoint: 90.09,898.84,89.94</Task>
+  <Task>Goto Waypoint: 90.09,898.84,89.94</Task>
   <Task>Rest: 3000</Task>
   <Task>Target NPC: Cell Door</Task>
   <Task>Press Key(s): E, 2000</Task>
@@ -41,9 +42,9 @@
   <Task>Rest: 3000</Task>
   <Task>Press Key(s): I, 2000</Task>
   <Task>Rest: 3000</Task>
-  <Task>Left Click: 588,471</Task>
+  <Task>Scaled Left Click: 845,259,1085,707</Task>
   <Task>Rest: 3000</Task>
-  <Task>Left Click: 820,303</Task>
+  <Task>Scaled Left Click: 899,257,1085,707</Task>
   <Task>Rest: 3000</Task>
   <Task>Press Key(s): E, 2000</Task>
   <Task>Rest: 3000</Task>
