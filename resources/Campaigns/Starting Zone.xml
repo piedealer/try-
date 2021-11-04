@@ -2,6 +2,7 @@
   <Loops>1</Loops>
   <Task>Goto Waypoint: 88.54,899.56,89.94</Task>
   <Task>Target NPC: Norianwe</Task>
+  <Task>Rest: 3000</Task>
   <Task>Press Key(s): E, 2000</Task>
   <Task>Press Key(s): E, 2000</Task>
   <Task>Press Key(s): E, 2000</Task>
@@ -13,6 +14,7 @@
   <Task>Goto Waypoint: 90.09,898.84,89.94</Task>
   <Task>Rest: 3000</Task>
   <Task>Target NPC: Cell Door</Task>
+  <Task>Rest: 3000</Task>
   <Task>Press Key(s): E, 2000</Task>
   <Task>Goto Waypoint: 96.38,892.6,89.94</Task>
   <Task>Goto Waypoint: 96.74,871.69,89.94</Task>
@@ -42,9 +44,9 @@
   <Task>Rest: 3000</Task>
   <Task>Press Key(s): I, 2000</Task>
   <Task>Rest: 3000</Task>
-  <Task>Scaled Left Click: 845,259,1085,707</Task>
+  <Task>Scaled Left Click: 808,299,1008,752</Task>
   <Task>Rest: 3000</Task>
-  <Task>Scaled Left Click: 899,257,1085,707</Task>
+  <Task>Scaled Left Click: 809,301,1008,752</Task>
   <Task>Rest: 3000</Task>
   <Task>Press Key(s): E, 2000</Task>
   <Task>Rest: 3000</Task>
