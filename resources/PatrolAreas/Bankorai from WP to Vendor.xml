@@ -1,0 +1,15 @@
+<PatrolArea Name="Bankorai from WP to Vendor">
+  <WaypointDistance>30</WaypointDistance>
+  <TargetMaxLevel>999</TargetMaxLevel>
+  <TargetMinLevel>0</TargetMinLevel>
+  <TargetRange>30</TargetRange>
+  <Type>1</Type>
+  <UseClosestWaypoint>False</UseClosestWaypoint>
+  <PatrolMinLevel>1</PatrolMinLevel>
+  <PatrolMaxLevel>999</PatrolMaxLevel>
+  <TargetsPerHotspot>5</TargetsPerHotspot>
+  <TaskList Name="Bankorai from WP to Vendor">
+    <Loops>9999</Loops>
+    <Task>Goto Hotspot: auto, 1680.13,1940.01,121.87</Task>
+  </TaskList>
+</PatrolArea>
