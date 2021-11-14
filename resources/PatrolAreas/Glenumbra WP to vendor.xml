@@ -1,0 +1,15 @@
+<PatrolArea Name="Glenumbra WP to vendor">
+  <WaypointDistance>30</WaypointDistance>
+  <TargetMaxLevel>999</TargetMaxLevel>
+  <TargetMinLevel>0</TargetMinLevel>
+  <TargetRange>30</TargetRange>
+  <Type>1</Type>
+  <UseClosestWaypoint>False</UseClosestWaypoint>
+  <PatrolMinLevel>1</PatrolMinLevel>
+  <PatrolMaxLevel>999</PatrolMaxLevel>
+  <TargetsPerHotspot>5</TargetsPerHotspot>
+  <TaskList Name="Glenumbra WP to vendor">
+    <Loops>1</Loops>
+    <Task>Goto Hotspot: auto, 1005.48,3016.99,166.21</Task>
+  </TaskList>
+</PatrolArea>
