@@ -14,7 +14,7 @@
   <Target Name="Mountain Flower" />
   <Target Name="Pewter Seam" />
   <TaskList Name="7 - Glenumbra - Top east mudcrab farm">
-    <Loops>5</Loops>
+    <Loops>15</Loops>
     <Task>Goto Hotspot: auto, 1942.76,1235.66,100.46</Task>
     <Task>Goto Hotspot: auto, 1963.26,1211.23,100.29</Task>
     <Task>Goto Hotspot: auto, 1994.3,1217.15,100.55</Task>
