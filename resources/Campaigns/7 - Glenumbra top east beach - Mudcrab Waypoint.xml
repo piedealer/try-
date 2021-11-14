@@ -3,14 +3,15 @@
   <Task>REPEAT LOOP: 99999</Task>
   <Task>Press Key(s): M, 300</Task>
   <Task>Pause: 3000</Task>
-  <Task>Scaled Left Click: 384,440,998,655</Task>
+  <Task>Scaled Left Click: 379,517,1002,782</Task>
   <Task>Pause: 3000</Task>
   <Task>Press Key(s): E, 3000</Task>
   <Task>Pause: 60000</Task>
-  <Task>Goto Waypoint: 1023.46,2975.14,167.88</Task>
-  <Task>Goto Waypoint: 1017.28,2989.44,167.14</Task>
-  <Task>Goto Waypoint: 1003.58,3006.19,166.18</Task>
-  <Task>Goto Waypoint: 1001.59,3019.72,166.19</Task>
+  <Task>Set Waypoint Accuracy: 3</Task>
+  <Task>Start Patrol: Glenumbra WP to vendor,0,1</Task>
+  <Task>Set Waypoint Accuracy: 3</Task>
+  <Task>Goto Waypoint: 1004.52,3019.72,166.15</Task>
+  <Task>Set Waypoint Accuracy: 3</Task>
   <Task>Rest: 20000</Task>
   <Task>Target NPC: Fabio Previa</Task>
   <Task>Pause: 1500</Task>
@@ -37,11 +38,7 @@
   <Task>Press Key(s): ESCAPE, 1000</Task>
   <Task>Pause: 1000</Task>
   <Task>Set Waypoint Accuracy: 3</Task>
-  <Task>Goto Waypoint: 1003.01,3014.21,166.27</Task>
-  <Task>Goto Waypoint: 1011.11,3000.35,166.8</Task>
-  <Task>Goto Waypoint: 1026.13,2987.75,167.22</Task>
-  <Task>Goto Waypoint: 1035.17,2978.82,167.55</Task>
-  <Task>Goto Waypoint: 1032.16,2969.71,167.84</Task>
+  <Task>Start Patrol: Glenumbra vendor to WP,0,1</Task>
   <Task>Rest: 5000</Task>
   <Task>Set Waypoint Accuracy: 3</Task>
   <Task>Pause: 1000</Task>
@@ -49,10 +46,10 @@
   <Task>Pause: 1000</Task>
   <Task>Press Key(s): E, 1000</Task>
   <Task>Pause: 3000</Task>
-  <Task>Scaled Left Click: 548,213,998,655</Task>
+  <Task>Scaled Left Click: 556,263,1002,782</Task>
   <Task>Pause: 1000</Task>
   <Task>Press Key(s): E, 300</Task>
   <Task>Pause: 60000</Task>
-  <Task>Start Patrol: 7 - Glenumbra - Top east mudcrab farm,0,5</Task>
+  <Task>Start Patrol: 7 - Glenumbra - Top east mudcrab farm,0,15</Task>
   <Task>END REPEAT LOOP</Task>
 </TaskList>
