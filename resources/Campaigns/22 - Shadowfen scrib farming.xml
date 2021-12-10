@@ -1,0 +1,30 @@
+<TaskList Name="22 - Shadowfen scrib farming">
+  <Loops>1</Loops>
+  <Task>REPEAT LOOP: 999999</Task>
+  <Task>Start Patrol: 22 - Shadowfen scrib farming - farm to venodor,0,1</Task>
+  <Task>Rest: 3000</Task>
+  <Task>Target NPC: Puyatha</Task>
+  <Task>Rest: 3000</Task>
+  <Task>Press Key(s): E, 3000</Task>
+  <Task>Rest: 3000</Task>
+  <Task>Press Key(s): E, 3000</Task>
+  <Task>Rest: 3000</Task>
+  <Task>Press Key(s): X, 3000</Task>
+  <Task>Rest: 3000</Task>
+  <Task>Press Key(s): E, 3000</Task>
+  <Task>Rest: 3000</Task>
+  <Task>Press Key(s): ESCAPE, 3000</Task>
+  <Task>Rest: 3000</Task>
+  <Task>Start Patrol: 22 - Shadowfen scrib farming - vendor to farm,0,1</Task>
+  <Task>Face Heading: 44</Task>
+  <Task>Press Key(s): E, 3000</Task>
+  <Task>Rest: 20000</Task>
+  <Task>REPEAT LOOP: 30</Task>
+  <Task>Start Patrol: 22 - Shadowfen scrib farm part 1,0,1</Task>
+  <Task>Goto Waypoint: 254.53,236.9,104.31</Task>
+  <Task>Press Key(s): E, 3000</Task>
+  <Task>Rest: 5000</Task>
+  <Task>Start Patrol: 22 - Shadowfen scrib famr part 2,0,1</Task>
+  <Task>END REPEAT LOOP</Task>
+  <Task>END REPEAT LOOP</Task>
+</TaskList>

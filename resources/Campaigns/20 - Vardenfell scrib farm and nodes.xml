@@ -1,0 +1,53 @@
+<TaskList Name="20 - Vardenfell scrib farm and nodes">
+  <Loops>1</Loops>
+  <Task>REPEAT LOOP: 99999</Task>
+  <Task>Start Patrol: 18 -  Vardenfell scrib farm to vendor,0,1</Task>
+  <Task>Goto Waypoint: 3274.49,4596.06,117.25</Task>
+  <Task>Face Heading: 91</Task>
+  <Task>Press Key(s): E, 3000</Task>
+  <Task>Rest: 20000</Task>
+  <Task>Goto Waypoint: 3296.19,4594.03,16.55</Task>
+  <Task>Goto Waypoint: 3289.27,4604.44,16.55</Task>
+  <Task>Target NPC: Sevus Alor</Task>
+  <Task>Pause: 1500</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 10000</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 5000</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 5000</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 5000</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 5000</Task>
+  <Task>Press Key(s): X, 2000</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Press Key(s): E, 2000</Task>
+  <Task>Pause: 2000</Task>
+  <Task>Press Key(s): ESCAPE, 1000</Task>
+  <Task>Pause: 1000</Task>
+  <Task>Target NPC: Sevus Alor</Task>
+  <Task>Pause: 1500</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 10000</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 5000</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 5000</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 5000</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 5000</Task>
+  <Task>Press Key(s): X, 2000</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Press Key(s): E, 2000</Task>
+  <Task>Pause: 2000</Task>
+  <Task>Press Key(s): ESCAPE, 1000</Task>
+  <Task>Pause: 1000</Task>
+  <Task>Goto Waypoint: 3296.19,4594.55,16.55</Task>
+  <Task>Goto Waypoint: 3276.65,4594.22,9.38</Task>
+  <Task>Face Heading: 270</Task>
+  <Task>Press Key(s): E, 3000</Task>
+  <Task>Start Patrol: 20 - Vardenfell scrib jelly farm and nodes,0,30</Task>
+  <Task>END REPEAT LOOP</Task>
+</TaskList>
