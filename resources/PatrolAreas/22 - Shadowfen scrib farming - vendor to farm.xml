@@ -1,0 +1,15 @@
+<PatrolArea Name="22 - Shadowfen scrib farming - vendor to farm">
+  <WaypointDistance>30</WaypointDistance>
+  <TargetMaxLevel>999</TargetMaxLevel>
+  <TargetMinLevel>0</TargetMinLevel>
+  <TargetRange>30</TargetRange>
+  <Type>1</Type>
+  <UseClosestWaypoint>False</UseClosestWaypoint>
+  <PatrolMinLevel>1</PatrolMinLevel>
+  <PatrolMaxLevel>999</PatrolMaxLevel>
+  <TargetsPerHotspot>5</TargetsPerHotspot>
+  <TaskList Name="22 - Shadowfen scrib farming - vendor to farm">
+    <Loops>9999</Loops>
+    <Task>Goto Hotspot: auto, 2791.7,2652.78,101.69</Task>
+  </TaskList>
+</PatrolArea>

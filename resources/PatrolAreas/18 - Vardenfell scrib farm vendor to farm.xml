@@ -1,0 +1,15 @@
+<PatrolArea Name="18 - Vardenfell scrib farm vendor to farm">
+  <WaypointDistance>30</WaypointDistance>
+  <TargetMaxLevel>999</TargetMaxLevel>
+  <TargetMinLevel>0</TargetMinLevel>
+  <TargetRange>30</TargetRange>
+  <Type>1</Type>
+  <UseClosestWaypoint>False</UseClosestWaypoint>
+  <PatrolMinLevel>1</PatrolMinLevel>
+  <PatrolMaxLevel>999</PatrolMaxLevel>
+  <TargetsPerHotspot>5</TargetsPerHotspot>
+  <TaskList Name="18 - Vardenfell scrib farm vendor to farm">
+    <Loops>9999</Loops>
+    <Task>Goto Hotspot: auto, 3589.34,4191.48,122.75</Task>
+  </TaskList>
+</PatrolArea>

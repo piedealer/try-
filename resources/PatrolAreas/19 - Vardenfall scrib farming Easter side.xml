@@ -1,0 +1,44 @@
+<PatrolArea Name="19 - Vardenfall scrib farming Easter side">
+  <WaypointDistance>30</WaypointDistance>
+  <TargetMaxLevel>999</TargetMaxLevel>
+  <TargetMinLevel>0</TargetMinLevel>
+  <TargetRange>30</TargetRange>
+  <Type>1</Type>
+  <UseClosestWaypoint>False</UseClosestWaypoint>
+  <PatrolMinLevel>1</PatrolMinLevel>
+  <PatrolMaxLevel>999</PatrolMaxLevel>
+  <TargetsPerHotspot>5</TargetsPerHotspot>
+  <Target Name="High Iron Ore" />
+  <Target Name="Nightshade" />
+  <Target Name="Pure Water" />
+  <Target Name="Iron Ore" />
+  <Target Name="Kwama Scrib" />
+  <Target Name="Jute" />
+  <Target Name="Mountain Flower" />
+  <Target Name="Nirnroot" />
+  <Target Name="Wormwood" />
+  <Target Name="Maple" />
+  <Target Name="Iron Ore" />
+  <Target Name="Jute" />
+  <Target Name="Pewter Seam" />
+  <Target Name="Kwama Worker" />
+  <Target Name="Kwama Warrior" />
+  <TaskList Name="19 - Vardenfall scrib farming Easter side">
+    <Loops>9999</Loops>
+    <Task>Goto Hotspot: auto, 3108.13,3601.96,115.8</Task>
+    <Task>Goto Hotspot: auto, 3138.45,3608.95,114.77</Task>
+    <Task>Goto Hotspot: auto, 3173.6,3598.2,112.25</Task>
+    <Task>Goto Hotspot: auto, 3202.7,3612.37,112.48</Task>
+    <Task>Goto Hotspot: auto, 3223.6,3650.49,117.98</Task>
+    <Task>Goto Hotspot: auto, 3195.43,3661.43,122.08</Task>
+    <Task>Goto Hotspot: auto, 3170.83,3683.33,117.79</Task>
+    <Task>Goto Hotspot: auto, 3186.58,3709,116.62</Task>
+    <Task>Goto Hotspot: auto, 3154.66,3697.16,121.76</Task>
+    <Task>Goto Hotspot: auto, 3141.26,3724,131.85</Task>
+    <Task>Goto Hotspot: auto, 3141.78,3692.93,126.56</Task>
+    <Task>Goto Hotspot: auto, 3148.73,3662.75,121.78</Task>
+    <Task>Goto Hotspot: auto, 3167.05,3634.05,116.76</Task>
+    <Task>Goto Hotspot: auto, 3138.6,3610.43,114.87</Task>
+    <Task>Goto Hotspot: auto, 3107.99,3601.86,115.83</Task>
+  </TaskList>
+</PatrolArea>

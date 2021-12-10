@@ -1,0 +1,52 @@
+<PatrolArea Name="20 - Vardenfell scrib jelly farm and nodes">
+  <WaypointDistance>30</WaypointDistance>
+  <TargetMaxLevel>999</TargetMaxLevel>
+  <TargetMinLevel>0</TargetMinLevel>
+  <TargetRange>30</TargetRange>
+  <Type>1</Type>
+  <UseClosestWaypoint>False</UseClosestWaypoint>
+  <PatrolMinLevel>1</PatrolMinLevel>
+  <PatrolMaxLevel>999</PatrolMaxLevel>
+  <TargetsPerHotspot>5</TargetsPerHotspot>
+  <Target Name="Stinkhorn" />
+  <Target Name="Kwama Warrior" />
+  <Target Name="High Iron Ore" />
+  <Target Name="Flax" />
+  <Target Name="Oak" />
+  <Target Name="Kwama Worker" />
+  <Target Name="Pewter Seam" />
+  <Target Name="Emetic Russula" />
+  <Target Name="Pewter Seam" />
+  <Target Name="Dragonthorn" />
+  <Target Name="Iron Ore" />
+  <Target Name="Lady's Smock" />
+  <Target Name="Maple" />
+  <Target Name="White Cap" />
+  <Target Name="Imp Stool" />
+  <Target Name="Blue Entoloma" />
+  <Target Name="Bugloss" />
+  <TaskList Name="20 - Vardenfell scrib jelly farm and nodes">
+    <Loops>9999</Loops>
+    <Task>Goto Hotspot: auto, 3777.8,4604.14,119.44</Task>
+    <Task>Goto Hotspot: auto, 3812.44,4610.95,119.45</Task>
+    <Task>Goto Hotspot: auto, 3843.84,4626.19,111.65</Task>
+    <Task>Goto Hotspot: auto, 3826.77,4597.89,116.19</Task>
+    <Task>Goto Hotspot: auto, 3844.6,4570.94,122.37</Task>
+    <Task>Goto Hotspot: auto, 3825.77,4545.87,121.97</Task>
+    <Task>Goto Hotspot: auto, 3794.29,4535.31,118.99</Task>
+    <Task>Goto Hotspot: auto, 3765.18,4512.4,116.17</Task>
+    <Task>Goto Hotspot: auto, 3790.43,4492.58,116.75</Task>
+    <Task>Goto Hotspot: auto, 3814.69,4467.6,116.46</Task>
+    <Task>Goto Hotspot: auto, 3850.7,4462.18,117.76</Task>
+    <Task>Goto Hotspot: auto, 3878.32,4430.84,126.75</Task>
+    <Task>Goto Hotspot: auto, 3859.03,4405.34,122.62</Task>
+    <Task>Goto Hotspot: auto, 3838.1,4396.15,122.5</Task>
+    <Task>Goto Hotspot: auto, 3843.18,4435.07,128.41</Task>
+    <Task>Goto Hotspot: auto, 3853.09,4468.83,116.15</Task>
+    <Task>Goto Hotspot: auto, 3874.91,4491.25,116.2</Task>
+    <Task>Goto Hotspot: auto, 3871.17,4528.22,118.68</Task>
+    <Task>Goto Hotspot: auto, 3854.79,4563.54,123.54</Task>
+    <Task>Goto Hotspot: auto, 3826.56,4581.54,119.32</Task>
+    <Task>Goto Hotspot: auto, 3794.02,4590.6,117.21</Task>
+  </TaskList>
+</PatrolArea>

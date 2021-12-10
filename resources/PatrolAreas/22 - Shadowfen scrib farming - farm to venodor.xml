@@ -1,0 +1,15 @@
+<PatrolArea Name="22 - Shadowfen scrib farming - farm to venodor">
+  <WaypointDistance>30</WaypointDistance>
+  <TargetMaxLevel>999</TargetMaxLevel>
+  <TargetMinLevel>0</TargetMinLevel>
+  <TargetRange>30</TargetRange>
+  <Type>1</Type>
+  <UseClosestWaypoint>False</UseClosestWaypoint>
+  <PatrolMinLevel>1</PatrolMinLevel>
+  <PatrolMaxLevel>999</PatrolMaxLevel>
+  <TargetsPerHotspot>5</TargetsPerHotspot>
+  <TaskList Name="22 - Shadowfen scrib farming - farm to venodor">
+    <Loops>9999</Loops>
+    <Task>Goto Hotspot: auto, 2837.27,2143.52,109.53</Task>
+  </TaskList>
+</PatrolArea>

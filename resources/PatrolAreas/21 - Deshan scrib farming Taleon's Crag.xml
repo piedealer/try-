@@ -1,0 +1,39 @@
+<PatrolArea Name="21 - Deshan scrib farming Taleon's Crag">
+  <WaypointDistance>30</WaypointDistance>
+  <TargetMaxLevel>999</TargetMaxLevel>
+  <TargetMinLevel>0</TargetMinLevel>
+  <TargetRange>30</TargetRange>
+  <Type>1</Type>
+  <UseClosestWaypoint>False</UseClosestWaypoint>
+  <PatrolMinLevel>1</PatrolMinLevel>
+  <PatrolMaxLevel>999</PatrolMaxLevel>
+  <TargetsPerHotspot>5</TargetsPerHotspot>
+  <Target Name="Kwama Warrior" />
+  <Target Name="Kwama Worker" />
+  <Target Name="Scrib" />
+  <TaskList Name="21 - Deshan scrib farming Taleon's Crag">
+    <Loops>9999</Loops>
+    <Task>Goto Hotspot: auto, 234.75,371.63,115.88</Task>
+    <Task>Goto Hotspot: auto, 246.02,338.99,106.96</Task>
+    <Task>Goto Hotspot: auto, 279.56,334.12,103.5</Task>
+    <Task>Goto Hotspot: auto, 309.47,319.21,103.07</Task>
+    <Task>Goto Hotspot: auto, 308.8,287.37,102.75</Task>
+    <Task>Goto Hotspot: auto, 281.78,266.56,103.22</Task>
+    <Task>Goto Hotspot: auto, 248.53,254.64,103.71</Task>
+    <Task>Goto Hotspot: auto, 217.72,270.14,103.32</Task>
+    <Task>Goto Hotspot: auto, 185.87,266.89,103.7</Task>
+    <Task>Goto Hotspot: auto, 154.3,269.05,102.81</Task>
+    <Task>Goto Hotspot: auto, 145.99,239.72,100.84</Task>
+    <Task>Goto Hotspot: auto, 144.62,198.75,102.79</Task>
+    <Task>Goto Hotspot: auto, 177.13,192.51,102.96</Task>
+    <Task>Goto Hotspot: auto, 210.28,197.99,102.37</Task>
+    <Task>Goto Hotspot: auto, 224.8,225.84,103.46</Task>
+    <Task>Goto Hotspot: auto, 222.73,260.15,103.37</Task>
+    <Task>Goto Hotspot: auto, 261.93,264.13,102.96</Task>
+    <Task>Goto Hotspot: auto, 304.56,278.97,102.76</Task>
+    <Task>Goto Hotspot: auto, 309.24,311.03,103.48</Task>
+    <Task>Goto Hotspot: auto, 281.97,332.86,103.57</Task>
+    <Task>Goto Hotspot: auto, 248.41,336.15,106.37</Task>
+    <Task>Goto Hotspot: auto, 235.3,366.63,114.61</Task>
+  </TaskList>
+</PatrolArea>

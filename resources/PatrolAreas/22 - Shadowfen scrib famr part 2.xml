@@ -1,0 +1,21 @@
+<PatrolArea Name="22 - Shadowfen scrib famr part 2">
+  <WaypointDistance>30</WaypointDistance>
+  <TargetMaxLevel>999</TargetMaxLevel>
+  <TargetMinLevel>0</TargetMinLevel>
+  <TargetRange>14</TargetRange>
+  <Type>0</Type>
+  <UseClosestWaypoint>False</UseClosestWaypoint>
+  <PatrolMinLevel>1</PatrolMinLevel>
+  <PatrolMaxLevel>999</PatrolMaxLevel>
+  <TargetsPerHotspot>5</TargetsPerHotspot>
+  <Target Name="Kwama Worker" />
+  <Target Name="Kwama Scrib" />
+  <TaskList Name="22 - Shadowfen scrib famr part 2">
+    <Loops>1</Loops>
+    <Task>Goto Hotspot: auto, 248.07,237.42,104.52</Task>
+    <Task>Goto Hotspot: auto, 217.66,239.27,117.11</Task>
+    <Task>Goto Hotspot: auto, 196.59,216.42,117.07</Task>
+    <Task>Goto Hotspot: auto, 171.09,195.21,128.83</Task>
+    <Task>Goto Hotspot: auto, 139.64,186.41,142.78</Task>
+  </TaskList>
+</PatrolArea>
