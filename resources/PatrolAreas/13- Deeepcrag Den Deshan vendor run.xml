@@ -9,7 +9,7 @@
   <PatrolMaxLevel>999</PatrolMaxLevel>
   <TargetsPerHotspot>5</TargetsPerHotspot>
   <TaskList Name="13- Deeepcrag Den Deshan vendor run">
-    <Loops>9999</Loops>
-    <Task>Goto Hotspot: auto, 2297.21,2417.34,127.47</Task>
+    <Loops>1</Loops>
+    <Task>Goto Hotspot: auto, 2298.03,2416.48,127.47</Task>
   </TaskList>
 </PatrolArea>
