@@ -2,12 +2,16 @@
   <Loops>1</Loops>
   <Task>REPEAT LOOP: 99999</Task>
   <Task>Face Heading: 99</Task>
+  <Task>Rest: 5000</Task>
   <Task>Press Key(s): E, 3000</Task>
   <Task>Target NPC: Vvardenfell</Task>
   <Task>Rest: 20000</Task>
   <Task>Start Patrol: 18 -  Vardenfell scrib farm to vendor,0,1</Task>
-  <Task>Goto Waypoint: 3274.49,4596.06,117.25</Task>
+  <Task>Set Waypoint Accuracy: 3</Task>
+  <Task>Goto Waypoint: 3274.49,4595.19,117.24</Task>
+  <Task>Set Waypoint Accuracy: 3</Task>
   <Task>Face Heading: 91</Task>
+  <Task>Rest: 4000</Task>
   <Task>Press Key(s): E, 3000</Task>
   <Task>Rest: 20000</Task>
   <Task>Goto Waypoint: 3296.19,4594.03,16.55</Task>
@@ -53,10 +57,29 @@
   <Task>Face Heading: 270</Task>
   <Task>Press Key(s): E, 3000</Task>
   <Task>Start Patrol: 18 - Vardenfell scrib farm vendor to farm,0,1</Task>
-  <Task>Goto Waypoint: 3589.34,4191.48,122.75</Task>
-  <Task>Face Heading: 277</Task>
+  <Task>Goto Waypoint: 3588.99,4194.04,122.76</Task>
+  <Task>Face Heading: 278</Task>
+  <Task>Target NPC: Matus-Akin Egg Mine</Task>
+  <Task>Rest: 5000</Task>
+  <Task>Press Key(s): E, 3000</Task>
+  <Task>Face Heading: 278</Task>
+  <Task>Target NPC: Matus-Akin Egg Mine</Task>
+  <Task>Rest: 5000</Task>
+  <Task>Press Key(s): E, 3000</Task>
+  <Task>Face Heading: 278</Task>
+  <Task>Target NPC: Matus-Akin Egg Mine</Task>
+  <Task>Rest: 5000</Task>
+  <Task>Press Key(s): E, 3000</Task>
+  <Task>Face Heading: 278</Task>
+  <Task>Target NPC: Matus-Akin Egg Mine</Task>
+  <Task>Rest: 5000</Task>
+  <Task>Press Key(s): E, 3000</Task>
+  <Task>Face Heading: 278</Task>
+  <Task>Target NPC: Matus-Akin Egg Mine</Task>
+  <Task>Rest: 5000</Task>
   <Task>Press Key(s): E, 3000</Task>
   <Task>Rest: 20000</Task>
-  <Task>Start Patrol: Vardenfell - Scrib farm Matus Akin,0,10</Task>
+  <Task>Start Patrol: Vardenfell - Scrib farm Matus Akin,0,3</Task>
+  <Task>Goto Waypoint: 450.76,191.53,99.39</Task>
   <Task>END REPEAT LOOP</Task>
 </TaskList>
