@@ -2,8 +2,8 @@
   <Loops>1</Loops>
   <Task>REPEAT LOOP: 99999</Task>
   <Task>Start Patrol: 18 -  Vardenfell scrib farm to vendor,0,1</Task>
-  <Task>Goto Waypoint: 3274.49,4596.06,117.25</Task>
-  <Task>Face Heading: 91</Task>
+  <Task>Goto Waypoint: 3274.49,4595.74,117.24</Task>
+  <Task>Face Heading: 93</Task>
   <Task>Press Key(s): E, 3000</Task>
   <Task>Rest: 20000</Task>
   <Task>Goto Waypoint: 3296.19,4594.03,16.55</Task>
