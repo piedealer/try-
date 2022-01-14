@@ -1,0 +1,50 @@
+<PatrolArea Name="15 - Stross M'Kai mudcrab and node farm">
+  <WaypointDistance>30</WaypointDistance>
+  <TargetMaxLevel>999</TargetMaxLevel>
+  <TargetMinLevel>0</TargetMinLevel>
+  <TargetRange>30</TargetRange>
+  <Type>1</Type>
+  <UseClosestWaypoint>False</UseClosestWaypoint>
+  <PatrolMinLevel>1</PatrolMinLevel>
+  <PatrolMaxLevel>999</PatrolMaxLevel>
+  <TargetsPerHotspot>5</TargetsPerHotspot>
+  <Target Name="Mudcrab" />
+  <TaskList Name="15 - Stross M'Kai mudcrab and node farm">
+    <Loops>9999</Loops>
+    <Task>Goto Hotspot: auto, 1022.57,1101.07,100.24</Task>
+    <Task>Goto Hotspot: auto, 984.41,1093.33,100.25</Task>
+    <Task>Goto Hotspot: auto, 965.13,1059.05,100.21</Task>
+    <Task>Goto Hotspot: auto, 957.13,1021.02,100.18</Task>
+    <Task>Goto Hotspot: auto, 919.85,1009.7,100.14</Task>
+    <Task>Goto Hotspot: auto, 889.08,1028.15,107.27</Task>
+    <Task>Goto Hotspot: auto, 873.21,1061.86,107.93</Task>
+    <Task>Goto Hotspot: auto, 879.78,1099.19,107.81</Task>
+    <Task>Goto Hotspot: auto, 903.31,1122.72,99.39</Task>
+    <Task>Goto Hotspot: auto, 890.35,1152.11,103.3</Task>
+    <Task>Goto Hotspot: auto, 889.38,1191.85,99.91</Task>
+    <Task>Goto Hotspot: auto, 928.11,1189.59,100.27</Task>
+    <Task>Goto Hotspot: auto, 965.88,1198.87,100.45</Task>
+    <Task>Goto Hotspot: auto, 1004.1,1196.49,100.4</Task>
+    <Task>Goto Hotspot: auto, 1034.21,1173.53,99.97</Task>
+    <Task>Goto Hotspot: auto, 1067.9,1156.83,102.29</Task>
+    <Task>Goto Hotspot: auto, 1074.95,1190.97,100.16</Task>
+    <Task>Goto Hotspot: auto, 1057.63,1216.33,100.11</Task>
+    <Task>Goto Hotspot: auto, 1070.81,1249.2,101.74</Task>
+    <Task>Goto Hotspot: auto, 1103.51,1262.06,105.26</Task>
+    <Task>Goto Hotspot: auto, 1133.26,1252.18,100.39</Task>
+    <Task>Goto Hotspot: auto, 1158.39,1275.12,102.17</Task>
+    <Task>Goto Hotspot: auto, 1172.88,1307.27,100.6</Task>
+    <Task>Goto Hotspot: auto, 1164.25,1341.39,100.22</Task>
+    <Task>Goto Hotspot: auto, 1184.33,1370.32,99.98</Task>
+    <Task>Goto Hotspot: auto, 1185.5,1405.36,99.34</Task>
+    <Task>Goto Hotspot: auto, 1182.65,1436.26,100.51</Task>
+    <Task>Goto Hotspot: auto, 1196.11,1465.98,99.9</Task>
+    <Task>Goto Hotspot: auto, 1177.92,1499.46,99.99</Task>
+    <Task>Goto Hotspot: auto, 1168.8,1531.59,100.01</Task>
+    <Task>Goto Hotspot: auto, 1140.16,1551.56,100.07</Task>
+    <Task>Goto Hotspot: auto, 1107.58,1563.08,99.99</Task>
+    <Task>Goto Hotspot: auto, 1071.76,1563.82,100.5</Task>
+    <Task>Goto Hotspot: auto, 1041.15,1580.35,103.39</Task>
+    <Task>Goto Hotspot: auto, 1012.77,1598.02,101.58</Task>
+  </TaskList>
+</PatrolArea>

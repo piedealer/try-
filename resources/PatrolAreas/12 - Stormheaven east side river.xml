@@ -1,0 +1,113 @@
+<PatrolArea Name="12 - Stormheaven east side river">
+  <WaypointDistance>30</WaypointDistance>
+  <TargetMaxLevel>999</TargetMaxLevel>
+  <TargetMinLevel>0</TargetMinLevel>
+  <TargetRange>56</TargetRange>
+  <Type>1</Type>
+  <UseClosestWaypoint>False</UseClosestWaypoint>
+  <PatrolMinLevel>1</PatrolMinLevel>
+  <PatrolMaxLevel>999</PatrolMaxLevel>
+  <TargetsPerHotspot>99</TargetsPerHotspot>
+  <Target Name="Flax" />
+  <Target Name="Pure Water" />
+  <Target Name="Maple" />
+  <Target Name="Iron Ore" />
+  <Target Name="Pewter Seam" />
+  <Target Name="Nirnroot" />
+  <Target Name="Nightshade" />
+  <Target Name="Maple" />
+  <Target Name="Stinkhorn" />
+  <Target Name="Jute" />
+  <Target Name="Imp Stool" />
+  <Target Name="Maple" />
+  <Target Name="Pure Water" />
+  <Target Name="Blessed Thistle" />
+  <Target Name="Oak" />
+  <Target Name="Corn Flower" />
+  <Target Name="High Iron Ore" />
+  <Target Name="Water Skin" />
+  <Target Name="Imp Stool" />
+  <Target Name="Blessed Thistle" />
+  <Target Name="Water Skin" />
+  <Target Name="Water Hyacinth" />
+  <Target Name="Nightshade" />
+  <Target Name="Pure Water" />
+  <Target Name="Bugloss" />
+  <Target Name="Dragonthorn" />
+  <Target Name="Oak" />
+  <Target Name="Nightshade" />
+  <Target Name="Jute" />
+  <Target Name="White Cap" />
+  <Target Name="Pewter Seam" />
+  <Target Name="Emetic Russula" />
+  <Target Name="Iron Ore" />
+  <Target Name="Luminous Russula" />
+  <Target Name="Wormwood" />
+  <Target Name="Corn Flower" />
+  <Target Name="Maple" />
+  <Target Name="Pewter Seam" />
+  <Target Name="Namira's Rot" />
+  <Target Name="Jute" />
+  <Target Name="Lady's Smock" />
+  <Target Name="Dragonthorn" />
+  <Target Name="Violet Coprinus" />
+  <Target Name="Pure Water" />
+  <Target Name="Blue Entoloma" />
+  <Target Name="High Iron Ore" />
+  <Target Name="White Cap" />
+  <Target Name="Columbine" />
+  <Target Name="Mudcrab">
+    <bModified>True</bModified>
+    <MeleeDistance>20</MeleeDistance>
+    <AggroRange>30</AggroRange>
+  </Target>
+  <Target Name="Oak">
+    <bModified>True</bModified>
+    <MeleeDistance>20</MeleeDistance>
+    <AggroRange>30</AggroRange>
+  </Target>
+  <TaskList Name="12 - Stormheaven east side river">
+    <Loops>1</Loops>
+    <Task>Goto Hotspot: auto, 1251.44,1275,138.23</Task>
+    <Task>Goto Hotspot: auto, 1271.24,1298.43,138.57</Task>
+    <Task>Goto Hotspot: auto, 1294.32,1320.96,138.57</Task>
+    <Task>Goto Hotspot: auto, 1301.53,1328.09,138.74</Task>
+    <Task>Goto Hotspot: auto, 1321.44,1355.79,135.77</Task>
+    <Task>Goto Hotspot: auto, 1354.23,1377.45,133.68</Task>
+    <Task>Goto Hotspot: auto, 1381.47,1404.56,133.76</Task>
+    <Task>Goto Hotspot: auto, 1407.35,1434.69,133.52</Task>
+    <Task>Goto Hotspot: auto, 1434.87,1459.14,133.85</Task>
+    <Task>Goto Hotspot: auto, 1465.56,1484.53,134.34</Task>
+    <Task>Goto Hotspot: auto, 1497.11,1505.42,131.1</Task>
+    <Task>Goto Hotspot: auto, 1499.07,1543.87,123.56</Task>
+    <Task>Goto Hotspot: auto, 1555.68,1642.92,125.03</Task>
+    <Task>Goto Hotspot: auto, 1525.23,1665.96,124.61</Task>
+    <Task>Goto Hotspot: auto, 1490.55,1660.8,123.73</Task>
+    <Task>Goto Hotspot: auto, 1454.96,1664.78,122.51</Task>
+    <Task>Goto Hotspot: auto, 1422.43,1678.71,122.62</Task>
+    <Task>Goto Hotspot: auto, 1434.99,1650.33,125.6</Task>
+    <Task>Goto Hotspot: auto, 1459.77,1624.79,127.1</Task>
+    <Task>Goto Hotspot: auto, 1495.19,1620,125.12</Task>
+    <Task>Goto Hotspot: auto, 1523.75,1632.65,122.11</Task>
+    <Task>Goto Hotspot: auto, 1544.95,1663.3,122.39</Task>
+    <Task>Goto Hotspot: auto, 1547.7,1696.73,122.87</Task>
+    <Task>Goto Hotspot: auto, 1550.22,1739.19,121.97</Task>
+    <Task>Goto Hotspot: auto, 1549.34,1772.36,119.93</Task>
+    <Task>Goto Hotspot: auto, 1549.84,1806.47,118.84</Task>
+    <Task>Goto Hotspot: auto, 1574.23,1836.5,119.27</Task>
+    <Task>Goto Hotspot: auto, 1593.16,1868.66,119.07</Task>
+    <Task>Goto Hotspot: auto, 1572.79,1902.21,119.05</Task>
+    <Task>Goto Hotspot: auto, 1535.32,1916.99,118.82</Task>
+    <Task>Goto Hotspot: auto, 1534.7,1949.04,112.93</Task>
+    <Task>Goto Hotspot: auto, 1546.02,1983.63,111.79</Task>
+    <Task>Goto Hotspot: auto, 1550.41,2018.18,112.68</Task>
+    <Task>Goto Hotspot: auto, 1550.49,2050.7,112.66</Task>
+    <Task>Goto Hotspot: auto, 1548.63,2091.16,108.33</Task>
+    <Task>Goto Hotspot: auto, 1518.28,2107.64,107.65</Task>
+    <Task>Goto Hotspot: auto, 1490.22,2125.43,108.81</Task>
+    <Task>Goto Hotspot: auto, 1455.27,2122.42,109.97</Task>
+    <Task>Goto Hotspot: auto, 1416.85,2125.63,109.43</Task>
+    <Task>Goto Hotspot: auto, 1390.18,2149.57,111.86</Task>
+    <Task>Goto Hotspot: auto, 1396.14,2188.19,108.1</Task>
+  </TaskList>
+</PatrolArea>
