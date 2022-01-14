@@ -1,0 +1,60 @@
+<TaskList Name="13- Stro's Mkai nodes and crabs">
+  <Loops>1</Loops>
+  <Task>REPEAT LOOP: 99999</Task>
+  <Task>Start Patrol: 12 - Stormheaven east side river,0,1</Task>
+  <Task>Press Key(s): M, 300</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Scaled Left Click: 1262,245,1904,1129</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Press Key(s): E, 3000</Task>
+  <Task>Pause: 60000</Task>
+  <Task>Start Patrol: 12 - Stormheaven east side river,0,1</Task>
+  <Task>Press Key(s): M, 300</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Scaled Left Click: 1263,246,1904,1129</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Press Key(s): E, 3000</Task>
+  <Task>Pause: 60000</Task>
+  <Task>Start Patrol: 12 - Stormheaven east side river,0,1</Task>
+  <Task>Press Key(s): M, 300</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Scaled Left Click: 1262,245,1904,1129</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Press Key(s): E, 3000</Task>
+  <Task>Pause: 60000</Task>
+  <Task>Start Patrol: 12 - Stormheaven east side river,0,1</Task>
+  <Task>Press Key(s): M, 300</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Scaled Left Click: 1263,246,1904,1129</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Press Key(s): E, 3000</Task>
+  <Task>Pause: 60000</Task>
+  <Task>Start Patrol: 13 - Stro's Mkrai Mudcrab to vendor,0,1</Task>
+  <Task>Rest: 20000</Task>
+  <Task>Goto Waypoint: 1046.4,993.28,101.96</Task>
+  <Task>Target NPC: Candariel</Task>
+  <Task>Pause: 1500</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 10000</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 5000</Task>
+  <Task>Press Key(s): X, 2000</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Press Key(s): E, 2000</Task>
+  <Task>Pause: 2000</Task>
+  <Task>Press Key(s): ESCAPE, 1000</Task>
+  <Task>Pause: 1000</Task>
+  <Task>Target NPC: Candariel</Task>
+  <Task>Pause: 1500</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 10000</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 5000</Task>
+  <Task>Press Key(s): X, 2000</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Press Key(s): E, 2000</Task>
+  <Task>Pause: 2000</Task>
+  <Task>Press Key(s): ESCAPE, 1000</Task>
+  <Task>Pause: 1000</Task>
+  <Task>END REPEAT LOOP</Task>
+</TaskList>
