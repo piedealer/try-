@@ -4,7 +4,7 @@
   <Task>Start Patrol: 15- Bankorai Mudcrab vendor part 1,0,1</Task>
   <Task>Press Key(s): E, 300</Task>
   <Task>Pause: 6000</Task>
-  <Task>Scaled Left Click: 465,280,1000,744</Task>
+  <Task>Scaled Left Click: 460,271,984,728</Task>
   <Task>Pause: 3000</Task>
   <Task>Press Key(s): E, 3000</Task>
   <Task>Pause: 60000</Task>
@@ -64,10 +64,10 @@
   <Task>Press Key(s): E, 1000</Task>
   <Task>Pause: 3000</Task>
   <Task>Face Heading: 85</Task>
-  <Task>Scaled Left Click: 512,150,1000,744</Task>
+  <Task>Scaled Left Click: 505,145,984,728</Task>
   <Task>Pause: 1000</Task>
   <Task>Press Key(s): E, 300</Task>
   <Task>Pause: 60000</Task>
-  <Task>Start Patrol: 15- Bankorai - Mudcrab and node farm,0,10</Task>
+  <Task>Start Patrol: 15- Bankorai - Mudcrab and node farm,0,5</Task>
   <Task>END REPEAT LOOP</Task>
 </TaskList>
