@@ -29,7 +29,7 @@
   <Task>Press Key(s): E, 3000</Task>
   <Task>Rest: 20000</Task>
   <Task>Start Patrol: 13- Deeepcrag Den Deshan vendor run,0,1</Task>
-  <Task>Rest: 30000</Task>
+  <Task>Rest: 60000</Task>
   <Task>Target NPC: Am-Eepa</Task>
   <Task>Pause: 1500</Task>
   <Task>Press Key(s): E, 300</Task>
