@@ -24,7 +24,6 @@
   <Target Name="Mountain Flower" />
   <Target Name="Bugloss" />
   <Target Name="Blue Entoloma" />
-  <Target Name="Runestone" />
   <Target Name="Blessed Thistle" />
   <Target Name="Dragonthorn" />
   <Target Name="Nirnroot" />
@@ -35,7 +34,7 @@
   <Target Name="Spider" />
   <Target Name="Blue Entoloma" />
   <TaskList Name="15- Bankorai - Mudcrab and node farm">
-    <Loops>10</Loops>
+    <Loops>5</Loops>
     <Task>Goto Hotspot: auto, 1760.97,1341.79,99.64</Task>
     <Task>Goto Hotspot: auto, 1781.89,1326.25,99.88</Task>
     <Task>Goto Hotspot: auto, 1817.09,1322.09,99.95</Task>
@@ -65,9 +64,5 @@
     <Task>Goto Hotspot: auto, 1705.1,1331.37,103.74</Task>
     <Task>Goto Hotspot: auto, 1704.39,1336.05,104.55</Task>
     <Task>Goto Hotspot: auto, 1687.39,1362.53,107.68</Task>
-    <Task>Goto Hotspot: auto, 1691.5,1392.65,105.49</Task>
-    <Task>Goto Hotspot: auto, 1716.89,1413.85,100.26</Task>
-    <Task>Goto Hotspot: auto, 1748.6,1410.56,100.45</Task>
-    <Task>Goto Hotspot: auto, 1742.74,1376.19,99.87</Task>
   </TaskList>
 </PatrolArea>
