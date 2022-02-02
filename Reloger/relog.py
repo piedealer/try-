@@ -10,7 +10,7 @@ import time
 
 while 1:
     
-    if pyautogui.locateOnScreen('pic.png', confidence=0.8) != None:
+    if pyautogui.locateOnScreen('pic.png', confidence=0.6) != None:
         time.sleep(10)
 #Locate bot window
         print("I will try locate the stop bot now")
@@ -31,8 +31,8 @@ while 1:
         pyautogui.press('altleft')
 #Move to the the Password Field
         print("Move to password field")
-        if pyautogui.locateOnScreen('password.png', confidence=0.9) != None:
-            x, y = pyautogui.locateCenterOnScreen('password.png', confidence=0.9)
+        if pyautogui.locateOnScreen('password.png', confidence=0.6) != None:
+            x, y = pyautogui.locateCenterOnScreen('password.png', confidence=0.8)
             pyautogui.moveTo(x, y, duration=1)
             pyautogui.click()
         time.sleep(3)
