@@ -24,10 +24,8 @@ while 1:
             time.sleep(5)
 #Dissmiss the error message
         print("Time to dismiss error")
-        if pyautogui.locateOnScreen('Error Alt.png', confidence=0.9) != None:
-            x, y = pyautogui.locateCenterOnScreen('Error Alt.png', confidence=0.9)
-            pyautogui.moveTo(x, y, duration=1)
-            pyautogui.click()
+        pyautogui.moveTo(300,300, duration=1)
+        pyautogui.click(300, 300)
         time.sleep(3)
         print("Pressing Alt also just incase")
         pyautogui.press('altleft')
@@ -44,29 +42,20 @@ while 1:
         time.sleep(3)
         pyautogui.press('enter')
 #Sleep for enough time to log in in char select screen
-        print("I will now wait to load up character select screen. This will work only if Templar")
+        print("I will now wait to load up character select screen.")
         time.sleep(120)
-        if pyautogui.locateOnScreen('Templar.png', confidence=0.8) != None:
-            time.sleep(10)
-        
+        pyautogui.click(300, 300)
+        time.sleep(10)
+        pyautogui.press('enter')
 #Dismiss event window if there is one
         #print("Closing potential event windows")
         #pyautogui.press('E')
                    
 #Select the character
-            print("We are on character select screen. Will try to load up char.")
-            x, y = pyautogui.locateCenterOnScreen('Templar.png', confidence=0.9)
-            pyautogui.moveTo(x, y, duration=1)
-            pyautogui.click()
-            pyautogui.press('enter')
-            time.sleep(120)
-            if pyautogui.locateOnScreen('Templar.png', confidence=0.8) != None:
-                time.sleep(10)
-                print("We are on character select screen. Will try to load up char.")
-                x, y = pyautogui.locateCenterOnScreen('Templar.png', confidence=0.9)
-                pyautogui.moveTo(x, y, duration=1)
-                pyautogui.click()
-                pyautogui.press('enter')
+        time.sleep(120)
+        pyautogui.click(300, 300)
+        time.sleep(10)
+        pyautogui.press('enter')
 #Close up Notifiucation
         print("We should be in game by now. I will look for the notifications and close them.")
         if pyautogui.locateOnScreen('notification.png', confidence=0.8) != None:
@@ -90,10 +79,10 @@ while 1:
         
             print("I should have pressed start bot")
             time.sleep(5)
-
+            pyautogui.click(300, 300)
         print("Relog should be succesfull")
         time.sleep(0.5)
         
     else:
         print("I am playing")
-        time.sleep(60)
+        time.sleep(10)
