@@ -1,4 +1,0 @@
-<TaskList Name="Nodes">
-  <Loops>1</Loops>
-  <Task>StopBot: Stopping Bot</Task>
-</TaskList>

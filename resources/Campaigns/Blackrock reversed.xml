@@ -1,6 +1,0 @@
-<TaskList Name="Blackrock reversed">
-  <Loops>1</Loops>
-  <Task>REPEAT LOOP: 99999</Task>
-  <Task>Start Patrol: Bleakrock gathering,1,99999</Task>
-  <Task>END REPEAT LOOP</Task>
-</TaskList>
