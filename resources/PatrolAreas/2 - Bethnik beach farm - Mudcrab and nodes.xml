@@ -9,23 +9,6 @@
   <PatrolMaxLevel>999</PatrolMaxLevel>
   <TargetsPerHotspot>5</TargetsPerHotspot>
   <Target Name="Mudcrab" />
-  <Target Name="Blessed Thistle" />
-  <Target Name="Oak" />
-  <Target Name="Maple" />
-  <Target Name="Wolf" />
-  <Target Name="Pewter Seam" />
-  <Target Name="Nightshade" />
-  <Target Name="Flax" />
-  <Target Name="Iron Ore" />
-  <Target Name="High Iron Ore" />
-  <Target Name="Blue Entoloma" />
-  <Target Name="Luminous Russula" />
-  <Target Name="Water Skin" />
-  <Target Name="Jute" />
-  <Target Name="Corn Flower" />
-  <Target Name="Mountain Flower" />
-  <Target Name="Voidstone Ore" />
-  <Target Name="Nightwood" />
   <TaskList Name="2 - Bethnik beach farm - Mudcrab and nodes">
     <Loops>5</Loops>
     <Task>Goto Hotspot: auto, 640.76,626.54,105.1</Task>

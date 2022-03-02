@@ -1,0 +1,14 @@
+<PatrolArea Name="Unknown Patrol">
+  <WaypointDistance>0</WaypointDistance>
+  <TargetMaxLevel>0</TargetMaxLevel>
+  <TargetMinLevel>0</TargetMinLevel>
+  <TargetRange>0</TargetRange>
+  <Type>1</Type>
+  <UseClosestWaypoint>False</UseClosestWaypoint>
+  <PatrolMinLevel>0</PatrolMinLevel>
+  <PatrolMaxLevel>999999</PatrolMaxLevel>
+  <TargetsPerHotspot>5</TargetsPerHotspot>
+  <TaskList Name="Unknown Patrol">
+    <Loops>9999</Loops>
+  </TaskList>
+</PatrolArea>

@@ -9,26 +9,7 @@
   <PatrolMaxLevel>999</PatrolMaxLevel>
   <TargetsPerHotspot>5</TargetsPerHotspot>
   <Target Name="Mudcrab" />
-  <Target Name="Iron Ore" />
-  <Target Name="High Iron Ore" />
-  <Target Name="Water Skin" />
-  <Target Name="Oak" />
-  <Target Name="Jute" />
-  <Target Name="Pewter Seam" />
-  <Target Name="Maple" />
   <Target Name="Wolf" />
-  <Target Name="Flax" />
-  <Target Name="Wormwood" />
-  <Target Name="Dragonthorn" />
-  <Target Name="Lady's Smock" />
-  <Target Name="Corn Flower" />
-  <Target Name="White Cap" />
-  <Target Name="Mountain Flower" />
-  <Target Name="Columbine" />
-  <Target Name="Bugloss" />
-  <Target Name="Wolf" />
-  <Target Name="Nightshade" />
-  <Target Name="Blessed Thistle" />
   <TaskList Name="13 - Stro's Mkai Mudcrab">
     <Loops>9999</Loops>
     <Task>Goto Hotspot: auto, 1455.62,373.28,99.75</Task>

@@ -10,28 +10,6 @@
   <TargetsPerHotspot>5</TargetsPerHotspot>
   <Target Name="Mudcrab" />
   <Target Name="Wolf" />
-  <Target Name="Flax" />
-  <Target Name="Dragonthorn" />
-  <Target Name="Nightshade" />
-  <Target Name="Jute" />
-  <Target Name="White Cap" />
-  <Target Name="Luminous Russula" />
-  <Target Name="Pewter Seam" />
-  <Target Name="Flax" />
-  <Target Name="Oak" />
-  <Target Name="Maple" />
-  <Target Name="Blessed Thistle" />
-  <Target Name="Water Skin" />
-  <Target Name="High Iron Ore" />
-  <Target Name="Blue Entoloma" />
-  <Target Name="Namira's Rot" />
-  <Target Name="Columbine" />
-  <Target Name="Blessed Thistle" />
-  <Target Name="Dragonthorn" />
-  <Target Name="Iron Ore" />
-  <Target Name="Bugloss" />
-  <Target Name="Dragonthorn" />
-  <Target Name="Imp Stool" />
   <TaskList Name="14 - Stro'sMkari mudcrab and node">
     <Loops>9999</Loops>
     <Task>Goto Hotspot: auto, 997.81,848.33,100.01</Task>
