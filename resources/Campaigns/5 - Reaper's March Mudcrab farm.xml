@@ -1,10 +1,10 @@
-<TaskList Name="1- Knetari's Roost Beach Farm - Mudcrabs and nodes">
+<TaskList Name="10 - Reaper's March Mudcrab farm">
   <Loops>1</Loops>
   <Task>REPEAT LOOP: 99999</Task>
-  <Task>Start Patrol: 1- Knetari's Roost beach Farm - Vendor run,0,1</Task>
+  <Task>Start Patrol: 10 - Reaper's March - Mudcrab farming at town,0,10</Task>
+  <Task>Start Patrol: 10 - Reaper March to vendor,0,1</Task>
   <Task>Pause: 20000</Task>
-  <Task>Goto Waypoint: 997.98,1263.88,156.7</Task>
-  <Task>Target NPC: Palmur-dra</Task>
+  <Task>Target NPC: Shasirba</Task>
   <Task>Pause: 1500</Task>
   <Task>Press Key(s): E, 300</Task>
   <Task>Pause: 10000</Task>
@@ -16,7 +16,7 @@
   <Task>Pause: 2000</Task>
   <Task>Press Key(s): ESCAPE, 1000</Task>
   <Task>Pause: 1000</Task>
-  <Task>Target NPC: Palmur-dra</Task>
+  <Task>Target NPC: Shasirba</Task>
   <Task>Pause: 1500</Task>
   <Task>Press Key(s): E, 300</Task>
   <Task>Pause: 10000</Task>
@@ -28,6 +28,5 @@
   <Task>Pause: 2000</Task>
   <Task>Press Key(s): ESCAPE, 1000</Task>
   <Task>Pause: 1000</Task>
-  <Task>Start Patrol: 1- Knetari's Roost beach farm - Mudcrabs and nodes,0,30</Task>
   <Task>END REPEAT LOOP</Task>
 </TaskList>

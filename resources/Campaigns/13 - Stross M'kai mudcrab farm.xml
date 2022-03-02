@@ -1,0 +1,74 @@
+<TaskList Name="14 - Stross M'kai mudcrab farm">
+  <Loops>1</Loops>
+  <Task>REPEAT LOOP: 99999</Task>
+  <Task>Start Patrol: 15 - Stross M'Kai mudcrab and node farm,0,1</Task>
+  <Task>Press Key(s): M, 300</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Scaled Left Click: 920,534,1920,1137</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Press Key(s): E, 3000</Task>
+  <Task>Pause: 10000</Task>
+  <Task>Start Patrol: 15 - Stross M'Kai mudcrab and node farm,0,1</Task>
+  <Task>Press Key(s): M, 300</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Scaled Left Click: 920,534,1920,1137</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Press Key(s): E, 3000</Task>
+  <Task>Pause: 10000</Task>
+  <Task>Start Patrol: 15 - Stross M'Kai mudcrab and node farm,0,1</Task>
+  <Task>Press Key(s): M, 300</Task>
+  <Task>Pause: 10000</Task>
+  <Task>Scaled Left Click: 920,534,1920,1137</Task>
+  <Task>Pause: 10000</Task>
+  <Task>Press Key(s): E, 3000</Task>
+  <Task>Pause: 10000</Task>
+  <Task>Start Patrol: 15 - Stross M'Kai mudcrab and node farm,0,1</Task>
+  <Task>Press Key(s): M, 300</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Scaled Left Click: 920,534,1920,1137</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Press Key(s): E, 3000</Task>
+  <Task>Pause: 10000</Task>
+  <Task>Start Patrol: 15 - Stross M'Kai mudcrab and node farm,0,1</Task>
+  <Task>Press Key(s): M, 300</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Scaled Left Click: 920,534,1920,1137</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Press Key(s): E, 3000</Task>
+  <Task>Pause: 60000</Task>
+  <Task>Start Patrol: 12 - Stormheaven east side river,0,1</Task>
+  <Task>Press Key(s): M, 300</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Scaled Left Click: 730,347,1896,1121</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Press Key(s): E, 3000</Task>
+  <Task>Pause: 10000</Task>
+  <Task>Start Patrol: 14 - Stross M'Kai mudcrab and node vendor,0,1</Task>
+  <Task>Rest: 20000</Task>
+  <Task>Goto Waypoint: 1044.72,993.12,102</Task>
+  <Task>Target NPC: Candariel</Task>
+  <Task>Pause: 1500</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 10000</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 5000</Task>
+  <Task>Press Key(s): X, 2000</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Press Key(s): E, 2000</Task>
+  <Task>Pause: 2000</Task>
+  <Task>Press Key(s): ESCAPE, 1000</Task>
+  <Task>Pause: 1000</Task>
+  <Task>Target NPC: Candariel</Task>
+  <Task>Pause: 1500</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 10000</Task>
+  <Task>Press Key(s): E, 300</Task>
+  <Task>Pause: 5000</Task>
+  <Task>Press Key(s): X, 2000</Task>
+  <Task>Pause: 3000</Task>
+  <Task>Press Key(s): E, 2000</Task>
+  <Task>Pause: 2000</Task>
+  <Task>Press Key(s): ESCAPE, 1000</Task>
+  <Task>Pause: 1000</Task>
+  <Task>END REPEAT LOOP</Task>
+</TaskList>

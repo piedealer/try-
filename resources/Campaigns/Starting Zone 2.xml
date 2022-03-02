@@ -114,10 +114,8 @@
   <Task>Goto Waypoint: 685.74,402.91,107.21</Task>
   <Task>Goto Waypoint: 658.57,386.16,107.26</Task>
   <Task>Goto Waypoint: 673.52,374.41,109.63</Task>
-  <Task>Goto Waypoint: 675.12,372.96,109.96</Task>
   <Task>Rest: 3000</Task>
   <Task>Press Key(s): E, 3000</Task>
-  <Task>Pause: 3000</Task>
   <Task>Goto Waypoint: 407.73,922.81,103.12</Task>
   <Task>Goto Waypoint: 428.26,902.52,103.12</Task>
   <Task>Goto Waypoint: 438.04,906.67,106.49</Task>
